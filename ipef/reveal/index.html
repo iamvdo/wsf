@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ENSG - Le web du geek</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Vincent De Oliveira">
+		<link rel="icon" href="http://iamvdo.me/images/favicon.png"/>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="vdo/theme_vdo.css" id="theme">
+		<link rel="stylesheet" href="plugin/nav/nav.css">
+
+		<!-- Add VDO stylesheet -->
+		<!-- <link rel="stylesheet" href="vdo/assets/vdo.css"> -->
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Le web du geek</h1>
+					<p>
+						<small><a href="">Vincent De Oliveira</a> &middot; <a href="http://twitter.com/iamvdo">@iamvdo</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>C'est quoi le web?</h2>
+					<ul>
+						<li class="fragment">Site web / Site applicatif / Mobile</li>
+						<li class="fragment">Aucune différences de technologie
+							<ul>
+								<li class="fragment">Site d'infos</li>
+								<li class="fragment">Webmail</li>
+								<li class="fragment">Intranet</li>
+								<li class="fragment">Facebook</li>
+							</ul>
+						</li>
+						<li class="fragment">Trois piliers
+							<ul>
+								<li class="fragment">Nom de domaine (DNS)</li>
+								<li class="fragment">URI (HTTP)</li>
+								<li class="fragment">Langages: HTML, CSS, JavaScript, etc</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Spécificités du web</h2>
+					<ul>
+						<li class="fragment">Environnement non contrôlé
+							<ul>
+								<li class="fragment">Clients web multiples</li>
+								<li class="fragment">Tailles d'écrans, résolutions (Desktop, mobile)</li>
+								<li class="fragment">Connexion (Filaire, WIFI, 4G, Edge)</li>
+							</ul>
+						</li>
+						<li class="fragment">Accessibilité des données</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Langages Client</h2>
+					<ul>
+						<li class="fragment">HTML
+							<ul>
+								<li class="fragment">Contenu des pages</li>
+								<li class="fragment">Textes, images, vidéos, etc.</li>
+							</ul>
+						</li>
+						<li class="fragment">CSS
+							<ul>
+								<li class="fragment">Mise en forme graphique</li>
+							</ul>
+						</li>
+						<li class="fragment">JavaScript (JS)
+							<ul>
+								<li class="fragment">Interactivité</li>
+								<li class="fragment">Logique applicative</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Langages Serveur</h2>
+					<ul>
+						<li class="fragment">PHP</li>
+						<li class="fragment">JAVA</li>
+						<li class="fragment">JavaScript (Node.js)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Architecture classique</h2>
+					<ul>
+						<li class="fragment">Client
+							<ul>
+								<li class="fragment">Fais des requêtes au serveur via l'interface</li>
+								<li class="fragment">Affiche le résultat</li>
+							</ul>
+						</li>
+						<li class="fragment">Serveur
+							<ul>
+								<li class="fragment">Traite les requêtes du client</li>
+								<li class="fragment">Fournit / stocke les données</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Architecture moderne</h2>
+					<ul>
+						<li class="fragment">AJAX (chargement asynchrone)</li>
+						<li class="fragment">Client
+							<ul>
+								<li class="fragment">Fais des requêtes au serveur via le code</li>
+								<li class="fragment">Traite les données</li>
+								<li class="fragment">Affiche / modifie le résultat</li>
+							</ul>
+						</li>
+						<li class="fragment">Serveur
+							<ul>
+								<li class="fragment">Traite les requêtes du client</li>
+								<li class="fragment">Fournit / stocke les données</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Application web</h2>
+					<ul>
+						<li class="fragment">API JS (HTML5)</li>
+						<li class="fragment">Client
+							<ul>
+								<li class="fragment">Traite les données</li>
+								<li class="fragment">Stocke les données</li>
+								<li class="fragment">Affiche / modifie le résultat</li>
+								<li class="fragment">Communique avec d'autres clients (P2P)</li>
+							</ul>
+						</li>
+						<li class="fragment">Serveur
+							<ul>
+								<li class="fragment">Charge moins importante</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Application installable</h2>
+					<ul>
+						<li class="fragment">Firefox OS, Windows 8</li>
+						<li class="fragment">Le site web devient l'OS</li>
+					</ul>
+					<h2>Application packagée</h2>
+					<ul>
+						<li class="fragment">Rendre l'appli native</li>
+						<li class="fragment">PhoneGap</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Environnement client</h2>
+					<ul>
+						<li class="fragment"><strong>Graphique</strong>
+							<ul>
+								<li class="fragment">Canvas (WebGL), SVG, CSS, RWD, etc.</li>
+							</ul>
+						</li>
+						<li class="fragment"><strong>Contenu</strong>
+							<ul>
+								<li class="fragment">Elements d'UI, Offline, AppCache, History, etc.</li>
+							</ul>
+						</li>
+						<li class="fragment"><strong>Données</strong>
+							<ul>
+								<li class="fragment">IndexedDB, WebStorage, WebSockets, WebRTC, etc.</li>
+							</ul>
+						</li>
+						<li class="fragment"><strong>Système</strong>
+							<ul>
+								<li class="fragment">Geolocalisation, FileAPI, Battery, SMS, etc.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Démos</h2>
+					<ul>
+						<li class="fragment"><a href="http://172.17.1.191/codesprint/">Geolocalisation</a></li>
+						<li class="fragment"><a href="../demos/todo.html">TODO List</a></li>
+						<li class="fragment"><a href="https://opentokrtc.com">Chat temps-réel</a></li>
+						<li class="fragment"><a href="http://iamthecu.be/">iamthecube</a></li>
+						<li class="fragment"><a href="http://mediaqueri.es">Media-queries (Responsive Web Design)</a></li>
+						<li class="fragment"><a href="http://www.playmapscube.com/">Maps Cube</a></li>
+						<li class="fragment"><a href="../../../DEV/3D/MNT">Les écrins</a></li>
+						<li class="fragment"><a href="http://kostar111.github.io/rando3D/demo/v1.2/">Randonnée 3D</a></li>
+						<li class="fragment"><a href="http://race.assassinscreedpirates.com/">Assassin's Creed</a></li>
+						<li class="fragment"><a href="http://vladimir.sh/lab/bird">Flappy Bird temps-réel multijoueur</a></li>
+					</ul>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<div class="reveal-overlay"></div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: false,
+
+				transitionSpeed: 'slow',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				//parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				//parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/prefixfree/prefixfree.js', async: true },
+					{ src: 'plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }},
+					{ src: 'plugin/nav/nav.js', async: true}
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
