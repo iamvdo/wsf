@@ -3,10 +3,17 @@
     </div>
 
     <div class="reveal-overlay"></div>
-
+    <?php
+    if (isset($_GET['a']) and isset($_GET['s']) and !empty($_GET['a']) and !empty($_GET['a'])) {
+      echo 'yep';
+      $annee = $_GET['a'];
+      $seance = $_GET['s'];
+    ?>
     <script src="browserify.js"></script>
     <script>VDO('slides', <?php echo $annee; ?>, <?php echo $seance; ?>);</script>
-
+    <?php
+    }
+    ?>
     <script src="/reveal/lib/js/head.min.js"></script>
     <script src="/reveal/js/reveal.min.js"></script>
 

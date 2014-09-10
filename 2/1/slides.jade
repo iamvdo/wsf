@@ -1,4 +1,9 @@
 -var root = '/2/1/';
+mixin img (name)
+  img.fragment.current-visible.overlay(class!=attributes.class,src=root+name)
+mixin li (name)
+  li.fragment= name
+
 section
   h1 Intégration web FTW
 
@@ -9,8 +14,8 @@ section
     li.fragment Créé par Tim Berners-Lee
     li.fragment
       a(href='http://info.cern.ch/hypertext/WWW/TheProject.html') Première page web
-    li.fragment Internet existe déjà depuis 40ans! (fin des années 50)
-    img.fragment(src=root+'premier-site-web.jpg',alt='Capture du premier site web')
+    li.fragment Internet existe déjà depuis 60ans! (fin des années 50)
+    +img('premier-site-web.jpg')
 
 section
   h2 Le WWW
@@ -66,13 +71,13 @@ section
   h2 Le web, techniquement...
   ul
     li.fragment Nom de domaine (DNS: Domain Name System)
-      img.fragment.current-visible.overlay(src=root+'dns.gif')
+      +img('dns.gif')
     li.fragment URIs (protocole HTTP)
-      img.fragment.current-visible.overlay(src=root+'url.jpg')
+      +img('url.jpg')
     li.fragment Langages client
-      img.fragment.current-visible.overlay(src=root+'html.jpg')
-      img.fragment.current-visible.overlay(src=root+'css.jpg')
-      img.fragment.current-visible.overlay(src=root+'js.jpg')
+      +img('html.jpg')
+      +img('css.jpg')
+      +img('js.jpg')
       ul
         li.fragment HTML, CSS, JavaScript
     li.fragment Langages Serveur
@@ -138,7 +143,7 @@ section
         li.fragment traite les données
         li.fragment répond au client
     li.fragment Le client affiche les données
-    img.fragment.current-visible.overlay(src=root+'archi1.jpg')
+    +img('archi1.jpg')
 
 section
   h2 Architecture moderne
@@ -150,7 +155,7 @@ section
         li.fragment récupère et traite ces informations
         li.fragment modifie la page avec le résultat
     li.fragment → Le socle des applications riches (RIA)
-    img.fragment.current-visible.overlay(src=root+'archi2.jpg')
+    +img('archi2.jpg')
 
 section
   h2 Application riche
@@ -166,21 +171,26 @@ section
 
 section
   h2 Welcome HTML5!
-  img.fragment.current-visible.overlay.overlay--noborder(src=root+'html5.png')
+  +img('html5.png')(class="overlay--noborder")
 
 section
   h2 HTML5, petite histoire
   ul
     li.fragment 1999: 
       a(href='http://www.w3.org/TR/1999/REC-html401-19991224/') HTML4
-      | par le W3C
+      |  par le W3C
     li.fragment 2000-2007: W3C travaille sur XHTML
       ul
         li.fragment reformulation de HTML4 en XML
     li.fragment 2004: Création du 
       a(href='http://www.whatwg.org/') WHATWG
+      ul
+        li.fragment travaille sur un nouveau standard: HTML5
     li.fragment 2007: W3C adopte HTML5 sous l'impulsion du WHATWG
-    li.fragment W3C abandonne XHTML2
+    li.fragment Depuis:
+      ul
+        li.fragment W3C abandonne XHTML2
+        li.fragment HTML5 s'est imposé
 
 section
   h2 HTML5
@@ -197,6 +207,9 @@ section
     li.fragment Permet la création d'application riches!
 
 section
+  h1 HTML5, le HTML!
+
+section
   h2 HTML, quoi de neuf?
   ul
     li.fragment Simplifier la création de documents web
@@ -205,7 +218,9 @@ section
     li.fragment Améliorer l'accessibilité des données
 
 section
-  h2 Doctype simplifié
+  h2 Doctype XHTML1
+  pre.language-markup.fragment(style='word-break: break-word'): code &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  h2.fragment Doctype HTML5
   pre.language-markup.fragment: code &lt;!doctype html>
   ul
     li.fragment Plus de versions
@@ -256,7 +271,7 @@ section
           code figcaption
         li.fragment
           code time
-  img.fragment.current-visible.overlay.overlay--noborder(src=root+'html5-elements.jpg')
+  +img('html5-elements.jpg')
   ul: li.fragment Limite les 
     code &lt;div id="">
 
@@ -271,7 +286,7 @@ section
           code meter
         li.fragment
           code keygen
-  img.fragment.current-visible.overlay.overlay--noborder(src=root+'progress.png')
+  +img('progress.png')
 
 section
   h2 Nouveaux éléments
@@ -279,8 +294,109 @@ section
     li.fragment Nouveaux types de formulaires:
       ul
         li.fragment Aide l'utilisateur, notamment sur mobile
-        li.fragment Pré-validation client
+        li.fragment Pré-validation client inclue
+  ul
+    li.fragment Nouveaux 
+      code &lt;input type="..."/>
+      ul
+        li.fragment
+          code number
+        li.fragment
+          code email
+          |, 
+          code tel
+          |, 
+          code url
+        li.fragment
+          code date
+          |, 
+          code time
+          |, 
+          code datetime-local
+        li.fragment
+          code range
+        li.fragment
+          code color
+  ul
+    li.fragment Nouveaux attributs:
+      ul
+        li.fragment
+          code placeholder
+          |, 
+          code autofocus
+  +img('mobile-forms.jpg')
+  ul
+    li.fragment Moins besoin de JavaScript
+    li.fragment
+      a(href='http://codylindley.com/native.html') Native HTML forms
 
+section
+  h2 ARIA
+  ul
+    li.fragment Accessible Rich Internet Applications
+    li.fragment https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+
+section
+  h2 Nouvelles fonctionnalités
+  ul
+    li.fragment Sons 
+      code &lt;audio>
+    li.fragment Vidéos 
+      code &lt;video>
+
+  ul
+    li.fragment Plus de dépendance
+    li.fragment Avant, utilisation de Adobe Flash
+
+  +img('video-html5.jpg')
 
 section
   h2 HTML5 (API JS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
