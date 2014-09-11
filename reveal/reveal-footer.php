@@ -5,7 +5,6 @@
     <div class="reveal-overlay"></div>
     <?php
     if (isset($_GET['a']) and isset($_GET['s']) and !empty($_GET['a']) and !empty($_GET['a'])) {
-      echo 'yep';
       $annee = $_GET['a'];
       $seance = $_GET['s'];
     ?>

@@ -1,8 +1,8 @@
 -var root = '/2/1/';
 mixin img (name)
   img.fragment.current-visible.overlay(class!=attributes.class,src=root+name)
-mixin li (name)
-  li.fragment= name
+mixin img2 (name)
+  img.fragment(class!=attributes.class,src=root+name)
 
 section
   h1 Intégration web FTW
@@ -284,17 +284,22 @@ section
           code progress
           |, 
           code meter
+          +img('progress.png')
+        li.fragment
+          code menu
+          |, 
+          code command
         li.fragment
           code keygen
-  +img('progress.png')
 
 section
-  h2 Nouveaux éléments
+  h2 Nouveaux formulaires
   ul
-    li.fragment Nouveaux types de formulaires:
-      ul
-        li.fragment Aide l'utilisateur, notamment sur mobile
-        li.fragment Pré-validation client inclue
+    li.fragment Meilleure intégration dans les apps
+    li.fragment Aide l'utilisateur, notamment sur mobile
+      +img('mobile-forms.jpg')
+    li.fragment Pré-validation client inclue
+      +img('html5-forms-validation.png')
   ul
     li.fragment Nouveaux 
       code &lt;input type="..."/>
@@ -324,11 +329,22 @@ section
           code placeholder
           |, 
           code autofocus
-  +img('mobile-forms.jpg')
   ul
     li.fragment Moins besoin de JavaScript
     li.fragment
       a(href='http://codylindley.com/native.html') Native HTML forms
+
+section
+  h2 Attributs personnalisés
+  ul
+    li.fragment Stockage de données dans le DOM
+    li.fragment 
+      code data-attributes
+      |, 
+      code data-*
+  pre.fragment
+    code.
+      &lt;div data-info="8">&lt;/div>
 
 section
   h2 ARIA
@@ -337,7 +353,7 @@ section
     li.fragment https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 
 section
-  h2 Nouvelles fonctionnalités
+  h2 Nouvelles fonctionnalités multimédias
   ul
     li.fragment Sons 
       code &lt;audio>
@@ -348,10 +364,294 @@ section
     li.fragment Plus de dépendance
     li.fragment Avant, utilisation de Adobe Flash
 
-  +img('video-html5.jpg')
+  +img2('video-html5.jpg')
+
+section
+  h2 Nouvelles fonctionnalités graphiques
+  ul
+    li.fragment
+      code canvas
+      |  pour du dessin matriciel (via JavaScript)
+      ul
+        li.fragment
+          a(href='http://www.craftymind.com/factory/html5video/CanvasVideo.html') Video Explosion
+    li.fragment WebGL (canvas 3D)
+      ul
+        li.fragment
+          a(href='http://kostar111.github.io/rando3D/demo/v1.2') Randonnée 3D
+        li.fragment
+          a(href='http://race.assassinscreedpirates.com/') Assassin's Creed Pirates
+    li.fragment SVG inline pour du dessin vectoriel
+      ul
+        li.fragment
+          a(href='http://snapsvg.io/demos/#coffee') Coffee Maker
+
+section
+  h1 HTML5: CSS!
+
+section
+  h2 CSS3
+  ul
+    li.fragment Combo gagnant avec HTML5
+    li.fragment Suite logique du langage CSS
+
+section
+  h2 CSS3, petite histoire
+  ul
+    li.fragment 1996: CSS1
+      ul
+        li.fragment Sélecteurs simples, positionnements basiques, tailles, marges, couleurs, polices, etc.
+    li.fragment 1998: CSS2
+      ul
+        li.fragment Abandonnée, car trop complexe
+    li.fragment 2011: CSS2.1
+      ul
+        li.fragment Version corrigée de CSS2
+    li.fragment Depuis 1999: CSS3
+      ul
+        li.fragment Standard fragmenté en modules
+        li.fragment Environ 50!
+    li.fragment CSS4 ne verra jamais le jour
+
+section
+  h2 Modules CSS3
+  ul
+    li.fragment
+      a(href='http://www.w3.org/Style/CSS/current-work') Current work W3C
+    li.fragment Chaque module a sa propre vie
+    li.fragment Chaque module a sa propre version:
+      ul
+        li.fragment Sélecteurs Niveau 3, Niveau 4
+        li.fragment Masques Niveau 1
+
+section
+  h2 Sélecteurs CSS3
+  ul
+    li.fragment Premier module en Recommandation
+    li.fragment Sélecteurs étoffés: 50+ sélecteurs, pseudo-classes, pseudo-éléments
+    li.fragment Ciblage précis des éléments
+      +img('selecteurs.jpg')
+    li.fragment Sélecteurs d'état de formulaires
+      +img('selecteurs-forms.png')
+    li.fragment
+      a(href='http://tools.css3.info/selectors-test/test.html') Selectors Test
+
+section
+  h2 Effets graphiques
+  ul
+    li.fragment Simplication de nombreux effets
+    li.fragment Limiter le nombre d'images
+    li.fragment Maintenance plus facile
+
+section
+  h2 Coins arrondis
+  pre.fragment.language-css
+    code.
+      .e {
+        border-radius: 10px;
+      }
+  ul
+    li.fragment Crée des coins arrondis
+    li.fragment Limite les images
+    li.fragment Simplifie le HTML et le CSS
+
+section
+  h2 Opacité et transparence
+  pre.fragment.language-css
+    code.
+      .e {
+        opacity: 0.5;
+      }
+  ul
+    li.fragment Rends un élément transparent
+  pre.fragment.language-css
+    code.
+      .e {
+        color: rgba(235, 162, 53, .5);
+      }
+  ul
+    li.fragment Applique une couleur transparente
+  +img('opacite.jpg')
+
+section
+  h2 Ombres
+  pre.fragment.language-css
+    code.
+      .e {
+        text-shadow: 2px 2px 5px black;
+      }
+  ul
+    li.fragment Ajoute des ombres sur texte
+  +img('ombres.jpg')
+  pre.fragment.language-css
+    code.
+      .e {
+        box-shadow: 2px 2px 5px (5px) black (inset);
+      }
+  ul
+    li.fragment Ajoute des ombres sur boites
+  +img('ombres3.jpg')
+
+section
+  h2 Dégradés
+  pre.fragment.language-css
+    code.
+      .e {
+        background: linear-gradient(to left, red, green);
+      }
+  ul
+    li.fragment Dégradés linéaires ou radiaux
+    li.fragment Simplifie grandement l'usage d'images
+  +img('degrades.jpg')
+  ul
+    li.fragment
+      a(href='http://www.css3create.com/Menu-sans-images') Menu sans images
+    li.fragment
+      a(href='http://slides.html5rocks.com/#logo-demo') Web 2.0 Logo Creatr
+
+section
+  h2 Transitions / Animations
+  ul
+    li.fragment
+      b Transitions
+      |: animer d'un état A à B
+  pre.fragment.language-css
+    code.
+      .e {
+        width: 100px;
+        transition: width 2s;
+      }
+      .e:hover {
+        width: 200px;
+      }
+  ul
+    li.fragment
+      a(href='http://www.css3create.com/Navigation-a-onglets-fluides-avec-les-transitions-CSS') Menu avec transitions
+
+section
+  h2 Transitions / Animations
+  ul
+    li.fragment
+      b Animations
+      |: animer plusieurs états
+  pre.fragment.language-css
+    code.
+      .e {
+        animation: taille 1s 2 alternate;
+      }
+      @keyframes taille {
+        from { width: 100px }
+        50%  { width: 300px }
+        to   { width: 200px }
+      }
+  ul
+    li.fragment
+      a(href='http://www.css3create.com/Slider-Galerie-photos-en-CSS3') Carroussel galerie photo
+    li.fragment
+      a(href='http://www.css3create.com/Animation-effet-bounce-en-CSS') Effet de rebond
+
+section
+  h2 Webfonts
+  ul
+    li.fragment Polices personnalisées
+  pre.fragment.language-css
+    code.
+      @font-face {
+        font-family: 'myFont';
+        src: url(myFont.woff);
+      }
+      h1 {
+        font-family: myFont;
+      }
+  +img('font-face.jpg')
+  ul
+    li.fragment
+      a(href='https://www.google.com/fonts') Google WebFonts
+      |  et d'autres
+
+section
+  h2 Transformations
+  pre.fragment.language-css
+    code.
+      .e {
+        transform: rotate(45deg) scale(.5);
+      }
+  ul
+    li.fragment Transforme un élément dans l'espace
+    li.fragment Animable!
+
+section
+  h2 Transformations 3D
+  pre.fragment.language-css
+    code.
+      .e {
+        transform: rotateY(45deg) rotateX(15deg);
+      }
+  ul
+    li.fragment Transforme en 3D
+    li.fragment Animable!
+    li.fragment
+      a(href='http://www.css3create.com/Effet-coverflow-en-full-CSS') Effet coverflow 3D
+    li.fragment
+      a(href='http://iamthecu.be/') Rubik's cube
+
+section
+  h2 Filtres
+  pre.fragment.language-css
+    code.
+      .e {
+        filter: blur(2px) grayscale(1);
+      }
+  ul
+    li.fragment Processing sur les éléments
+    li.fragment Animable!
+    li.fragment
+      a(href='http://www.css3create.com/Effets-de-survol-avec-transitions-et-filtres-CSS') Galerie photo
+
+section
+  h2 Media-queries
+  ul
+    li.fragment
+      a(href='http://www.w3.org/TR/CSS2/media.html') Media
+      |  depuis CSS2
+    li.fragment CSS3: Requête de média
+    li.fragment Adapter en fonction de critères
+    pre.fragment.language-css
+    code.
+      @media (max-width: 400px) {
+        .e {
+          background: yellow;
+        }
+      }
+    li.fragment Responsive Web Design!
+      +img('responsive.png')
+    li.fragment
+      a(href='http://mediaqueri.es') Showcase mediaqueri.es
+
 
 section
   h2 HTML5 (API JS)
+
+section
+  h2 Environnement client
+  ul
+    li.fragment
+      strong Graphique
+      ul
+        li.fragment Canvas (WebGL), SVG, CSS, RWD, etc.
+    li.fragment
+      strong Contenu
+      ul
+        li.fragment Elements d'UI, Offline, AppCache, History, etc.
+    li.fragment
+      strong Données
+      ul
+        li.fragment IndexedDB, WebStorage, WebSockets, WebRTC, etc.
+    li.fragment
+      strong Système
+      ul
+        li.fragment Géolocalisation, FileAPI, Battery, SMS, etc.
+
 
 
 

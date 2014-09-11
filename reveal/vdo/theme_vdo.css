@@ -50,22 +50,26 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
+  display: inline-block;
   margin: 0 0 20px 0;
+  padding: .2em;
   color: white;
-  color: #444;
   font-family: "Montserrat", sans-serif;
   line-height: 0.9em;
   letter-spacing: -0.05em;
   text-transform: none;
-  text-shadow: none; }
+  text-shadow: none;
+  background: #111;
+}
 
-.reveal h1 { font-size: 2.8em;  }
+.reveal h1 { font-size: 2.8em; background: #f03d36; }
 .reveal h2 { font-size: 1.8em;  }
 .reveal h3 { font-size: 1.1em; text-align: left; }
 .reveal h4 { font-size: 1em;    }
 
 .reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5); }
+  /* text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5); */
+}
 
 /*********************************************
  * CONTENT
@@ -235,7 +239,11 @@ body {
 .reveal img.overlay {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 10;
   margin: auto;
+  box-shadow: 0 5px 20px 5px rgba(0,0,0,.5), 0 50px 100px 50px rgba(0,0,0,.05);
+}
+.reveal img.visible {
   animation: overlay .4s 1 cubic-bezier(0,0,.1,1);
 }
 .reveal img.overlay--noborder {
