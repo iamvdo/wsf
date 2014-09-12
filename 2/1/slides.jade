@@ -1,4 +1,4 @@
--var root = '/2/1/';
+-var root = '/images/';
 mixin img (name)
   img.fragment.current-visible.overlay(class!=attributes.class,src=root+name)
 mixin img2 (name)
@@ -616,21 +616,140 @@ section
       |  depuis CSS2
     li.fragment CSS3: Requête de média
     li.fragment Adapter en fonction de critères
-    pre.fragment.language-css
+  pre.fragment.language-css
     code.
       @media (max-width: 400px) {
         .e {
           background: yellow;
         }
       }
-    li.fragment Responsive Web Design!
-      +img('responsive.png')
+
+section
+  h2 Responsive Web Design!
+  +img('responsive.png')
+  ul
+    li.fragment Philosophie de développement
     li.fragment
       a(href='http://mediaqueri.es') Showcase mediaqueri.es
 
 
 section
-  h2 HTML5 (API JS)
+  h1 HTML5: API JavaScript!
+
+section
+  h2 De nombreuses API...
+  ul
+    li.fragment Interactions avancées
+    li.fragment Stockage
+    li.fragment Accès système
+
+section
+  h2 Native drag and drop
+  ul
+    li.fragment Attribut
+      code draggable
+    li.fragment Nouveaux évènements
+    li.fragment
+      a(href='http://slides.html5rocks.com/#native-drag-and-drop') Drag&Drop demo
+
+section
+  h2 Géolocalisation
+  ul
+    li.fragment Coordonnées géographiques de l'utilisateur
+      ul
+        li.fragment Basé sur IP
+        li.fragment Basé sur puce GPS
+  pre.fragment.language-js
+    code.
+      navigator.geolocation.getCurrentPosition(function(position) {
+        console.log(position.coords.latitude, position.coords.longitude);
+      });
+  ul
+    li.fragment
+      a(href='http://slides.html5rocks.com/#geolocation') Géolocalisation démo
+
+section
+  h2 Device Orientation
+  ul
+    li.fragment Position du device dans l'espace
+      ul
+        li.fragment Angles alpha, beta, gamma
+  pre.fragment.language-js
+    code.
+      window.addEventListener('deviceorientation', function(event) {
+        var a = event.alpha;
+        var b = event.beta;
+        var g = event.gamma;
+      }, false);
+
+section
+  h2 Web Storage
+  ul
+    li.fragment
+      code localStorage
+      |, 
+      code sessionStorage
+    li.fragment Stockage persistent dans le navigateur
+    li.fragment Clé / valeur simples
+  pre.fragment.language-js
+    code.
+      localStorage.setItem('value', value);
+      localStorage.getItem('value');
+
+section
+  h2 IndexedDB
+  ul
+    li.fragment Stockage persistent dans le navigateur
+    li.fragment Base de donnée indexée
+    li.fragment Clé / valeur complexes
+
+section
+  h2 Appcache
+  ul
+    li.fragment Cache Manifest
+    li.fragment Gestion précise du cache
+  pre.fragment.language-markup
+    code.
+      &lt;html manifest="cache.appcache">
+  pre.fragment.language-text
+    code.
+      CACHE MANIFEST
+      # version 1.0.0
+
+      CACHE:
+      /html5/src/logic.js
+      /html5/src/style.css
+      /html5/src/background.png
+
+      NETWORK:
+      *
+  ul
+    li.fragment Permet mode offline sous conditions
+
+section
+  h2 File API (desktop drag in, drag out)
+  ul
+    li.fragment Manipulation de fichiers coté client
+    li.fragment Drag & Drop depuis le système
+    li.fragment
+      a(href='http://slides.html5rocks.com/#desktop-drag-in') Démo
+
+section
+  h2 WebWorkers
+  ul
+    li.fragment Lancer des scripts en parallèle
+    li.fragment Threads
+    li.fragment Performance
+
+section
+  h2 WebSockets
+  ul
+    li.fragment Communication full-duplex, bi-directionnelle
+    li.fragment Le serveur et le client peuvent envoyer des données
+    li.fragment Web temps-réel!
+    li.fragment http://mrdoob.com/projects/multiuserpad/
+    li.fragment
+      a(href='http://vladimir.sh/lab/bird') Flappy Bird temps-réel multijoueur
 
 section
   h2 Environnement client
@@ -651,6 +770,9 @@ section
       strong Système
       ul
         li.fragment Géolocalisation, FileAPI, Battery, SMS, etc.
+
+section
+  h2 Métiers?
 
 
 
