@@ -91,6 +91,9 @@ body {
 .reveal .citation cite::before {
   content: '-';
 }
+.reveal p {
+  text-align: left;
+}
 .reveal ul{
   display: block;
   margin: 30px 1.5em;
@@ -107,9 +110,12 @@ body {
 .reveal pre {
   position: relative;
   z-index: 1;
-  overflow: visible;
+  overflow: scroll;
   height: 110px;
   transition: z-index 0s .5s;
+}
+.reveal pre.large {
+  height: auto;
 }
 .reveal ul code,
 .reveal p code,
@@ -137,7 +143,10 @@ body {
     -o-tab-size: 3;
        tab-size: 3;
   transition: max-height .5s, height .5s;
-  box-shadow: 0 0 6px rgba(0,0,0,.8);
+}
+.reveal pre.large code {
+  max-height: inherit;
+  height: auto;
 }
 .reveal pre:hover {
   z-index: 10;

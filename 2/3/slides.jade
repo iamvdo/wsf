@@ -2,5 +2,1071 @@ section
   h1 HTML5
 
 section
-  h1 HTML5: HTML!
+  h2 XML anymore?
+  ul
+    li.fragment Pas aussi strict
+    li.fragment Non obligatoire de fermer les balises, mais 
+      strong fortement recommandé!
+    li.fragment Attributs sans valeur autorisés
+    li.fragment Le meilleur des 2 mondes
+
+section
+
+  section
+    h1 Nouvelle structure
+
+  section
+    h2 Nouveau doctype
+    pre.fragment.language-markup
+      code.
+        &lt;!doctype html>
+
+  section
+    h2: code &lt;html>
+    p.fragment Avant:
+    pre.fragment.language-markup
+      code.
+        &lt;html xmlns="..." lang="fr" xml:lang="fr">
+    ul
+      li.fragment Attributs redondants
+    p.fragment Maintenant:
+    pre.fragment.language-markup
+      code.
+        &lt;html lang="fr">
+    ul
+      li.fragment Attribut 
+        code lang
+        |  pour accessibilité
+
+  section
+    h2: code &lt;head>
+    p.fragment Meta 
+        code charset
+        |  simplifiée
+    pre.fragment.language-markup
+      code.
+        &lt;meta charset="utf-8">
+    ul
+      li.fragment  On la retient par coeur maintenant!
+
+  section
+    h2: code &lt;head>
+    p.fragment
+        code script
+        |  allégé
+    pre.fragment.language-markup
+      code.
+        &lt;script src="fichier.js">&lt;/script>
+    p.fragment
+        code link
+        |  allégé aussi
+    pre.fragment.language-markup
+      code.
+        &lt;link rel="stylesheet" href="fichier.css">
+
+  section
+    h2 Attributs sans valeur
+    p.fragment Plus simple d'utilisation
+    pre.fragment.language-markup
+      code.
+        &lt;input type="checkbox" checked>
+
+  section
+    h2 Structure complète
+    p.fragment Structure (hipster) minimale
+    pre.fragment.language-markup
+      code.
+        &lt;!doctype html>
+        &lt;title>Titre&lt;/title>
+        &lt;p>Contenu&lt;/p>
+    p.fragment Structure minimale à utiliser
+    pre.fragment.language-markup
+      code.
+        &lt;!doctype html>
+        &lt;html lang="fr">
+          &lt;head>
+            &lt;meta charset="utf-8">
+            &lt;title>Titre&lt;/title>
+          &lt;/head>
+          &lt;body>
+            &lt;p>Contenu&lt;/p>
+          &lt;/body>
+        &lt;/html>
+
+section
+
+  section
+    h1 Nouvelles balises structurelles
+  
+  section
+    h2 Pourquoi?
+    ul
+      li.fragment Segmenter le document
+      li.fragment Ajouter une sémantique précise
+      li.fragment Remplacer les 
+        code &lt;div id="menu">
+        |, 
+        code &lt;div id="sidebar">
+        |, etc, mais pas seulement
+      li.fragment N'empêche pas d'utiliser des 
+        code id
+        |  ou des 
+        code class
+
+  section
+    h2: code section
+    ul
+      li.fragment Définit une partie de page, d'application
+      li.fragment Contenu de même thème
+      li.fragment Ne pas sur-utiliser
+    pre.fragment.language-markup
+      code.
+        &lt;section>
+          &lt;h1>Articles&lt;/h1>
+          &lt;article>
+            &lt;p>Contenu&lt;/p>
+          &lt;/article>
+        &lt;/section>
+
+  section
+    h2: code article
+    ul
+      li.fragment Une section, axée rédaction
+      li.fragment Élément réutilisable hors contexte
+      li.fragment Indépendant
+      li.fragment Billet de blog, fiches informations, etc.
+    pre.fragment.language-markup
+      code.
+        &lt;article>
+          &lt;h1>Titre de l'article&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+        &lt;/article>
+
+  section
+    h2: code aside
+    ul
+      li.fragment Contenu annexe
+      li.fragment Apporte des informations complémentaires
+      li.fragment Pas primordial
+    pre.fragment.language-markup
+      code.
+        &lt;article>
+          &lt;p>Contenu&lt;/p>
+          &lt;aside>
+            &lt;p>Note: saviez-vous que...&lt;/p>
+          &lt;/aside>
+          &lt;p>Contenu&lt;/p>
+        &lt;/article>
+
+  section
+    h2: code header
+    ul
+      li.fragment Entête de section, pas uniquement du site
+      li.fragment Contient titres, logos, textes, navigation, pagination, dates, etc.
+    pre.fragment.language-markup
+      code.
+        &lt;article>
+          &lt;header>
+            &lt;h1>Titre de l'article&lt;/h1>
+            &lt;p>Écrit par moi&lt;/p>
+          &lt;/header>
+          &lt;p>Contenu&lt;/p>
+        &lt;/article>
+
+  section
+    h2: code footer
+    ul
+      li.fragment Pied de page de section, pas uniquement du site
+      li.fragment Contient titres, logos, textes, navigation, pagination, dates, etc.
+    pre.fragment.language-markup
+      code.
+        &lt;footer>
+          &lt;h1>À lire aussi:&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+        &lt;/footer>
+
+
+  section
+    h2: code nav
+    ul
+      li.fragment Liens de navigation
+      li.fragment Navigation principale princpalement
+    pre.fragment.language-markup
+      code.
+        &lt;nav>
+          &lt;ul>
+            &lt;li>&lt;a href="#">Accueil&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/nav>
+
+  section
+    h2
+      code figure
+      | et 
+      code figcaption
+    ul
+      li.fragment Définir une légende à un élément
+      li.fragment Images, vidéos, graphique, code, etc.
+    pre.fragment.language-markup
+      code.
+        &lt;figure>
+          &lt;img src="image.jpg" alt="">
+          &lt;figcaption>Oh la belle image&lt;/figcaption>
+        &lt;/figure>
+
+  section
+    h2 Outline
+    ul
+      li.fragment Nouveaux types d'éléments; plus seulement block et inline
+      li.fragment Sectioning content: 
+        code section
+        |, 
+        code article
+        |, 
+        code aside
+        |, 
+        code nav
+      li.fragment Portée des titres
+
+  section
+    h2 Cas classique
+    pre.fragment.language-markup
+      code.
+        &lt;body>
+          &lt;h1>Titre A&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+          &lt;h2>Titre B&lt;/h2>
+          &lt;p>Contenu&lt;/p>
+          &lt;h2>Titre C&lt;/h2>
+          &lt;p>Contenu&lt;/p>
+        &lt;/body>
+    p.fragment Donne:
+    ul.fragment
+      li 1. Titre A
+        ul
+          li 1.1 Titre B
+          li 1.2 Titre C
+
+  section
+    h2 Cas HTML5
+    pre.fragment.language-markup
+      code.
+        &lt;body>
+          &lt;h1>Titre A&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+          &lt;section>
+            &lt;h1>Titre B&lt;/h1>
+            &lt;p>Contenu&lt;/p>
+          &lt;/section>
+          &lt;h2>Titre C&lt;/h2>
+          &lt;p>Contenu&lt;/p>
+        &lt;/body>
+    p.fragment Donne:
+    ul.fragment
+      li 1. Titre A
+        ul
+          li 1.1 Titre B
+          li 1.2 Titre C
+    p.fragment Et non:
+    ul.fragment
+      li 1. Titre A
+      li 2. Titre B
+        ul
+          li 2.1 Titre C
+
+  section
+    h2 Internet Explorer
+    p.fragment Pour Internet Explorer 9-:
+    ul
+      li.fragment Les éléments sont inline par défaut
+      li.fragment Créer l'élément en JavaScript
+        ul
+          li.fragment: code document.createElement('section')
+      li.fragment Affichage en mode block en CSS
+        ul
+          li.fragment: code section { display: block }
+
+  section
+    h2 Outils / Code
+    ul
+      li.fragment
+        a(href='http://html5shiv.googlecode.com/svn/trunk/html5.js') HTML5 Shiv
+      li.fragment Utilisation des commentaires conditionnels
+    pre.fragment.language-markup
+      code.
+        &lt;!--[if lt IE 9]>
+          &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script>
+        &lt;![endif]-->
+
+  section
+    h2 Ressources
+    ul
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1374-html5-structure-globale-document.html') Structure HTML5
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1376-html5-section-article-nav-header-footer-aside.html') Nouveaux éléments
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1337-html5-elements-figure-et-figcaption.html') Éléments figure et figcaption
+      li.fragment
+        a(href='https://developer.mozilla.org/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document') Outline HTML5
+
+section
+
+  section
+    h1 Autres balises
+
+  section
+    h2 Balises redéfinies
+    ul
+      li.fragment Balise 
+        code &lt;a> 
+        ul
+          li.fragment Autorise d'englober des éléments blocks
+    p.fragment Avant:
+    pre.fragment.language-markup
+      code.
+        &lt;h4>&lt;a href="#">Titre&lt;/a>&lt;/h4>
+        &lt;p>&lt;a href="#">Texte&lt;/a>&lt;/p>
+    p.fragment Maintenant:
+    pre.fragment.language-markup
+      code.
+        &lt;a href="#">
+          &lt;h4>Titre&lt;/h4>
+          &lt;p>Texte&lt;/p>
+        &lt;/a>
+    +img('a-block.jpg')
+
+  section
+    h2 Balises redéfinies
+    p.fragment: code &lt;cite>
+    ul
+      li.fragment Pas une citation
+      li.fragment Le titre d'une oeuvre: livre, film, poème, etc.
+    pre.fragment.language-markup
+      code.
+        &lt;p>J'ai écrit le livre &lt;cite>CSS3 Le Design web moderne&lt;/cite>&lt;/p>
+    ul
+      li.fragment Citations: 
+        code q
+        |  (citations courtes), 
+        code blockquote
+        |  (citations longues)
+
+  section
+    h2 Balises redéfinies
+    p.fragment: code &lt;b>
+    ul
+      li.fragment Mettre en valeur sans sémantique
+    p.fragment: code &lt;i>
+    ul
+      li.fragment Changement de ton
+    ul
+      li.fragment Préférez toujours 
+        code &lt;strong>
+        |  et 
+        code &lt;em>
+
+  section
+    h2 Balises abandonnées
+    ul
+      li.fragment Balises de mise en forme
+        ul
+          li.fragment
+            code &lt;basefont>
+            |, 
+            code &lt;font>
+            |, 
+            code &lt;center>
+            |, 
+            code &lt;big>
+            |, 
+            code &lt;u>
+            |, 
+            code &lt;strike>
+      li.fragment Problèmes d'accessibilité
+        ul
+          li.fragment
+            code &lt;frame>
+            |, 
+            code &lt;frameset>
+            |, 
+            code &lt;noframes>
+      li.fragment Pas assez utilisées, ou entre en concurrence
+        ul
+          li.fragment
+            code &lt;acronym>
+            |, 
+            code &lt;applet>
+
+section
+
+  section
+    h1 Formulaires
+
+  section
+    h2 
+    ul
+      li.fragment Nouveaux attributs
+      li.fragment Nouveaux contrôles
+
+  section
+    h2 Attribut 
+      code placeholder
+    ul
+      li.fragment Valeur dans le champ
+      li.fragment Quand click: disparait.
+      li.fragment Ne remplace pas 
+        code &lt;label>
+    pre.fragment.language-markup
+      code.
+        &lt;label>Recherchez un auteur
+          &lt;input type="text" placeholder="Hugo, Zola, etc.">
+        &lt;/label>
+    +img('placeholder.jpg')
+
+  section
+    h2 Attribut 
+      code autofocus
+    ul
+      li.fragment Booléen
+      li.fragment Donne le focus au champ au chargement
+      li.fragment Sur 
+        code &lt;input>
+        |, 
+        code &lt;textarea>
+        |, 
+        code &lt;select>
+    pre.fragment.language-markup
+      code.
+        &lt;label>Recherchez un auteur
+          &lt;input type="text" autofocus>
+        &lt;/label>
+    ul
+      li.fragment
+        a(href='http://www.synonymes.com/') synonymes.com en aurait besoin
+
+  section
+    h2 Attribut 
+      code required
+    ul
+      li.fragment Booléen
+      li.fragment Rends le champ obligatoire
+      li.fragment Le formulaire ne peut pas être validé si le champ est vide
+    pre.fragment.language-markup
+      code.
+        &lt;label>Recherchez un auteur
+          &lt;input type="text" required>
+        &lt;/label>
+    +img('required.jpg')
+
+  section
+    h2 Attribut 
+      code autocomplete
+    ul
+      li.fragment Empêche les navigateurs de pré-remplir les champs
+    pre.fragment.language-markup
+      code.
+        &lt;form action="#" autocomplete="off">
+    pre.fragment.language-markup
+      code.
+        &lt;input type="text" autocomplete="off">
+
+  section
+    h2 Attribut 
+      code pattern
+    ul
+      li.fragment Règle de validation d'un champ
+      li.fragment Basé sur expression régulière
+    p.fragment Le texte doit commencer par "a"
+    pre.fragment.language-markup
+      code.
+        &lt;input type="text" pattern="^a">
+
+  section
+    h2 Attribut 
+      code novalidate
+    ul
+      li.fragment Empêche les navigateurs de valider les champs
+      li.fragment Règle les problèmes d'inconsistence et d'accessibilité
+    pre.fragment.language-markup
+      code.
+        &lt;form action="#" novalidate>
+    ul
+      li.fragment Existe également 
+        code formnovalidate
+        |  sur boutons de validation
+    pre.fragment.language-markup
+      code.
+        &lt;input type="submit" formnovalidate>
+
+  section
+    h2: code datalist
+    ul
+      li.fragment Nouveau type de champ
+      li.fragment À mi-chemin entre un 
+        code &lt;input>
+        |  et un 
+        code &lt;select>
+      li.fragment Liste de choix pour input, ou autre choix
+    pre.fragment.language-markup
+      code.
+        &lt;input type="text" list="auteurs">
+        &lt;datalist id="auteurs">
+          &lt;option>Hugo&lt;/option>
+          &lt;option>Zola&lt;/option>
+          &lt;option>Balzac&lt;/option>
+        &lt;/datalist>
+    +img('datalist.jpg')
+    ul
+      li.fragment
+        a(href='http://demo.agektmr.com/datalist/') Pas uniquement avec 
+          code &lt;input type="text">
+
+  section
+    h2: code &lt;input type="search">
+    ul
+      li.fragment Identique à 
+        code &lt;input type="text">
+      li.fragment Style différent dans WebKit
+    pre.fragment.language-markup
+      code.
+        &lt;input type="search">
+
+  section
+    h2: code &lt;input type="number">
+    ul
+      li.fragment Similaire à 
+        code &lt;input type="text">
+      li.fragment Contrôle supplémentaire
+      li.fragment N'accepte que des nombres
+      li.fragment Clavier adapté sur mobile
+      li.fragment Attributs 
+        code min
+        |, 
+        code max
+        |, 
+        code step
+    pre.fragment.language-markup
+      code.
+        &lt;input type="number" min="0" max="100" step="2">
+    +img2('input-number.jpg')
+
+  section
+    h2: code &lt;input type="email">
+    ul
+      li.fragment Similaire à 
+        code &lt;input type="text">
+      li.fragment N'accepte que des emails
+      li.fragment Clavier adapté sur mobile
+    pre.fragment.language-markup
+      code.
+        &lt;input type="email">
+    +img2('input-mail.jpg')
+
+  section
+    h2: code &lt;input type="tel">
+    ul
+      li.fragment Similaire à 
+        code &lt;input type="text">
+      li.fragment N'accepte que des nombres
+      li.fragment Clavier adapté sur mobile
+      li.fragment Pas de validation auto (mais attribut 
+        code pattern
+        |)
+    pre.fragment.language-markup
+      code.
+        &lt;input type="tel" pattern="^\d{10}">
+    +img2('input-tel.jpg')
+
+  section
+    h2: code &lt;input type="url">
+    ul
+      li.fragment Similaire à 
+        code &lt;input type="text">
+      li.fragment N'accepte que des URLs
+      li.fragment Clavier adapté sur mobile
+    pre.fragment.language-markup
+      code.
+        &lt;input type="url">
+
+  section
+    h2: code &lt;input type="range">
+    ul
+      li.fragment Type slider
+      li.fragment Attributs 
+        code min
+        |, 
+        code max
+        |, 
+        code step
+    pre.fragment.language-markup
+      code.
+        &lt;input type="range" min="0" max="50" value="10">
+    +img2('input-range.jpg')
+
+  section
+    h2: code &lt;input type="color">
+    ul
+      li.fragment Type sélecteur couleur
+      li.fragment Héxadécimal
+    pre.fragment.language-markup
+      code.
+        &lt;input type="color">
+    +img2('input-color.jpg')
+
+  section
+    h2: code &lt;input type="date">
+    ul
+      li.fragment Type sélecteur de date
+      li.fragment Format: Année, mois, jour
+      li.fragment 2014-10-05
+    pre.fragment.language-markup
+      code.
+        &lt;input type="date">
+    +img2('input-date.jpg')
+
+  section
+    h2: code &lt;input type="datetime-local">
+    ul
+      li.fragment Type sélecteur de date
+      li.fragment Format: Année, mois, jour, heures, minutes
+      li.fragment 2014-10-05T18:35
+    pre.fragment.language-markup
+      code.
+        &lt;input type="datetime-local">
+    +img2('input-datetime.jpg')
+
+  section
+    h2 Déclinaisons
+    ul
+      li.fragment: code &lt;input type="time">
+      li.fragment Format: Heures
+      li.fragment 18:35
+    ul
+      li.fragment: code &lt;input type="week">
+      li.fragment Format: Année, Semaine
+      li.fragment 2014-W42
+    ul
+      li.fragment: code &lt;input type="month">
+      li.fragment Format: Annee, mois
+      li.fragment 2014-10
+
+
+section
+
+  section
+    h1 Audio / Vidéo
+
+  section
+    h2 Élément 
+      code &lt;audio>
+    ul
+      li.fragment Intégrer un son
+      li.fragment Ne nécessite pas de plugin
+    p.fragment Source unique
+    pre.fragment.language-markup
+      code.
+        &lt;audio src="video.mp3">
+          Contenu alternatif
+        &lt;/audio>
+    p.fragment Sources multiples
+    pre.fragment.language-markup
+      code.
+        &lt;audio>
+          &lt;source src="audio.mp3" type="audio/mpeg">
+          &lt;source src="audio.ogg" type="audio/ogg">
+        &lt;/audio>
+
+  section
+    h2 Élément 
+      code &lt;video>
+    ul
+      li.fragment Intégrer une vidéo
+      li.fragment Ne nécessite pas de plugin
+    p.fragment Source unique
+    pre.fragment.language-markup
+      code.
+        &lt;video src="video.mp4" width="600" height="400">
+          Contenu alternatif
+        &lt;/video>
+    p.fragment Sources multiples
+    pre.fragment.language-markup
+      code.
+        &lt;video width="600" height="400">
+          &lt;source src="video.mp4" type="video/mp4">
+          &lt;source src="video-hd.mp4" type="video/mp4">
+        &lt;/video>
+
+  section
+    h2 Attributs audio / vidéo
+    p.fragment
+      code controls
+    ul
+      li.fragment Affiche / masque les contrôles
+    p.fragment
+      code preload
+    ul
+      li.fragment Préchargement avant lecture
+      li.fragment Valeurs
+        code auto
+        |, 
+        code metadata
+        |  ou 
+        code none
+      li.fragment À utiliser avec prudence
+    p.fragment
+      code autoplay
+    ul
+      li.fragment Lance la lecture automatiquement
+      li.fragment À utiliser avec prudence également (mobilité)
+    p.fragment
+      code loop
+    ul
+      li.fragment Lecture en boucle
+    p.fragment
+      code poster="image.jpg"
+      |  (vidéo uniquement)
+    ul
+      li.fragment Affiche image.jpg avant la lecture de la vidéo
+    
+
+  section
+    h2 Formats
+    ul
+      li.fragment WebM
+        ul
+          li.fragment Libre et gratuit
+          li.fragment Lancé par Google
+          li.fragment OK sur Firefox, Chrome, Opera
+          li.fragment Type MIME: 
+            code type="audio/webm"
+            |, 
+            code type="video/webm"
+      li.fragment OGG Theora
+        ul
+          li.fragment Libre et gratuit
+          li.fragment OK sur Firefox, Chrome, Opera
+          li.fragment Type MIME: 
+            code type="audio/ogg"
+            |, 
+            code type="video/ogg"
+      li.fragment MP4
+        ul
+          li.fragment Non libre et non gratuit
+          li.fragment Gratuit pour diffusion gratuite
+          li.fragment OK sur Safari (+iAppareils), IE9
+          li.fragment Type MIME: 
+            code type="audio/mp4"
+            |, 
+            code type="video/mp4"
+      li.fragment
+        code type="audio/mpeg"
+        |, 
+        code type="audio/wave"
+      li.fragment
+        a(href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility') Aussi une histoire de codecs
+
+  section
+    h2 Formats
+    ul
+      li.fragment Convertir vos fichiers vidéos
+        ul
+          li.fragment
+            a(href='http://www.mirovideoconverter.com/') Miro converter
+      li.fragment Configurez le serveur (.htaccess)
+    pre.fragment.language-txt
+      code.
+        AddType video/mp4  .mp4 .m4v
+        AddType video/webm .webm
+        AddType video/ogg  .ogv
+
+        AddType audio/aac .aac
+        AddType audio/mp4 .mp4 .m4a
+        AddType audio/mpeg .mp1 .mp2 .mp3 .mpg .mpeg
+        AddType audio/ogg .oga .ogg
+        AddType audio/wav .wav
+        AddType audio/webm .webm
+
+  section
+    h2 Proposer une alternative
+    ul
+      li.fragment Élément 
+        code object
+        |: recours à Flash
+    pre.fragment.language-markup
+      code.
+        &lt;video width="600" height="400">
+          &lt;source src="video.mp4" type="video/mp4">
+          &lt;source src="video.webm" type="video/webm">
+
+          &lt;object type="application/x-shockwave-flash" width="600" height="400" data="http://www.youtube.com/v/HVMoJqg41Bw">
+            &lt;param name="movie" value="http://www.youtube.com/v/HVMoJqg41Bw" />
+            &lt;param name="wmode" value="transparent" />
+            Contenu alternatif
+          &lt;/object>
+
+        &lt;/video>
+
+  section
+    h2 Media Elements API
+    ul
+      li.fragment API complète pour gérer les médias
+      li.fragment Propriétés
+        ul
+          li.fragment
+            code currentTime
+          li.fragment
+            code duration
+          li.fragment
+            code volume
+          li.fragment
+            a(href='https://developer.mozilla.org/fr/docs/Web/API/HTMLMediaElement#Properties') etc.
+      li.fragment Méthodes
+        ul
+          li.fragment
+            code play()
+          li.fragment
+            code pause()
+          li.fragment
+            a(href='https://developer.mozilla.org/fr/docs/Web/API/HTMLMediaElement#Method') etc.
+      li.fragment Évènements
+        ul
+          li.fragment
+            code ended
+            |, 
+            code loadedfirstframe
+            |, 
+            code pause
+            |, 
+            code play
+            |, 
+            code seeked
+            |, 
+            code volumechange
+            |, 
+            a(href='https://developer.mozilla.org/fr/docs/Web/HTML/Utilisation_d\'audio_et_video_en_HTML5') etc.
+
+  section
+    h2 TP!
+    ul
+      li.fragment Lecteur Vidéo en HTML5:
+        ul
+          li.fragment Insérer une vidéo
+          li.fragment Créer boutons: play, pause, stop
+          li.fragment Créer barre de progression
+      li.fragment Si vous avez le temps
+        ul
+          li.fragment Contrôle du volume
+          li.fragment Plein écran
+
+
+section
+
+  section
+    h1 Microdonnées
+
+  section
+    h2 Pourquoi
+    ul
+      li.fragment Une page web: un flux d'informations
+      li.fragment Apport de sémantique
+      li.fragment Exemples: actualités, évènements, localisation, carte de visite, fiche produit, films, etc.
+      li.fragment SEO, rich snippets
+        +img2('richsnippet.jpg')
+
+  section
+    h2 Histoire
+    ul
+      li.fragment 3 spécifications
+      li.fragment RDFa
+        ul
+          li.fragment Resource Description Framework in attributes
+          li.fragment -) Un peu trop complexe
+          li.fragment -) Jamais vraiment utilisé
+      li.fragment Microformats
+        ul
+          li.fragment Basé sur classes HTML
+          li.fragment Différents types d'objet
+            pre.fragment.language-markup
+              code.
+                &lt;span class="vcard">
+                  &lt;span class="fn">Vincent De Oliveira&lt;/span>, 
+                  &lt;span class="org">ENSG&lt;/span>
+                &lt;/span>
+          li.fragment +) Fontionne très bien
+          li.fragment -) 
+            a(href='http://www.marmiton.org/recettes/recette_mojito-cubain_80528.aspx') Difficultés pour s'y retrouver
+          li.fragment -) Conflit avec d'autres classes
+
+  section
+    h2 Microdata
+    ul
+      li.fragment
+        a(href='http://schema.org') Schema.org
+        ul
+          li.fragment Ensemble de définitions de microdonnées
+          li.fragment Poussé par Google, Bing, Yahoo
+          li.fragment Mieux que les autres
+          li.fragment
+            a(href='http://www.google.com/webmasters/tools/richsnippets') Outil de test
+      li.fragment Basé sur attributs HTML:
+        ul
+          li.fragment
+            code itemscope
+            |: booleén. Nouvel object sémantique
+          li.fragment
+            code itemtype
+            |: type d'élément sémantique, défini sur Schema.org
+          li.fragment
+            code itemprop
+            |: propriétés de l'objet
+
+  section
+    h2 Microdata
+    ul
+      li.fragment Cas d'une fiche de film:
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche">
+          &lt;h1>Pirates of the Carribean On Stranger Tides 2011&lt;/h1>
+          &lt;p>Jack Sparrow and Barbossa embark on a quest to find the elusive fountain of youth only to discover that Blackbeard and his daughter are after it too.&lt;/p>
+          &lt;p>Director: Rob Marshall&lt;/p>
+          &lt;p>Writers: Ted Elliott, Terry Rossio, and 7 more credits&lt;/p>
+          &lt;p>Stars: Johnny Depp, Penelope Cruz, Ian McShane&lt;/p>
+          &lt;p>8/10 stars from 200 users. Reviews: 50.&lt;/p>
+        &lt;/div>
+
+  section
+    h2 Microdata
+    ul
+      li.fragment Création d'un nouvel object sémantique
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche" itemscope>
+          &lt;h1>Pirates of the Carribean On Stranger Tides 2011&lt;/h1>
+          &lt;p>Jack Sparrow and Barbossa embark on a quest to find the elusive fountain of youth only to discover that Blackbeard and his daughter are after it too.&lt;/p>
+          &lt;p>Director: Rob Marshall&lt;/p>
+          &lt;p>Writers: Ted Elliott, Terry Rossio, and 7 more credits&lt;/p>
+          &lt;p>Stars: Johnny Depp, Penelope Cruz, Ian McShane&lt;/p>
+          &lt;p>8/10 stars from 200 users. Reviews: 50.&lt;/p>
+        &lt;/div>
+
+  section
+    h2 Microdata
+    ul
+      li.fragment Préciser le type d'objet
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche" itemscope itemtype="http://schema.org/Movie">
+          ...
+        &lt;/div>
+    ul
+      li.fragment Type 
+        a(href='http://schema.org/Movie') Movie
+
+  section
+    h2 Microdata
+    ul
+      li.fragment Ajout des propriétés
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche" itemscope itemtype="http://schema.org/Movie">
+          &lt;h1 itemprop="name">Pirates of the Carribean On Stranger Tides 2011&lt;/h1>
+          &lt;p itemprop="description">Jack Sparrow and Barbossa embark on a quest to find the elusive fountain of youth only to discover that Blackbeard and his daughter are after it too.&lt;/p>
+          &lt;p>Director: &lt;span itemprop="director">Rob Marshall&lt;/span>&lt;/p>
+          &lt;p>Writers: &lt;span itemprop="author">Ted Elliott&lt;/span>, &lt;span itemprop="author">Terry Rossio&lt;/span>, and 7 more credits&lt;/p>
+          &lt;p>Stars: &lt;span itemprop="actor">Johnny Depp&lt;/span>, &lt;span itemprop="actor">Penelope Cruz&lt;/span>, &lt;span itemprop="actor">Ian McShane&lt;/span>&lt;/p>
+          &lt;p itemprop="aggregateRating">8/10 stars from 200 users. Reviews: 50.&lt;/p>
+        &lt;/div>
+    ul
+      li.fragment Type 
+        a(href='http://schema.org/Movie') Movie
+      li.fragment Problème sur le rating
+
+  section
+    h2 Microdata
+    ul
+      li.fragment Imbrication
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche" itemscope itemtype="http://schema.org/Movie">
+          ...
+          &lt;p itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            &lt;span itemprop="ratingValue">8&lt;/span>/&lt;span itemprop="bestRating">10&lt;/span> stars from &lt;span itemprop="ratingCount">200&lt;/span> users.
+            Reviews: &lt;span itemprop="reviewCount">50&lt;/span>.&lt;/p>
+        &lt;/div>
+
+  section
+    h2 Valeurs
+    ul
+      li.fragment Valeur de la propriété = contenu
+      li.fragment Sauf 
+        a(href='http://www.w3.org/TR/microdata/#values') cas particuliers
+      li.fragment Utilisation de 
+        code content
+        | dans cas complexes
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche" itemscope itemtype="http://schema.org/Movie">
+          ...
+          &lt;p>Voir la &lt;a itemprop="trailer" href="http://">bande-annonce&lt;/a>&lt;/p>
+        &lt;/div>
+    ul
+      li.fragment La valeur n'est pas bande-annonce, mais l'URL
+
+  section
+    h2 Éléments externes:
+    ul
+      li.fragment Cas d'une propriété hors l'objet
+      li.fragment 
+        code itemref
+        |  sur objet sémantique
+      li.fragment
+        code id
+        | sur propriété
+    pre.fragment.large
+      code.language-markup.
+        &lt;div class="fiche" itemref="award" itemscope itemtype="http://schema.org/Movie">
+          ...
+        &lt;/div>
+        ...
+        &lt;p>Le fim a reçu le &lt;span id="award" itemprop="award">prix Bateau de Pirates&lt;/span>&lt;/p>
+
+  section
+    h2 TP!
+    ul
+      li.fragment Nouvel album de U2
+      li.fragment MusicAlbum, MusicGroup, MusicRecording
+      li.fragment Durées au format 
+        a(href='http://en.wikipedia.org/wiki/ISO_8601#Durations') ISO 8601
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

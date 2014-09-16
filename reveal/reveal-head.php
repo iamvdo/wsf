@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="/reveal/css/reveal.min.css">
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="/reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="/reveal/plugin/prismjs/prism.css">
     <link rel="stylesheet" href="/reveal/vdo/theme_vdo.css" id="theme">
     <link rel="stylesheet" href="/reveal/plugin/nav/nav.css">
 

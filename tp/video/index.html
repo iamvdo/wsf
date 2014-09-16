@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Player vidéo HTML5</title>
+  <style>
+  html {
+    font: 1em sans-serif;
+  }
+  .video {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+
+<div class="video">
+
+  <h1>Lecteur vidéo HTML5</h1>
+
+  <video width="300" poster="/images/video-poster.jpg">
+    <source src="/media/video.mp4" type="video/mp4" />
+    <source src="/media/video.webm" type="video/webm" />
+  </video>
+
+  <div class="controls">
+    <button class="button button--play">play</button>
+    <button class="button button--pause">pause</button>
+    <button class="button button--stop">stop</button>
+    <input  class="time" type="range" value="0" min="0" max="100">
+  </div>
+</div>
+  
+  <script>
+  var timer;
+  var buttons = {
+    play: document.querySelector('.button--play'),
+    pause: document.querySelector('.button--pause'),
+    stop: document.querySelector('.button--stop'),
+    time: document.querySelector('.time')
+  };
+  var setTime = function () {
+    console.log('timer');
+    var elapsed = (video.obj.currentTime * 100) / video.obj.duration;
+    if (elapsed >= 100) {
+      video.stopVideo();
+    } else {
+      buttons.time.value = elapsed;
+    }
+  };
+  var video = {
+    obj: document.querySelector('video'),
+    state: 'STOP',
+    playVideo: function () {
+      this.state = 'PLAY';
+      this.obj.play();
+      this.syncVideoTime();
+    },
+    pauseVideo: function () {
+      this.state = 'PAUSE';
+      this.obj.pause();
+      this.unSyncVideoTime();
+    },
+    stopVideo: function () {
+      this.state = 'STOP';
+      this.obj.pause();
+      this.obj.currentTime = 0;
+      buttons.time.value = 0;
+      this.unSyncVideoTime();
+    },
+    timeVideo: function (event) {
+      this.obj.currentTime = (buttons.time.value * video.obj.duration) / 100;
+      this.syncVideoTime();
+    },
+    syncVideoTime: function () {
+      console.log('play', this.obj.play);
+      if (this.state === 'PLAY') {
+        timer = setInterval(setTime.bind(video), 10);
+      }
+    },
+    unSyncVideoTime: function () {
+      clearInterval(timer);
+    }
+  };
+  buttons.play.addEventListener('click', video.playVideo.bind(video));
+  buttons.pause.addEventListener('click', video.pauseVideo.bind(video));
+  buttons.stop.addEventListener('click', video.stopVideo.bind(video));
+  buttons.time.addEventListener('mousedown', video.unSyncVideoTime.bind(video));
+  buttons.time.addEventListener('change', video.timeVideo.bind(video));
+  </script>
+</body>
+</html>
