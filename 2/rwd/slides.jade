@@ -1,3 +1,270 @@
 section
   h1 RWD: Responsive Web Design
 
+section
+  h2 Constat
+  ul
+    li.fragment Multitude d'écrans
+    li.fragment De très petit à très grand
+      +img('01-responsive.jpg')
+    li.fragment Nécessité d'adapter le contenu
+
+section
+  h2 Stratégie
+  ul
+    li.fragment Choix possibles
+      ul
+        li.fragment Affichage 1:1 (taille réelle)
+        li.fragment Affichage au mieux (mise à l'échelle)
+        li.fragment Affichage adaptatif
+  +img2('stategy.jpg')
+
+section
+  h2 Techniquement
+  ul
+    li.fragment Deux sites (desktop et mobile)
+      ul
+        li.fragment Besoin de détection de user-agent
+        li.fragment Evolue trop vite
+        li.fragment Pas que 2 tailles
+        li.fragment etc.
+    li.fragment Un site unique, adaptatif
+      ul
+        li.fragment La meilleure stratégie!
+        li.fragment Mais ça dépend des projets
+
+section
+
+  section
+    h1 Affichage
+
+  section
+    h2 Les surfaces d'affichage
+    ul
+      li.fragment Sur mobile, 3 notions d'affichage:
+        ul
+          li.fragment Surface réelle
+          li.fragment Surface déclarée
+          li.fragment Le viewport
+    +img2('03-mobile2.jpg')
+
+  section
+    h2 Surface réelle
+    ul
+      li.fragment C'est le nombre physique de pixels de l'écran
+      li.fragment Par exemple:
+        ul
+          li.fragment iPhone5: 640 x 1136px
+          li.fragment Nexus5: 1080 x 1920px
+          li.fragment iPad mini: 768 x 1024px
+          li.fragment Nexus7 (v1): 800 x 1280px
+    ul
+      li.fragment En CSS, c'est <code>screen-width</code>, <code>screen-height</code>
+      li.fragment Non modifiable
+
+  section
+    h2 Surface déclarée
+    ul
+      li.fragment C'est le nombre de pixels que le téléphone pense avoir
+      li.fragment Par exemple:
+        ul
+          li.fragment iPhone5: 320 x 568px (1:2)
+          li.fragment Nexus5: 360 x 640px (1:3)
+          li.fragment iPad mini: 768 x 1024px (1:1)
+          li.fragment Nexus7 (v1): 603 x 966px (1:1.325)
+    ul
+      li.fragment 1 pixel CSS ne vaut donc pas toujours 1px écran
+      li.fragment En CSS, c'est <code>device-width</code>, <code>device-height</code>
+      li.fragment Non modifiable
+
+  section
+    h2 Le viewport
+    ul
+      li.fragment C'est la zone fictive d'affichage dans laquelle le site est rendu
+        ul
+          li.fragment Généralement plus grande au départ
+          li.fragment Pas égale à la surface réelle, ni à la surface virtuelle
+      li.fragment Puis adaptée ensuite dans la surface déclarée
+        ul
+          li.fragment Zoom dynamique (facteur d'échelle)
+          li.fragment = (<code>device-width</code> / viewport)
+
+  section
+    h2 Le viewport
+    +img2('viewport.jpg')
+
+  section
+    h2 Problèmes
+    ul
+      li.fragment Le viewport dépend du navigateur (et même du réglage de l'utilisateur)
+      li.fragment Par exemple:
+        ul
+          li.fragment iPhone5: 980px
+          li.fragment Nexus5: ça dépend
+          li.fragment iPad mini: 980px
+          li.fragment Nexus7 (v1): ça dépend
+      li.fragment Modifiable!
+
+  section
+    h2 Modifier le viewport
+    ul
+      li.fragment Balise meta
+        ul
+          li.fragment <code>&lt;meta name="viewport" content=""></code>
+    ul
+      li.fragment Modifier le zoom d'affichage
+        ul
+          li.fragment <code>&lt;meta name="viewport" content="initial-scale=1"></code>
+      li.fragment Modifier la taille du viewport
+        ul
+          li.fragment <code>&lt;meta name="viewport" content="width=400px"></code>
+    ul
+      li.fragment Utiliser les constantes du matériel
+        ul
+          li.fragment <code>&lt;meta name="viewport" content="width=device-width"></code>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Media-Queries
+
+section.language-css
+
+  section
+    h1 Média-queries
+
+  section
+    h2 CSS et médias
+    ul
+      li.fragment Les médias existent depuis toujours
+        ul
+          li.fragment Par exemple le média <code>print</code>
+      li.fragment Attribut <code>media</code> en HTML
+        ul
+          li.fragment <code>&lt;link rel="stylesheet" media="screen" href="screen.css" /></code>
+          li.fragment <code>&lt;link rel="stylesheet" media="print" href="print.css" /></code>
+      li.fragment Règle <code>@media</code> en CSS
+        ul
+          li.fragment <code>@media print { .elem { ... } }</code>
+      li.fragment En CSS3, requête de médias: les media-queries!
+
+  section
+    h2 Media-queries
+    ul
+      li.fragment Critères pour cibler des périphériques particuliers
+    pre.fragment
+      code.
+        @media (max-width: 600px) {
+          .e {
+            color: red;
+          }
+        }
+    ul
+      li.fragment Styles appliqués seulement si la largeur du viewport est inférieure à 600px
+
+  section
+    h2 Media-queries
+    ul
+      li.fragment Combinaisons possibles. Exemples:
+        ul
+          li.fragment <code>@media screen and (max-width: 600px)</code>
+          li.fragment <code>@media print and (max-width: 15cm)</code>
+          li.fragment <code>@media (min-width: 200px) and (max-width: 400px)</code>
+      li.fragment Les autres critères existants:
+        ul
+          li.fragment <code>(min|max)-device-height</code>
+          li.fragment <code>orientation: (landscape|portrait)</code>
+          li.fragment <code>(min|max)-device-aspect-ratio</code>
+          li.fragment <code>(min|max)-resolution</code> (en <code>dppx</code>)
+          li.fragment et d'autres
+
+  section
+    h2 Support media-queries
+    ul
+      li.fragment IE9+
+    ul
+      li.fragment <code>resolution</code> et <code>dppx</code> non supporté par WebKit (Chrome, Safari)
+        ul
+          li.fragment <code>device-pixel-ratio</code> en attendant
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Adapter un site
+
+section.language-css
+
+  section
+    h1 Adapter un site
+
+  section
+    h2 En CSS
+    ul
+      li.fragment Prévoir de s'adapter aux différentes largeurs
+      li.fragment Abandonnez les tailles fixes
+        ul
+          li.fragment Utilisez les pourcentages
+          li.fragment Utilisez <code>max-width</code>, <code>min-width</code>
+          li.fragment Limitez les <code>float</code>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- SVG
+
+section.language-css
+
+  section
+    h1 SVG
+
+  section
+    h2 SVG
+
