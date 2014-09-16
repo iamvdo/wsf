@@ -64,7 +64,7 @@ body {
 
 .reveal h1 { font-size: 2.8em; background: #f03d36; }
 .reveal h2 { font-size: 1.8em;  }
-.reveal h3 { font-size: 1.1em; text-align: left; }
+.reveal h3 { font-size: 1.1em; text-align: left; display: block; background: transparent; color: #111;}
 .reveal h4 { font-size: 1em;    }
 
 .reveal h1 {
@@ -111,7 +111,7 @@ body {
   position: relative;
   z-index: 1;
   overflow: scroll;
-  height: 110px;
+  /*height: 110px;*/
   transition: z-index 0s .5s;
 }
 .reveal pre.large {
@@ -131,12 +131,14 @@ body {
 .reveal pre code {
   color: black;
   position: relative;
-  max-height: 100px;
-  height: 100px;
+  max-height: inherit;
+  height: auto;
+  /*max-height: 100px;
+  height: 100px;*/
   font-family: Consolas, Monaco, monospace;
   font-weight: bold;
   font-size: 1.7em;
-  line-height: 1.2;
+  line-height: 1.5;
   white-space: pre;
   background: #FFF;
   -moz-tab-size: 3;
@@ -341,6 +343,26 @@ body {
      -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.reveal .slides>section>section[data-transition=default].past,
+.reveal .slides>section>section.past {
+  display: block;
+  opacity: 0;
+
+  -webkit-transform: translate3d(0, -300px, 0) rotateX(0deg) translate3d(0, -300px, 0);
+     -moz-transform: translate3d(0, -300px, 0) rotateX(0deg) translate3d(0, -300px, 0);
+      -ms-transform: translate3d(0, -300px, 0) rotateX(0deg) translate3d(0, -300px, 0);
+          transform: translate3d(0, -300px, 0) rotateX(0deg) translate3d(0, -300px, 0);
+}
+.reveal .slides>section>section[data-transition=default].future,
+.reveal .slides>section>section.future {
+  display: block;
+  opacity: 0;
+
+  -webkit-transform: translate3d(0, 300px, 0) rotateX(0deg) translate3d(0, 300px, 0);
+     -moz-transform: translate3d(0, 300px, 0) rotateX(0deg) translate3d(0, 300px, 0);
+      -ms-transform: translate3d(0, 300px, 0) rotateX(0deg) translate3d(0, 300px, 0);
+          transform: translate3d(0, 300px, 0) rotateX(0deg) translate3d(0, 300px, 0);
 }
 .reveal[data-transition-speed="slow"] .slides section {
   -webkit-transition-duration: 1000ms;

@@ -9,7 +9,8 @@
       $seance = $_GET['s'];
     ?>
     <script src="browserify.js"></script>
-    <script>VDO('slides', <?php echo $annee; ?>, <?php echo $seance; ?>);</script>
+    <script>VDO('slides', '<?php echo $annee; ?>', '<?php echo $seance; ?>');</script>
+    <script src="/reveal/plugin/live-coding/live-coding.js"></script>
     <?php
     }
     ?>
@@ -41,11 +42,11 @@
           //{ src: '/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           //{ src: '/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           //{ src: '/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '/reveal/plugin/prismjs/prism.js', async: true },
+          //{ src: '/reveal/plugin/prismjs/prism.js', async: true },
           { src: '/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: '/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
           //{ src: '/reveal/plugin/prefixfree/prefixfree.js', async: true },
-          { src: '/reveal/plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }},
+          //{ src: '/reveal/plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }},
           { src: '/reveal/plugin/nav/nav.js', async: true}
         ]
       });
