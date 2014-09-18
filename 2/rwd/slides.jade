@@ -2,12 +2,21 @@ section
   h1 RWD: Responsive Web Design
 
 section
+  h2 RWD?
+  ul
+    li.fragment Mot de l'année en 2013
+    li.fragment Incontournable dans une stratégie web
+
+section
   h2 Constat
   ul
     li.fragment Multitude d'écrans
     li.fragment De très petit à très grand
-      +img('01-responsive.jpg')
-    li.fragment Nécessité d'adapter le contenu
+      +img('devices.jpg')
+    li.fragment Nécessité d'adapter le contenu pour:
+      ul
+        li.fragment Offrir un confort de navigation
+        li.fragment Expérience de lecture optimale
 
 section
   h2 Stratégie
@@ -22,16 +31,60 @@ section
 section
   h2 Techniquement
   ul
-    li.fragment Deux sites (desktop et mobile)
+    li.fragment Deux méthodes:
       ul
-        li.fragment Besoin de détection de user-agent
-        li.fragment Evolue trop vite
-        li.fragment Pas que 2 tailles
-        li.fragment etc.
-    li.fragment Un site unique, adaptatif
+        li.fragment Sité dédié
+        li.fragment Site unique, adaptatif
+
+section
+  h2 Sité dédié
+  ul
+    li.fragment Plusieurs sites (URLs) distincts (desktop, mobile, autre)
+    li.fragment Les +:
       ul
-        li.fragment La meilleure stratégie!
-        li.fragment Mais ça dépend des projets
+        li.fragment Contrôle précis du contenu de chaque version
+        li.fragment Workflow séparé
+    li.fragment Les -:
+      ul
+        li.fragment Contenu dupliqué (duplicate content)
+        li.fragment Maintenance de plusieurs versions, SEO
+        li.fragment Détection de user-agent (technique non fiable)
+
+section
+  h2 Sité adaptatif
+  ul
+    li.fragment Un site unique
+    li.fragment Les +:
+      ul
+        li.fragment Maintenance
+        li.fragment Évolutions
+        li.fragment Déploiement multi-plateformes
+    li.fragment Les -:
+      ul
+        li.fragment Contenu identique entre les "versions"
+        li.fragment Workflow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Affichage
 
 section
 
@@ -66,6 +119,7 @@ section
     h2 Surface déclarée
     ul
       li.fragment C'est le nombre de pixels que le téléphone pense avoir
+      li.fragment Le nombre de "pixels CSS"
       li.fragment Par exemple:
         ul
           li.fragment iPhone5: 320 x 568px (1:2)
@@ -74,6 +128,10 @@ section
           li.fragment Nexus7 (v1): 603 x 966px (1:1.325)
     ul
       li.fragment 1 pixel CSS ne vaut donc pas toujours 1px écran
+        ul
+          li.fragment Ratio (unité 
+            code dppx
+            |)
       li.fragment En CSS, c'est <code>device-width</code>, <code>device-height</code>
       li.fragment Non modifiable
 
@@ -81,13 +139,13 @@ section
     h2 Le viewport
     ul
       li.fragment C'est la zone fictive d'affichage dans laquelle le site est rendu
+      li.fragment Généralement plus grande au départ
         ul
-          li.fragment Généralement plus grande au départ
-          li.fragment Pas égale à la surface réelle, ni à la surface virtuelle
-      li.fragment Puis adaptée ensuite dans la surface déclarée
+          li.fragment Pas égale à la surface réelle, ni à la surface déclarée
+      li.fragment Mais adaptée ensuite dans la surface déclarée
         ul
-          li.fragment Zoom dynamique (facteur d'échelle)
-          li.fragment = (<code>device-width</code> / viewport)
+          li.fragment Zoom dynamique (facteur d'échelle) = (<code>device-width</code> / viewport)
+          li.fragment Ex: iPhone5: (320 / 980) = 0.326
 
   section
     h2 Le viewport
@@ -110,18 +168,67 @@ section
     ul
       li.fragment Balise meta
         ul
-          li.fragment <code>&lt;meta name="viewport" content=""></code>
+          li.fragment
+            code &lt;meta name="viewport" content="">
+          li.fragment Ajouté par Apple pour l'iPhone1
     ul
-      li.fragment Modifier le zoom d'affichage
-        ul
-          li.fragment <code>&lt;meta name="viewport" content="initial-scale=1"></code>
-      li.fragment Modifier la taille du viewport
-        ul
-          li.fragment <code>&lt;meta name="viewport" content="width=400px"></code>
+      li.fragment Sans viewport spécifié
+    +img('meta-viewport1.jpg')
+
+  section
+    h2 Modifier la taille du viewport
+    ul
+      li.fragment
+        code &lt;meta name="viewport" content="width=320px">
+    +img('meta-viewport3-1.jpg')
+    ul
+      li.fragment Éléments plus grands: agrandissent le viewport
+    +img('meta-viewport3.jpg')
     ul
       li.fragment Utiliser les constantes du matériel
         ul
-          li.fragment <code>&lt;meta name="viewport" content="width=device-width"></code>
+          li.fragment
+            code &lt;meta name="viewport" content="width=device-width">
+
+  section
+    h2 Modifier le zoom d'affichage
+    ul
+      li.fragment
+        code &lt;meta name="viewport" content="initial-scale=1">
+    +img('meta-viewport2.jpg')
+
+  section
+    h2 Autres valeurs de viewport
+    ul
+      li.fragment
+        code width
+        |  et 
+        code height
+      li.fragment
+        code initial-scale
+        |  et 
+        code mininum-scale
+        |  et
+        code maximum-scale
+      li.fragment
+        code user-scalable
+
+  section
+    h2 Bugs d'orientation
+    ul
+      li.fragment
+        code device-width
+        |  en mode paysage sur iPhone
+        +img('meta-viewport4.jpg')
+
+  section
+    h2 Viewport recommandé
+    ul
+      li.fragment
+        code &lt;meta name="viewport" content="width=device-width,initial-scale=1">
+      li.fragment
+        code &lt;meta name="viewport" content="initial-scale=1">
+        |  si vous contrôlez la taille de vos éléments.
 
 
 
@@ -238,6 +345,66 @@ section.language-css
           li.fragment Utilisez les pourcentages
           li.fragment Utilisez <code>max-width</code>, <code>min-width</code>
           li.fragment Limitez les <code>float</code>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Tester un site
+
+section.language-css
+
+  section
+    h1 Tester le RWD
+
+  section
+    h2 Bonne vieille méthode
+    ul
+      li.fragment Resize FTW!
+
+  section
+    h2 Navigateurs
+    ul
+      li.fragment Outils intégrés par défaut
+        ul
+          li.fragment Firefox (Vue adaptative)
+          li.fragment Chrome (Émulation)
+          li.fragment Internet Explorer (Émulation)
+
+  section
+    h2 Plugins / Outils
+    ul
+      li.fragment
+        a(href='http://responsive.victorcoulon.fr/') RWD Bookmarklet
+      li.fragment 
+        a(href='http://lab.maltewassermann.com/viewport-resizer/') Viewport Resizer
+      li.fragment
+        a(href='http://tzi.fr/css/responsive/breaq-bookmarklet') Breaq, affiche les points critiques
+
+
+  section
+    h2 Meilleure méthode
+    ul
+      li.fragment Sur les devices!
+        +img('devices.jpg')
+      li.fragment Device Lab
+        +img('device-lab.jpg')
+      li.fragment Le Bon Coin
 
 
 
