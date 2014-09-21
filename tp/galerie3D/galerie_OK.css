@@ -1,0 +1,94 @@
+html{
+	background: #111;
+	color: #aaa;
+	font: 1em 'Raleway', sans-serif;
+}
+/* affichage tel un tableau */
+.galerie3D {
+	display: table;
+	padding: 0;
+	border-spacing: 5px;
+	margin: 50px auto;
+}
+/* affichage telle une cellule de tableau */
+.galerie3D li {
+	position: relative;
+	display: table-cell;
+	width: 150px;
+	vertical-align: top;
+	opacity: 1;
+	-webkit-transform: perspective(500px) rotateY(0);
+	        transform: perspective(500px) rotateY(0);
+	-webkit-transition: -webkit-transform .6s, opacity .6s;
+	        transition:         transform .6s, opacity .6s;
+	-webkit-transform-origin: 0 50%;
+	        transform-origin: 0 50%;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
+.transition .galerie3D li {
+	opacity: 0;
+	-webkit-transform: perspective(500px) rotateY(-135deg);
+	        transform: perspective(500px) rotateY(-135deg);
+	-webkit-transition: none;
+	        transition: none;
+}
+.galerie3D li:nth-child(2) {
+	z-index: 6;
+	-webkit-transition-delay: .15s;
+	        transition-delay: .15s;
+}
+.galerie3D li:nth-child(3) {
+	z-index: 5;
+	-webkit-transition-delay: .3s;
+	        transition-delay: .3s;
+}
+.galerie3D li:nth-child(4) {
+	z-index: 4;
+	-webkit-transition-delay: .45s;
+	        transition-delay: .45s;
+}
+.galerie3D li:nth-child(5) {
+	z-index: 3;
+	-webkit-transition-delay: .6s;
+	        transition-delay: .6s;
+}
+.galerie3D li:nth-child(6) {
+	z-index: 2;
+	-webkit-transition-delay: .75s;
+	        transition-delay: .75s;
+}
+h1, h2 {
+	padding: initial;
+	text-align: left;
+	font-weight: 200;
+	text-shadow: 0 1px 2px black;
+}
+h2 {
+	color: #aaa;
+	font-style: italic;
+	font-size: .9em;
+}
+
+/* navigation */
+nav ul {
+	text-align: center;
+	margin: 50px 0 0 0;
+}
+nav ul li {
+	display :inline-block;
+}
+nav ul li a {
+	display: block;
+	padding: 5px 10px;
+	background: rgba(255,255,255,.1);
+	color: #aaa;
+	text-shadow: 0 1px 1px black;
+	text-decoration: none;
+	border: 1px solid transparent;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+	background: rgba(255,255,255,.25);
+	border-color: #aaa;
+}

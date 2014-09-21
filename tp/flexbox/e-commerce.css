@@ -1,0 +1,42 @@
+@import url('../boutons.css');
+header {
+  max-width: 1000px;
+  padding: 0 .5em;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+header p {
+  margin-left: auto;
+}
+.articles {
+  display: flex;
+  flex-flow: row wrap;
+  background: black;
+  max-width: 1000px;
+  margin: 0 auto 100px;
+}
+.article {
+  height: 400px;
+  padding: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  background-color: lightgray;
+  
+  flex: 1 250px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.article--une {
+  flex-basis: 500px;
+  background-color: darkgray;
+}
+.article-media {
+  max-height: 200px;
+}
+.article-prix {
+  margin: auto 0 0 0;
+  align-self: flex-end;
+}

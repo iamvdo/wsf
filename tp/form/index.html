@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font: 1.2em Raleway, sans-serif;
+  }
+  form {
+    width: 500px;
+    margin: auto;
+    padding: 50px;
+    background: #ddd;
+  }
+  label,
+  input {
+    display: block;
+  }
+  label {
+    margin-top: 1em;
+  }
+  input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px 0 1em 0;
+  }
+  button {
+    display: block;
+    margin: auto;
+    font-size: 1em;
+    padding: .5em;
+    margin-top: 1em;
+  }
+  #competences {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  #competences label,
+  #competences input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    margin: 0;
+  }
+  #competences label {
+    width: 100px;
+    margin-left: 50px;
+  }
+  /*
+  #nom:valid    ~ .progress,
+  #prenom:valid ~ .progress,
+  #email:valid  ~ .progress {
+    width: 15%;
+  }
+  #nom:valid    ~ #prenom:valid ~ .progress,
+  #nom:valid    ~ #email:valid  ~ .progress,
+  #prenom:valid ~ #email:valid  ~ .progress {
+    width: 30%;
+  }
+  #nom:valid ~ #prenom:valid ~ #email:valid .progress {
+    width: 45%;
+  }
+  .progress {
+    height: 10px;
+    width: 0;
+    background: orangered;
+    transition: width .25s cubic-bezier(.1,.1,.1,1);
+  }
+  */
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}::-moz-placeholder {
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}:-ms-input-placeholder {
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}::placeholder {
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}
+  </style>
+</head>
+<body>
+  <form action="#">
+    
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" autofocus required>
+
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required placeholder="Un email valide">
+
+    <label for="url">Site web perso</label>
+    <input type="url" id="url" placeholder="Blog, portfolio, etc.">
+
+    <label for="age">Age</label>
+    <input type="number" id="age" value="20">
+
+    <fieldset id="competences">
+      <legend>Compétences</legend>
+      <p><label for="html">HTML</label><input type="range" id="html" value="60"></p>
+
+      <p><label for="css">CSS</label><input type="range" id="css" value="40"></p>
+
+      <p><label for="js">JS</label><input type="range" id="js" value="50"></p>
+    </fieldset>
+
+    <label for="anniv">Mois préféré</label>
+    <input type="month" list="mois" />
+    <datalist id="mois">
+      <option label="Les vacances">2014-08</option>
+      <option label="La rentrée">2014-10</option>
+      <option label="Noël">2014-12</option>
+    </datalist>
+
+    <div class="progress"></div>
+
+    <button>Prends ça!</button>
+  </form>
+</body>
+</html>

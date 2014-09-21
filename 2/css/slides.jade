@@ -335,7 +335,7 @@ section.language-css
       li.fragment
         code :enabled
         |, 
-        code>:disabled
+        code :disabled
       li.fragment
         code :checked
 
@@ -1320,6 +1320,243 @@ section.language-css
         |  pour 
         code transform
          crée un stacking context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Positionnement
+section.language-css
+
+  section
+    h1 Positionnement
+
+  section
+    h2 Le modèle de boite
+    ul
+      li.fragment Le box model en CSS2.1
+        ul
+          li.fragment <code>width</code> est la largeur du contenu
+          li.fragment largeur totale = <code>width</code> + <code>padding</code> + <code>border</code>
+    +img('modeleBoite.jpg')
+
+  section
+    h2 Le modèle de boite, en mieux!
+    ul
+      li.fragment <code>box-sizing</code> modifie le calcul du modèle de boite
+        ul
+          li.fragment <code>box-sizing: content-box</code>: modèle CSS2.1
+          li.fragment <code>box-sizing: border-box</code>: modèle CSS3
+      li.fragment <code>width</code> devient la largeur totale
+    +img('boxsizing.jpg')
+
+  section
+    h2 Le modèle de boite, en mieux!
+    ul
+      li.fragment Préconisé de toujours utiliser ce mode:
+    pre.fragment
+      code.
+        *,
+        *:before,
+        *:after {
+          box-sizing: border-box;
+        }
+
+  section
+    h2 Support box-sizing
+    ul
+      li.fragment IE8+
+      li.fragment Firefox &lt;= 28 avec préfixe <code>-moz-</code>
+      li.fragment Android &lt;= 3 avec préfixe <code>-webkit-</code>
+
+  section
+    h2 Les différentes «méthodes»
+    ul
+      li.fragment La propriété <code>display</code>
+        ul
+          li.fragment <code>block</code>, <code>inline</code>, <code>list-item</code>
+          li.fragment <code>inline-block</code>
+          li.fragment <code>table</code>, <code>table-row</code>, <code>table-cell</code>...
+      li.fragment La propriété <code>float</code>
+        ul
+          li.fragment <code>left</code>, <code>right</code>
+      li.fragment La propriété <code>position</code>
+        ul
+          li.fragment <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>
+
+  section
+    h2: code display: inline-block
+    ul
+      li.fragment Mode «hybride»
+      li.fragment Éléments en ligne, mais conserve les propriétés de block (dimensionnement, marges, etc.)
+      li.fragment Alignables entre eux avec <code>vertical-align</code>
+
+  section
+    h2: code display: table
+    ul
+      li.fragment Mode tabulaire
+        ul
+          li.fragment <code>display: table</code> simule un tableau (<code>&lt;table></code>)
+          li.fragment <code>display: table-row</code> simule une ligne de tableau (<code>&lt;tr></code>)
+          li.fragment <code>display: table-cell</code> simule une cellule de tableau (<code>&lt;td></code>)
+      li.fragment Toute la structure n'est pas obligatoire (création d'éléments anonymes)
+      li.fragment <code>table-layout</code> modifie le calcul d'affichage du tableau
+        ul
+          li.fragment <code>auto</code> la taille du tableau s'adapte au contenu
+          li.fragment <code>fixed</code> le contenu s'adapte à la taille du tableau
+
+  section
+    h2 Les plus de display: table
+    ul
+      li.fragment Pas de sortie de flux
+      li.fragment Éléments frères de même hauteur
+      li.fragment Largeur étirable dans le tableau
+      li.fragment Alignement vertical du contenu avec <code>vertical-align</code>
+
+  section
+    h2 Les moins de display: table
+    ul
+      li.fragment Pas de marges externes
+      li.fragment Réorganisation des éléments difficile
+        ul
+          li.fragment Possible (un peu) avec <code>table-header-group</code>, <code>table-footer-group</code>
+      li.fragment
+        a(href="http://iamvdo.me/blog/imbrication-de-boites-en-css-avec-display-table") Imbrication plus complexe
+
+  section
+    h2 Support inline-block, table
+    ul
+      li.fragment IE8+
+
+  section
+    h2 Flexbox: La promesse
+    ul
+      li.fragment Affichage en bloc ou en ligne
+      li.fragment Flexibilité des boites
+      li.fragment Réorganisation des éléments
+      li.fragment Alignements verticaux et horizontaux
+      li.fragment Responsive design facilité
+    ul
+      li.fragment Plusieurs versions co-existent encore
+      li.fragment Promesse tenue!
+
+  section
+    h2 L'élément Flexbox
+    pre.fragment
+      code.
+        .e {
+          display: flex;
+        }
+    ul
+      li.fragment Définit l'élément principal Flexbox
+      li.fragment Les Flex items (enfants) «subissent» ce mode
+
+  section
+    h2 Les axes du Flexbox
+    pre.fragment
+      code.
+        .e {
+          flex-flow: row wrap;
+        }
+    ul
+      li.fragment Propriété <code>flex-flow</code>, un raccourci de 2 autres
+        ul
+          li.fragment <code>flex-direction</code> définit <strong>l'axe principal</strong> du Flexbox
+            ul
+              li.fragment <code>column</code>, <code>column-reverse</code>: affichage en colonnes
+              li.fragment <code>row</code>, <code>row-reverse</code>: affichage en lignes
+          li.fragment <strong>L'axe secondaire</strong> est donc l'axe perpendiculaire
+      li.fragment <code>flex-wrap</code> gestion du débordement des lignes
+        ul
+          li <code>nowrap</code>
+          li <code>wrap</code>, <code>wrap-reverse</code>
+
+  section
+    h2 La flexibilité
+    pre.fragment
+      code.
+        .e {
+          flex: 1 100px;
+        }
+    ul
+      li.fragment Propriété <code>flex</code>, un raccourci de 3 autres:
+        ul
+          li.fragment <code>flex-grow</code> contrainte d'agrandissement
+          li.fragment <code>flex-shrink</code> contrainte de réduction
+          li.fragment <code>flex-basis</code> taille de base
+      li.fragment S'applique sur chaque Flex item (enfant)
+
+  section
+    h2 Ordre d'affichage
+    pre.fragment
+      code.
+        .e {
+          order: 2;
+        }
+    ul
+      li.fragment Propriété <code>order</code> change l'ordre d'apparition au cas par cas
+      li.fragment Pratique pour réorganiser, mais attention à l'accessibilité
+
+  section
+    h2 Alignements
+    ul
+      li.fragment Marges classiques
+      li.fragment Marges automatiques: <code>margin: auto</code>
+    ul
+      li.fragment Alignements en fonction de l'axe (principal ou secondaire)
+      li.fragment Suit le <a href="http://dev.w3.org/csswg/css3-align/">Box Alignment Module</a> (non spécifique à Flexbox)
+
+  section
+    h2 Alignement axe principal
+    ul
+      li.fragment <code>justify-content</code> sur le parent Flexbox
+        ul
+          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>
+    +img('alignPrincipal.jpg')
+
+  section
+    h2 Alignement axe secondaire
+    ul
+      li.fragment <code>align-items</code> sur le parent Flexbox
+        ul
+          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+    +img('alignSecondaire.jpg')
+
+  section
+    h2 Alignement axe secondaire
+    ul
+      li.fragment Un élément peut avoir son propre alignement
+      li.fragment <code>align-self</code> sur un Flexbox item (enfant)
+        ul
+          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+    +img('alignSelf.jpg')
+
+  section
+    h2 Support flexbox
+    ul
+      li.fragment IE10+ avec le préfixe <code>-ms-</code>, IE11+
+      li.fragment Firefox avec le préfixe <code>-moz-</code>, Firefox 28+
+      li.fragment Chrome avec le préfixe <code>-webkit-</code>, Chrome 29+
+      li.fragment Safari avec le préfixe <code>-webkit-</code>
+    
+    ul
+      li.fragment Nécessité d'outil comme Autoprefixer, 
+        a(href='http://pleeease.io/play') Pleeease playground
 
 
 

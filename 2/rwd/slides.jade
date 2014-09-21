@@ -63,7 +63,107 @@ section
       ul
         li.fragment Contenu identique entre les "versions"
         li.fragment Workflow
+        li.fragment
+          a(href='http://jsbin.com/yuzahi/1/edit?output') Plusieurs sites sur le même écran
+          +img('snap-mode.png')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Media-Queries
+
+section.language-css
+
+  section
+    h1 Média-queries
+
+  section
+    h2 CSS et médias
+    ul
+      li.fragment Les médias existent depuis toujours
+        ul
+          li.fragment Par exemple le média <code>print</code>
+      li.fragment Attribut <code>media</code> en HTML
+        ul
+          li.fragment <code>&lt;link rel="stylesheet" media="screen" href="screen.css" /></code>
+          li.fragment <code>&lt;link rel="stylesheet" media="print" href="print.css" /></code>
+      li.fragment Règle <code>@media</code> en CSS
+        ul
+          li.fragment <code>@media print { .elem { ... } }</code>
+      li.fragment En CSS3, requête de médias: les media-queries!
+
+  section
+    h2 Media-queries
+    ul
+      li.fragment Critères pour cibler des conditions particulières
+    pre.fragment
+      code.
+        @media (max-width: 600px) {
+          .e {
+            color: red;
+          }
+        }
+    ul
+      li.fragment Styles appliqués seulement si la largeur du viewport est inférieure à 600px
+
+  section
+    h2 Media-queries
+    ul
+      li.fragment Combinaisons possibles. Exemples:
+        ul
+          li.fragment <code>@media screen and (max-width: 600px)</code>
+          li.fragment <code>@media print and (max-width: 15cm)</code>
+          li.fragment <code>@media (min-width: 200px) and (max-width: 400px)</code>
+    
+  section
+    h2 Autres critères
+    ul
+      li.fragment Largeur et hauteur
+        ul
+          li.fragment <code>(min|max)-device-height</code>
+      li.fragment Orientation
+        ul
+          li.fragment <code>orientation: (landscape|portrait)</code>
+      li.fragment Ratio d'écran
+        ul
+          li.fragment <code>(min|max)-device-aspect-ratio</code>
+      li.fragment Ratio de pixels
+        ul
+          li.fragment <code>(min|max)-resolution</code> (en 
+            code dpi
+            |  ou 
+            code dppx
+            |)
+          li.fragment
+            code (min|max)-device-pixel-ratio
+      li.fragment et d'autres
+
+  section
+    h2 Support media-queries
+    ul
+      li.fragment IE9+, 
+        a(href='https://github.com/scottjehl/Respond') polyfill
+        |  pour IE8
+    ul
+      li.fragment <code>resolution</code> et <code>dppx</code> non supporté par WebKit (Chrome, Safari)
+        ul
+          li.fragment <code>device-pixel-ratio</code> en attendant
 
 
 
@@ -134,6 +234,17 @@ section
             |)
       li.fragment En CSS, c'est <code>device-width</code>, <code>device-height</code>
       li.fragment Non modifiable
+
+  section
+    h2 iPhone6 Plus
+    ul
+      li.fragment Complexifie encore
+      li.fragment Surface réelle: 1080x1920px
+      li.fragment Surface déclarée: 414x736px
+      li.fragment Surface rendue (!): 1242x2208px
+        ul
+          li.fragment Réduction de ~13% à l'affichage
+          li.fragment Ratio de 3, mais de ~2.6 à l'affichage
 
   section
     h2 Le viewport
@@ -230,85 +341,18 @@ section
         code &lt;meta name="viewport" content="initial-scale=1">
         |  si vous contrôlez la taille de vos éléments.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//- Media-Queries
-
-section.language-css
-
   section
-    h1 Média-queries
-
-  section
-    h2 CSS et médias
+    h2 D'autres infos
     ul
-      li.fragment Les médias existent depuis toujours
-        ul
-          li.fragment Par exemple le média <code>print</code>
-      li.fragment Attribut <code>media</code> en HTML
-        ul
-          li.fragment <code>&lt;link rel="stylesheet" media="screen" href="screen.css" /></code>
-          li.fragment <code>&lt;link rel="stylesheet" media="print" href="print.css" /></code>
-      li.fragment Règle <code>@media</code> en CSS
-        ul
-          li.fragment <code>@media print { .elem { ... } }</code>
-      li.fragment En CSS3, requête de médias: les media-queries!
-
-  section
-    h2 Media-queries
-    ul
-      li.fragment Critères pour cibler des périphériques particuliers
+      li.fragment Viewport non modifiable par le code
+      li.fragment Viewport en CSS 
+        code @viewport
     pre.fragment
       code.
-        @media (max-width: 600px) {
-          .e {
-            color: red;
-          }
+        @viewport {
+          width: 320px;
+          zoom: 1;
         }
-    ul
-      li.fragment Styles appliqués seulement si la largeur du viewport est inférieure à 600px
-
-  section
-    h2 Media-queries
-    ul
-      li.fragment Combinaisons possibles. Exemples:
-        ul
-          li.fragment <code>@media screen and (max-width: 600px)</code>
-          li.fragment <code>@media print and (max-width: 15cm)</code>
-          li.fragment <code>@media (min-width: 200px) and (max-width: 400px)</code>
-      li.fragment Les autres critères existants:
-        ul
-          li.fragment <code>(min|max)-device-height</code>
-          li.fragment <code>orientation: (landscape|portrait)</code>
-          li.fragment <code>(min|max)-device-aspect-ratio</code>
-          li.fragment <code>(min|max)-resolution</code> (en <code>dppx</code>)
-          li.fragment et d'autres
-
-  section
-    h2 Support media-queries
-    ul
-      li.fragment IE9+
-    ul
-      li.fragment <code>resolution</code> et <code>dppx</code> non supporté par WebKit (Chrome, Safari)
-        ul
-          li.fragment <code>device-pixel-ratio</code> en attendant
 
 
 
@@ -337,6 +381,15 @@ section.language-css
     h1 Adapter un site
 
   section
+    h2 Ça implique quoi?
+    ul
+      li.fragment Grille fluide
+      li.fragment Peu de valeurs en pixels
+      li.fragment Gérer le débordement des images, vidéos, etc.
+      li.fragment Philosophie mobile-first ou non
+
+
+  section
     h2 En CSS
     ul
       li.fragment Prévoir de s'adapter aux différentes largeurs
@@ -346,6 +399,33 @@ section.language-css
           li.fragment Utilisez <code>max-width</code>, <code>min-width</code>
           li.fragment Limitez les <code>float</code>
 
+  section
+    h2 En JavaScript (coté client)
+    ul
+      li.fragment Détecter les media-queries
+      li.fragment
+        code matchMedia
+    pre.fragment
+      code.language-js.
+        if (window.matchMedia("(min-width: 600px)").matches) {
+          /* largeur supérieure à 600 px inclus */
+        } else {
+          /* largeur inférieure à 600px */
+        }
+
+  section
+    h2 Sur serveur
+    ul
+      li.fragment 
+        a(href='http://www.lukew.com/ff/entry.asp?1392') RESS
+
+  section
+    h2 Contraintes
+    ul
+      li.fragment Beacoup de contraintes
+      li.fragment Et complexe!
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1559-responsive-web-design-present-futur-adaptation-mobile.html') Adaptation présente et future du RWD
 
 
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lueur sur formulaire</title>
+    <link rel="stylesheet" href="../demos.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <section>
+      <h1>Lueur sur formulaire & animé</h1>
+      <form action="#">
+        <label for="email">E-mail</label>
+        <input placeholder="Votre adresse email" type="text" id="email">
+        <label for="pass">Mot de passe</label>
+        <input placeholder="Personne ne vous regarde?" type="password" id="pass">
+        <button type="submit" class="button">Connexion</button>
+      </form>
+      <script>
+      function isOK (evt) {
+
+        var form = evt.currentTarget;
+
+        if (form.elements["email"].value !== '' && form.elements["pass"].value !== '') {
+          // formulaire OK
+        } else {
+          // formulaire pas OK
+          form.classList.add('invalid');
+
+          form.addEventListener('animationend', function () {
+            form.classList.remove('invalid');
+          });
+        }
+        evt.preventDefault();
+      }
+      document.querySelector('form').addEventListener('submit', isOK);
+      </script>
+    </section>
+
+    <section>
+      <h1>Animer au chargement de la page</h1>
+      <ul class="browsers">
+        <li class="browsers-item"><img src="images/chrome_64x64.png" alt=""></li>
+        <li class="browsers-item"><img src="images/firefox_64x64.png" alt=""></li>
+        <li class="browsers-item"><img src="images/internet-explorer_64x64.png" alt=""></li>
+        <li class="browsers-item"><img src="images/opera_64x64.png" alt=""></li>
+        <li class="browsers-item"><img src="images/safari_64x64.png" alt=""></li>
+      </ul>
+    </section>
+
+  </body>
+</html>

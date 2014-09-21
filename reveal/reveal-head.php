@@ -21,9 +21,6 @@
     <link rel="stylesheet" href="/reveal/vdo/theme_vdo.css" id="theme">
     <link rel="stylesheet" href="/reveal/plugin/nav/nav.css">
 
-    <!-- Add VDO stylesheet -->
-    <!-- <link rel="stylesheet" href="vdo/assets/vdo.css"> -->
-
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
       if( window.location.search.match( /print-pdf/gi ) ) {

@@ -1,0 +1,104 @@
+.menu {
+  font-size: 1.2em;
+  width: 300px;
+  
+  padding: 0;
+  border-left: 4px solid #111;
+}
+.menu-item {
+  list-style: none;
+  margin: 2px;
+}
+.menu-item a {
+  display: inline-block;
+  padding: 1em 2em;
+  background: orangered;
+  border-right: 4px solid rgba(0,0,0,.5);
+  color: #FFF;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0,0,0,.5);
+
+  /* transition: padding 1s, background 1s; */
+  transition-property: padding, background;
+  transition-duration: .75s;
+}
+.menu-item a:hover,
+.menu-item a:focus {
+  padding-right: 6em;
+  padding-left: 3em;
+  background: deepskyblue;
+
+  /* transition: padding .25s, background .25s; */
+  transition-duration: .25s;
+}
+
+
+
+
+
+
+
+
+.chart {
+  text-align: center;
+  height: 150px;
+}
+.chart-bar {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  vertical-align: bottom;
+  background: orangered;
+  transition: height .15s;
+}
+/*
+.init .chart-bar {
+  transition-timing-function: cubic-bezier(.4,2,.5,.8);
+}
+*/
+.chart::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+}
+
+.init .chart-bar:nth-child(1) {
+  height: 40px;
+  transition-delay: .1s;
+}
+.init .chart-bar:nth-child(2) {
+  height: 80px;
+  transition-delay: .15s;
+}
+.init .chart-bar:nth-child(3) {
+  height: 120px;
+  transition-delay: .2s;
+}
+.init .chart-bar:nth-child(4) {
+  height: 110px;
+  transition-delay: .25s;
+}
+.init .chart-bar:nth-child(5) {
+  height: 60px;
+  transition-delay: .3s;
+}
+.init .chart-bar:nth-child(6) {
+  height: 130px;
+  transition-delay: .35s;
+}
+.init .chart-bar:nth-child(7) {
+  height: 80px;
+  transition-delay: .4s;
+}
+.init .chart-bar:nth-child(8) {
+  height: 40px;
+  transition-delay: .45s;
+}
+.init .chart-bar:nth-child(9) {
+  height: 100px;
+  transition-delay: .5s;
+}
+.init .chart-bar:nth-child(10) {
+  height: 90px;
+  transition-delay: .55s;
+}

@@ -1,0 +1,45 @@
+.buttons {
+  text-align: center;
+}
+.button {
+  font-size: 1.2em;
+  padding: .6em 1.1em;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+  background-color: hsl(140, 100%, 30%);
+  background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
+
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 1px 5px rgba(0,0,0,.8);
+
+  border: none;
+
+  margin: 20px;
+  outline: none;
+}
+.button--danger {
+  background-color: hsl(0, 100%, 40%);
+}
+.button--info {
+  background-color: hsl(200, 100%, 40%);
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 0 10px 3px hsl(140, 100%, 30%), 0 1px 5px rgba(0,0,0,.8);
+}
+.button--danger:hover,
+.button--danger:focus {
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 0 10px 3px hsl(0, 100%, 30%), 0 1px 5px rgba(0,0,0,.8);
+}
+.button--info:hover,
+.button--info:focus {
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 0 10px 3px hsl(200, 100%, 30%), 0 1px 5px rgba(0,0,0,.8);
+}
+
+.button:active {
+  background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1));
+  box-shadow: 0 -1px 0 rgba(255,255,255,.4) inset, 0 2px 3px rgba(0,0,0,.8) inset;
+  color: rgba(0,0,0,.9);
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}

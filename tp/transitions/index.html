@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu avec les transitions CSS</title>
+  <link rel="stylesheet" href="../demos.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section>
+    <h1>Menu avec les transitions CSS</h1>
+    <ul class="menu">
+      <li class="menu-item"><a href="#">Home</a></li>
+      <li class="menu-item"><a href="#">Portfolio</a></li>
+      <li class="menu-item"><a href="#">Blog</a></li>
+      <li class="menu-item"><a href="#">Contact</a></li>
+      <li class="menu-item"><a href="#">RSS</a></li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h1>Histogramme 2D</h1>
+    <div class="chart">
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+      <div class="chart-bar"></div>
+    </div>
+    <p class="u-aligncenter"><button>Toggle anim</button></p>
+    <script>
+    document.querySelector('button').addEventListener('click', function() {
+      document.querySelector('.chart').classList.toggle('init');
+    });
+    </script>
+  </section>
+
+
+</body>
+</html>

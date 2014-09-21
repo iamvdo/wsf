@@ -10,27 +10,48 @@ section
     li.fragment Attributs sans valeur autorisés
     li.fragment Le meilleur des 2 mondes
 
-section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Structure HTML
+
+section.language-markup
 
   section
     h1 Nouvelle structure
 
   section
     h2 Nouveau doctype
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;!doctype html>
 
   section
     h2: code &lt;html>
     p.fragment Avant:
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;html xmlns="..." lang="fr" xml:lang="fr">
     ul
       li.fragment Attributs redondants
     p.fragment Maintenant:
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;html lang="fr">
     ul
@@ -43,7 +64,7 @@ section
     p.fragment Meta 
         code charset
         |  simplifiée
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;meta charset="utf-8">
     ul
@@ -54,33 +75,33 @@ section
     p.fragment
         code script
         |  allégé
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;script src="fichier.js">&lt;/script>
     p.fragment
         code link
         |  allégé aussi
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;link rel="stylesheet" href="fichier.css">
 
   section
     h2 Attributs sans valeur
     p.fragment Plus simple d'utilisation
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="checkbox" checked>
 
   section
     h2 Structure complète
     p.fragment Structure (hipster) minimale
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;!doctype html>
         &lt;title>Titre&lt;/title>
         &lt;p>Contenu&lt;/p>
     p.fragment Structure minimale à utiliser
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;!doctype html>
         &lt;html lang="fr">
@@ -93,228 +114,31 @@ section
           &lt;/body>
         &lt;/html>
 
-section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Balises
+
+section.language-markup
 
   section
-    h1 Nouvelles balises structurelles
-  
-  section
-    h2 Pourquoi?
-    ul
-      li.fragment Segmenter le document
-      li.fragment Ajouter une sémantique précise
-      li.fragment Remplacer les 
-        code &lt;div id="menu">
-        |, 
-        code &lt;div id="sidebar">
-        |, etc, mais pas seulement
-      li.fragment N'empêche pas d'utiliser des 
-        code id
-        |  ou des 
-        code class
-
-  section
-    h2: code section
-    ul
-      li.fragment Définit une partie de page, d'application
-      li.fragment Contenu de même thème
-      li.fragment Ne pas sur-utiliser
-    pre.fragment.language-markup
-      code.
-        &lt;section>
-          &lt;h1>Articles&lt;/h1>
-          &lt;article>
-            &lt;p>Contenu&lt;/p>
-          &lt;/article>
-        &lt;/section>
-
-  section
-    h2: code article
-    ul
-      li.fragment Une section, axée rédaction
-      li.fragment Élément réutilisable hors contexte
-      li.fragment Indépendant
-      li.fragment Billet de blog, fiches informations, etc.
-    pre.fragment.language-markup
-      code.
-        &lt;article>
-          &lt;h1>Titre de l'article&lt;/h1>
-          &lt;p>Contenu&lt;/p>
-        &lt;/article>
-
-  section
-    h2: code aside
-    ul
-      li.fragment Contenu annexe
-      li.fragment Apporte des informations complémentaires
-      li.fragment Pas primordial
-    pre.fragment.language-markup
-      code.
-        &lt;article>
-          &lt;p>Contenu&lt;/p>
-          &lt;aside>
-            &lt;p>Note: saviez-vous que...&lt;/p>
-          &lt;/aside>
-          &lt;p>Contenu&lt;/p>
-        &lt;/article>
-
-  section
-    h2: code header
-    ul
-      li.fragment Entête de section, pas uniquement du site
-      li.fragment Contient titres, logos, textes, navigation, pagination, dates, etc.
-    pre.fragment.language-markup
-      code.
-        &lt;article>
-          &lt;header>
-            &lt;h1>Titre de l'article&lt;/h1>
-            &lt;p>Écrit par moi&lt;/p>
-          &lt;/header>
-          &lt;p>Contenu&lt;/p>
-        &lt;/article>
-
-  section
-    h2: code footer
-    ul
-      li.fragment Pied de page de section, pas uniquement du site
-      li.fragment Contient titres, logos, textes, navigation, pagination, dates, etc.
-    pre.fragment.language-markup
-      code.
-        &lt;footer>
-          &lt;h1>À lire aussi:&lt;/h1>
-          &lt;p>Contenu&lt;/p>
-        &lt;/footer>
-
-
-  section
-    h2: code nav
-    ul
-      li.fragment Liens de navigation
-      li.fragment Navigation principale princpalement
-    pre.fragment.language-markup
-      code.
-        &lt;nav>
-          &lt;ul>
-            &lt;li>&lt;a href="#">Accueil&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
-          &lt;/ul>
-        &lt;/nav>
-
-  section
-    h2
-      code figure
-      | et 
-      code figcaption
-    ul
-      li.fragment Définir une légende à un élément
-      li.fragment Images, vidéos, graphique, code, etc.
-    pre.fragment.language-markup
-      code.
-        &lt;figure>
-          &lt;img src="image.jpg" alt="">
-          &lt;figcaption>Oh la belle image&lt;/figcaption>
-        &lt;/figure>
-
-  section
-    h2 Outline
-    ul
-      li.fragment Nouveaux types d'éléments; plus seulement block et inline
-      li.fragment Sectioning content: 
-        code section
-        |, 
-        code article
-        |, 
-        code aside
-        |, 
-        code nav
-      li.fragment Portée des titres
-
-  section
-    h2 Cas classique
-    pre.fragment.language-markup
-      code.
-        &lt;body>
-          &lt;h1>Titre A&lt;/h1>
-          &lt;p>Contenu&lt;/p>
-          &lt;h2>Titre B&lt;/h2>
-          &lt;p>Contenu&lt;/p>
-          &lt;h2>Titre C&lt;/h2>
-          &lt;p>Contenu&lt;/p>
-        &lt;/body>
-    p.fragment Donne:
-    ul.fragment
-      li 1. Titre A
-        ul
-          li 1.1 Titre B
-          li 1.2 Titre C
-
-  section
-    h2 Cas HTML5
-    pre.fragment.language-markup
-      code.
-        &lt;body>
-          &lt;h1>Titre A&lt;/h1>
-          &lt;p>Contenu&lt;/p>
-          &lt;section>
-            &lt;h1>Titre B&lt;/h1>
-            &lt;p>Contenu&lt;/p>
-          &lt;/section>
-          &lt;h2>Titre C&lt;/h2>
-          &lt;p>Contenu&lt;/p>
-        &lt;/body>
-    p.fragment Donne:
-    ul.fragment
-      li 1. Titre A
-        ul
-          li 1.1 Titre B
-          li 1.2 Titre C
-    p.fragment Et non:
-    ul.fragment
-      li 1. Titre A
-      li 2. Titre B
-        ul
-          li 2.1 Titre C
-
-  section
-    h2 Internet Explorer
-    p.fragment Pour Internet Explorer 9-:
-    ul
-      li.fragment Les éléments sont inline par défaut
-      li.fragment Créer l'élément en JavaScript
-        ul
-          li.fragment: code document.createElement('section')
-      li.fragment Affichage en mode block en CSS
-        ul
-          li.fragment: code section { display: block }
-
-  section
-    h2 Outils / Code
-    ul
-      li.fragment
-        a(href='http://html5shiv.googlecode.com/svn/trunk/html5.js') HTML5 Shiv
-      li.fragment Utilisation des commentaires conditionnels
-    pre.fragment.language-markup
-      code.
-        &lt;!--[if lt IE 9]>
-          &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script>
-        &lt;![endif]-->
-
-  section
-    h2 Ressources
-    ul
-      li.fragment
-        a(href='http://www.alsacreations.com/article/lire/1374-html5-structure-globale-document.html') Structure HTML5
-      li.fragment
-        a(href='http://www.alsacreations.com/article/lire/1376-html5-section-article-nav-header-footer-aside.html') Nouveaux éléments
-      li.fragment
-        a(href='http://www.alsacreations.com/article/lire/1337-html5-elements-figure-et-figcaption.html') Éléments figure et figcaption
-      li.fragment
-        a(href='https://developer.mozilla.org/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document') Outline HTML5
-
-section
-
-  section
-    h1 Autres balises
+    h1 Balises: nouvelles règles
 
   section
     h2 Balises redéfinies
@@ -324,12 +148,12 @@ section
         ul
           li.fragment Autorise d'englober des éléments blocks
     p.fragment Avant:
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;h4>&lt;a href="#">Titre&lt;/a>&lt;/h4>
         &lt;p>&lt;a href="#">Texte&lt;/a>&lt;/p>
     p.fragment Maintenant:
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;a href="#">
           &lt;h4>Titre&lt;/h4>
@@ -343,7 +167,7 @@ section
     ul
       li.fragment Pas une citation
       li.fragment Le titre d'une oeuvre: livre, film, poème, etc.
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;p>J'ai écrit le livre &lt;cite>CSS3 Le Design web moderne&lt;/cite>&lt;/p>
     ul
@@ -399,7 +223,375 @@ section
             |, 
             code &lt;applet>
 
-section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Balises Structurelles
+
+section.language-markup
+
+  section
+    h1 Balises structurelles
+  
+  section
+    h2 Pourquoi?
+    ul
+      li.fragment Segmenter le document
+      li.fragment Ajouter une sémantique précise
+      li.fragment Remplacer les 
+        code &lt;div id="menu">
+        |, 
+        code &lt;div id="sidebar">
+        |, etc, mais pas seulement
+      li.fragment N'empêche pas d'utiliser des 
+        code id
+        |  ou des 
+        code class
+
+  section
+    h2: code section
+    ul
+      li.fragment Définit une partie de page, d'application
+      li.fragment Contenu de même thème
+      li.fragment Ne pas sur-utiliser
+    pre.fragment
+      code.
+        &lt;section>
+          &lt;h1>Articles&lt;/h1>
+          &lt;article>
+            &lt;p>Contenu&lt;/p>
+          &lt;/article>
+        &lt;/section>
+
+  section
+    h2: code main
+    ul
+      li.fragment Contenu principal de la page
+    pre.fragment
+      code.
+        &lt;main>
+          &lt;h1>Articles&lt;/h1>
+          &lt;article>
+            &lt;p>Contenu&lt;/p>
+          &lt;/article>
+        &lt;/main>
+
+  section
+    h2: code article
+    ul
+      li.fragment Une section, axée rédaction
+      li.fragment Élément réutilisable hors contexte
+      li.fragment Indépendant
+      li.fragment Billet de blog, fiches informations, etc.
+    pre.fragment
+      code.
+        &lt;article>
+          &lt;h1>Titre de l'article&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+        &lt;/article>
+
+  section
+    h2: code aside
+    ul
+      li.fragment Contenu annexe
+      li.fragment Apporte des informations complémentaires
+      li.fragment Pas primordial
+    pre.fragment
+      code.
+        &lt;article>
+          &lt;p>Contenu&lt;/p>
+          &lt;aside>
+            &lt;p>Note: saviez-vous que...&lt;/p>
+          &lt;/aside>
+          &lt;p>Contenu&lt;/p>
+        &lt;/article>
+
+  section
+    h2: code header
+    ul
+      li.fragment Entête de section, pas uniquement du site
+      li.fragment Contient titres, logos, textes, navigation, pagination, dates, etc.
+    pre.fragment
+      code.
+        &lt;article>
+          &lt;header>
+            &lt;h1>Titre de l'article&lt;/h1>
+            &lt;p>Écrit par moi&lt;/p>
+          &lt;/header>
+          &lt;p>Contenu&lt;/p>
+        &lt;/article>
+
+  section
+    h2: code footer
+    ul
+      li.fragment Pied de page de section, pas uniquement du site
+      li.fragment Contient titres, logos, textes, navigation, pagination, dates, etc.
+    pre.fragment
+      code.
+        &lt;footer>
+          &lt;h1>À lire aussi:&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+        &lt;/footer>
+
+
+  section
+    h2: code nav
+    ul
+      li.fragment Liens de navigation
+      li.fragment Navigation principale princpalement
+    pre.fragment
+      code.
+        &lt;nav>
+          &lt;ul>
+            &lt;li>&lt;a href="#">Accueil&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/nav>
+
+  section
+    h2
+      code figure
+      | et 
+      code figcaption
+    ul
+      li.fragment Définir une légende à un élément
+      li.fragment Images, vidéos, graphique, code, etc.
+    pre.fragment
+      code.
+        &lt;figure>
+          &lt;img src="image.jpg" alt="">
+          &lt;figcaption>Oh la belle image&lt;/figcaption>
+        &lt;/figure>
+
+  section
+    h2
+      code time
+    ul
+      li.fragment Définir une date ou une heure
+    pre.fragment
+      code.
+        &lt;p>Le concert commence à &lt;time>20:00&lt;/time>.&lt;/p>
+    ul
+      li.fragment Attribut
+        code datetime
+        |  pour spécifier le format
+    pre.fragment
+      code.
+        &lt;p>Le concert a lieu le &lt;time datetime="2015-05-20 20:00">20 mai&lt;/time>.&lt;/p>
+    ul
+      li.fragment Attribut
+        code pubdate
+        |  pour date de publication
+
+  section
+    h2 Outline
+    ul
+      li.fragment Nouveaux types d'éléments; plus seulement block et inline
+      li.fragment Sectioning content: 
+        code section
+        |, 
+        code article
+        |, 
+        code aside
+        |, 
+        code nav
+      li.fragment
+        a(href='http://hoyois.github.io/html5outliner/') Portée des titres
+
+  section
+    h2 Cas classique
+    pre.fragment
+      code.
+        &lt;body>
+          &lt;h1>Titre A&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+          &lt;h2>Titre B&lt;/h2>
+          &lt;p>Contenu&lt;/p>
+          &lt;h2>Titre C&lt;/h2>
+          &lt;p>Contenu&lt;/p>
+        &lt;/body>
+    p.fragment Donne:
+    ul.fragment
+      li 1. Titre A
+        ul
+          li 1.1 Titre B
+          li 1.2 Titre C
+
+  section
+    h2 Cas HTML5
+    pre.fragment
+      code.
+        &lt;body>
+          &lt;h1>Titre A&lt;/h1>
+          &lt;p>Contenu&lt;/p>
+          &lt;section>
+            &lt;h1>Titre B&lt;/h1>
+            &lt;p>Contenu&lt;/p>
+          &lt;/section>
+          &lt;h2>Titre C&lt;/h2>
+          &lt;p>Contenu&lt;/p>
+        &lt;/body>
+    p.fragment Donne:
+    ul.fragment
+      li 1. Titre A
+        ul
+          li 1.1 Titre B
+          li 1.2 Titre C
+    p.fragment Et non:
+    ul.fragment
+      li 1. Titre A
+      li 2. Titre B
+        ul
+          li 2.1 Titre C
+
+  section
+    h2 Internet Explorer
+    p.fragment Pour Internet Explorer 9-:
+    ul
+      li.fragment Les éléments sont inline par défaut
+      li.fragment Créer l'élément en JavaScript
+        ul
+          li.fragment: code document.createElement('section')
+      li.fragment Affichage en mode block en CSS
+        ul
+          li.fragment: code section { display: block }
+
+  section
+    h2 Outils / Code
+    ul
+      li.fragment
+        a(href='http://html5shiv.googlecode.com/svn/trunk/html5.js') HTML5 Shiv
+      li.fragment Utilisation des commentaires conditionnels
+    pre.fragment
+      code.
+        &lt;!--[if lt IE 9]>
+          &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script>
+        &lt;![endif]-->
+
+  section
+    h2 Ressources
+    ul
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1374-html5-structure-globale-document.html') Structure HTML5
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1376-html5-section-article-nav-header-footer-aside.html') Nouveaux éléments
+      li.fragment
+        a(href='http://www.alsacreations.com/article/lire/1337-html5-elements-figure-et-figcaption.html') Éléments figure et figcaption
+      li.fragment
+        a(href='https://developer.mozilla.org/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document') Outline HTML5
+
+  section
+    h2 TP!
+    ul
+      li.fragment 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Balises Applicatives
+
+section.language-markup
+
+  section
+    h1 Balises applicatives
+  
+  section
+    h2 Pourquoi?
+    ul
+      li.fragment Site web deviennent des applications web
+      li.fragment Éviter de tout simuler avec des 
+        code &lt;div>
+      li.fragment Implémentation succinte
+
+  section
+    h2: &lt;progress>
+    ul
+      li.fragment Barre de progression
+      li.fragment Visualiser l'avancement d'une tâche
+    pre.fragment
+      code
+        &lt;progress value="70" max="100">70 %&lt;/progress>
+    ul
+      li.fragment Attributs 
+        code max
+        |  et 
+        code value
+
+  section
+    h2: &lt;meter>
+    ul
+      li.fragment Mesure dans un intervalle connu
+      li.fragment Exemple: espace de stockage restant, pertinence d'un résultat, proportions, etc.
+    pre.fragment
+      code
+        &lt;p>Utilisation de l'espace de stockage: &lt;meter value="6" max="8" low="5" high="6">6 blocs utilisés (sur un total de 8)&lt;/meter>&lt;/p>
+    ul
+      li.fragment Attributs 
+        code min
+        |, 
+        code max
+        |  et 
+        code value
+      li.fragment Mais aussi 
+        code low
+        |, 
+        code optimum
+        |  et 
+        code high
+      li.fragment Valeur considérée basse, haute ou optimum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Formulaires
+
+section.language-markup
 
   section
     h1 Formulaires
@@ -418,7 +610,7 @@ section
       li.fragment Quand click: disparait.
       li.fragment Ne remplace pas 
         code &lt;label>
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;label>Recherchez un auteur
           &lt;input type="text" placeholder="Hugo, Zola, etc.">
@@ -437,7 +629,7 @@ section
         code &lt;textarea>
         |, 
         code &lt;select>
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;label>Recherchez un auteur
           &lt;input type="text" autofocus>
@@ -453,7 +645,7 @@ section
       li.fragment Booléen
       li.fragment Rends le champ obligatoire
       li.fragment Le formulaire ne peut pas être validé si le champ est vide
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;label>Recherchez un auteur
           &lt;input type="text" required>
@@ -465,10 +657,10 @@ section
       code autocomplete
     ul
       li.fragment Empêche les navigateurs de pré-remplir les champs
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;form action="#" autocomplete="off">
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="text" autocomplete="off">
 
@@ -479,7 +671,7 @@ section
       li.fragment Règle de validation d'un champ
       li.fragment Basé sur expression régulière
     p.fragment Le texte doit commencer par "a"
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="text" pattern="^a">
 
@@ -489,14 +681,14 @@ section
     ul
       li.fragment Empêche les navigateurs de valider les champs
       li.fragment Règle les problèmes d'inconsistence et d'accessibilité
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;form action="#" novalidate>
     ul
       li.fragment Existe également 
         code formnovalidate
         |  sur boutons de validation
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="submit" formnovalidate>
 
@@ -509,7 +701,7 @@ section
         |  et un 
         code &lt;select>
       li.fragment Liste de choix pour input, ou autre choix
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="text" list="auteurs">
         &lt;datalist id="auteurs">
@@ -519,6 +711,11 @@ section
         &lt;/datalist>
     +img('datalist.jpg')
     ul
+      li.fragment Attribut 
+        code label
+        |  sur 
+        code option
+        |  pour spécifier une info supplémentaire
       li.fragment
         a(href='http://demo.agektmr.com/datalist/') Pas uniquement avec 
           code &lt;input type="text">
@@ -529,7 +726,7 @@ section
       li.fragment Identique à 
         code &lt;input type="text">
       li.fragment Style différent dans WebKit
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="search">
 
@@ -540,14 +737,14 @@ section
         code &lt;input type="text">
       li.fragment Contrôle supplémentaire
       li.fragment N'accepte que des nombres
-      li.fragment Clavier adapté sur mobile
+      li.fragment (Clavier adapté sur mobile)
       li.fragment Attributs 
         code min
         |, 
         code max
         |, 
         code step
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="number" min="0" max="100" step="2">
     +img2('input-number.jpg')
@@ -559,7 +756,7 @@ section
         code &lt;input type="text">
       li.fragment N'accepte que des emails
       li.fragment Clavier adapté sur mobile
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="email">
     +img2('input-mail.jpg')
@@ -574,7 +771,7 @@ section
       li.fragment Pas de validation auto (mais attribut 
         code pattern
         |)
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="tel" pattern="^\d{10}">
     +img2('input-tel.jpg')
@@ -586,7 +783,7 @@ section
         code &lt;input type="text">
       li.fragment N'accepte que des URLs
       li.fragment Clavier adapté sur mobile
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="url">
 
@@ -600,7 +797,7 @@ section
         code max
         |, 
         code step
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="range" min="0" max="50" value="10">
     +img2('input-range.jpg')
@@ -610,7 +807,7 @@ section
     ul
       li.fragment Type sélecteur couleur
       li.fragment Héxadécimal
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="color">
     +img2('input-color.jpg')
@@ -621,7 +818,7 @@ section
       li.fragment Type sélecteur de date
       li.fragment Format: Année, mois, jour
       li.fragment 2014-10-05
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="date">
     +img2('input-date.jpg')
@@ -632,7 +829,7 @@ section
       li.fragment Type sélecteur de date
       li.fragment Format: Année, mois, jour, heures, minutes
       li.fragment 2014-10-05T18:35
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;input type="datetime-local">
     +img2('input-datetime.jpg')
@@ -652,8 +849,37 @@ section
       li.fragment Format: Annee, mois
       li.fragment 2014-10
 
+  section
+    h2 CSS
+    ul
+      li.fragment Aie!
+      li.fragment Difficile à styler
+      li.fragment Rendu similaire impossible
+      li.fragment
+        a(href='https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills#web-forms') Polyfills Web Forms
 
-section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Audio-Video
+
+section.language-markup
 
   section
     h1 Audio / Vidéo
@@ -665,13 +891,13 @@ section
       li.fragment Intégrer un son
       li.fragment Ne nécessite pas de plugin
     p.fragment Source unique
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;audio src="video.mp3">
           Contenu alternatif
         &lt;/audio>
     p.fragment Sources multiples
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;audio>
           &lt;source src="audio.mp3" type="audio/mpeg">
@@ -685,13 +911,13 @@ section
       li.fragment Intégrer une vidéo
       li.fragment Ne nécessite pas de plugin
     p.fragment Source unique
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;video src="video.mp4" width="600" height="400">
           Contenu alternatif
         &lt;/video>
     p.fragment Sources multiples
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;video width="600" height="400">
           &lt;source src="video.mp4" type="video/mp4">
@@ -794,7 +1020,7 @@ section
       li.fragment Élément 
         code object
         |: recours à Flash
-    pre.fragment.language-markup
+    pre.fragment
       code.
         &lt;video width="600" height="400">
           &lt;source src="video.mp4" type="video/mp4">
@@ -860,6 +1086,26 @@ section
           li.fragment Contrôle du volume
           li.fragment Plein écran
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Microdata
 
 section
 
