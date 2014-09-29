@@ -1,11 +1,14 @@
 html {
-  background: #222;
+  font: 1em Raleway, sans-serif;
+  background: #333;
   color: #FFF;
 }
 #entete {
+  position: relative;
   background: #222;
   color: #FFF;
   padding: 2em;
+  box-shadow: 0 2px 2px rgba(0,0,0,.9);
 }
 #entete h1 {
   position: absolute;
@@ -44,27 +47,65 @@ html {
 
 #intro {
   font-size: 2.8em;
-  color: #FFF;
-  padding: 2.5em 1em;
+  color: #111;
+  padding: 4em 1em;
   text-align: center;
-  background-image: url('images/pattern.png');
+  background-image: url('images/pattern-wood.png');
 }
+
+
+
+#intro {
+  color: #FFF;
+  background: url('images/pattern-mac.jpg') no-repeat center / cover;
+}
+#intro p {
+  background: rgba(0,0,0,0.6);
+  display: inline;
+  padding: .2em .5em;
+  line-height: 1.6;
+}
+
+
+
 #intro strong {
-  color: #fb6402;
+  color: orangered;
 }
 
 #corps {
-  width: 900px;
-  margin: auto;
-  padding: 1em;
+  
 }
 #corps h2 {
   font-size: 1.8em;
-  padding: 0 1em 1em 1em;
-  color: #fb6402;
+  padding: 1em 0;
+  color: #FFF;
+}
+#corps h2::before {
+  content: '';
+  position: absolute;
+  margin-left: -50px;
+  margin-top: -5px;
+  width: 40px;
+  height: 40px;
+  background: url('images/moi.png');
+  background-size: 100% 100%;
 }
 .partie {
-  padding: 3em 0;
+  padding: 3em 0 6em;
+}
+.partie + .partie {
+  border-top: 4px solid orangered;
+}
+.partie:first-child {
+  border-top: 6px solid orangered;
+  box-shadow: 0 -2px 2px rgba(0,0,0,.3);
+}
+.partie:nth-child(2) {
+  background: #000;
+}
+.partie-inner {
+  width: 900px;
+  margin: auto;
 }
 
 #galerie {
@@ -99,7 +140,7 @@ textarea {
 #inputSubmit {
   margin: auto;
   width: auto;
-  background: #fb6402;
+  background: orangered;
   color: #FFF;
 }
 

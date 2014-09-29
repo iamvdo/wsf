@@ -66,6 +66,7 @@ section
         li.fragment la sémantique de ces éléments
         li.fragment la structure
         li.fragment les liens entre les ressources
+    li.fragment Doit permettre l'accessibilité des données
 
 section
   h2 CSS
@@ -87,6 +88,14 @@ section
         li.fragment interactivité des pages
         li.fragment interagir avec le DOM
         li.fragment logique applicative
+
+section
+  h2 3 langages = 3 pôles
+  p.fragment Séparation des tâches
+  ul
+    li.fragment Contenu
+    li.fragment Mise en forme
+    li.fragment Intéractivité
 
 section
   h2 Hands-on!
@@ -169,6 +178,9 @@ section
         li.fragment communique avec d'autres clients
         li.fragment accède au système
         li.fragment etc
+    li.fragment Le serveur:
+      ul
+        li.fragment peut pusher des infos au client (temps-réel)
 
 section
   h2 Welcome HTML5!
@@ -207,7 +219,28 @@ section
       a(href='http://www.w3.org/html/logo/#the-technology-top') Présentation de HTML5 par W3C
     li.fragment Permet la création d'application riches!
 
-section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- HTML5
+
+section.language-markup
 
   section
     h1 HTML5: HTML!
@@ -215,34 +248,24 @@ section
   section
     h2 HTML, quoi de neuf?
     ul
-      li.fragment Simplifier la création de documents web
-      li.fragment Plus de sémantique
+      li.fragment Simplifie la création de documents web
+      li.fragment Ajout de sémantique
       li.fragment Meilleurs formulaires
-      li.fragment Améliorer l'accessibilité des données
-
-  section
-    h2 Doctype XHTML1
-    pre.language-markup.fragment(style='word-break: break-word'): code &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-    h2.fragment Doctype HTML5
-    pre.language-markup.fragment: code &lt;!doctype html>
-    ul
-      li.fragment Plus de versions
-      li.fragment Rétro-compatible
-      li.fragment Toujours indispensable
+      li.fragment Améliore l'accessibilité des données
 
   section
     h2 Structure / règles simplifiées
     ul
+      li.fragment XML moins strict
       li.fragment Moins de balises et d'attributs obligatoires
       li.fragment Attributs booléens sans valeur, autorisé
     pre.fragment
       code.
+        &lt;input type="checkox" checked>
         &lt;p contenteditable>Texte éditable&lt;/p>
     ul
-      li.fragment Un élément 
-        code &lt;a>
-        |  peut contenir des éléments blocs
-    pre.fragment.language-markup
+      li.fragment Un élément inline peut contenir des éléments blocs
+    pre.fragment
       code.
         &lt;a href="#">
           &lt;h4>Titre&lt;/h4>
@@ -252,9 +275,23 @@ section
       li.fragment Et d'autres...
 
   section
+    h2 Doctype XHTML1
+    pre.fragment(style='word-break: break-word'): code &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    h2.fragment Doctype HTML5
+    pre.fragment
+      code.
+        &lt;!doctype html>
+    ul
+      li.fragment Plus de versions
+      li.fragment Rétro-compatible
+      li.fragment Toujours indispensable
+
+  section
     h2 Nouveaux éléments
     ul
-      li.fragment Nouvelles balises sémantiques:
+      li.fragment Nouvelles balises sémantiques
+      li.fragment Limite les 
+        code &lt;div id="">
         ul
           li.fragment
             code section
@@ -277,8 +314,6 @@ section
           li.fragment
             code time
     +img('html5-elements.jpg')
-    ul: li.fragment Limite les 
-      code &lt;div id="">
 
   section
     h2 Nouveaux éléments
@@ -377,12 +412,31 @@ section
         code &lt;audio>
       li.fragment Vidéos 
         code &lt;video>
-
     ul
       li.fragment Plus de dépendance
       li.fragment Avant, utilisation de Adobe Flash
-
     +img2('video-html5.jpg')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- CSS
 
 section
 
@@ -427,18 +481,27 @@ section
   section
     h2 Sélecteurs CSS3
     ul
-      li.fragment Premier module en Recommandation
+      li.fragment Premier 
+        a(href='http://www.w3.org/TR/selectors/') module 
+        |  en Recommandation
       li.fragment Sélecteurs étoffés: 50+ sélecteurs, pseudo-classes, pseudo-éléments
       li.fragment Ciblage précis des éléments
         +img('selecteurs.jpg')
+      li.fragment Limite les 
+        code class
+        |  ou 
+        code id
+    ul
       li.fragment Sélecteurs d'état de formulaires
         +img('selecteurs-forms.png')
+    ul
       li.fragment
         a(href='http://tools.css3.info/selectors-test/test.html') Selectors Test
 
   section
     h2 Effets graphiques
     ul
+      li.fragment Ombres, transparence, couleurs, arrondis, etc.
       li.fragment Simplication de nombreux effets
       li.fragment Limiter le nombre d'images
       li.fragment Maintenance plus facile
@@ -508,6 +571,23 @@ section
         a(href='http://www.css3create.com/Menu-sans-images') Menu sans images
       li.fragment
         a(href='http://slides.html5rocks.com/#logo-demo') Web 2.0 Logo Creatr
+
+  section
+    h2 Arrières-plans
+    ul
+      li.fragment Taille, origin, rognage
+      li.fragment -size, -origin, -clip
+    ul
+      li.fragment Arrière-plans étirables
+    pre.fragment
+      code.
+        .e {
+          background-image: url('img.jpg');
+          background-size: cover;
+        }
+
+  section
+    h2 Hands-on
 
   section
     h2 Transitions / Animations
