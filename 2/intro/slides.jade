@@ -2,7 +2,13 @@ section
   h1 Intégration web FTW
 
 section
-  h2 Rappels
+  h2 C'est quoi
+  ul
+    li.fragment Transposer les maquettes graphiques en pages web, en assemblant tous les éléments (textes, images, sons, etc.) dans le respect des normes et des standards.
+    li.fragment Métiers liés: développeur web, architecte web, (webmaster)
+
+section
+  h2 Rappels...
 
 section
   h2 Les débuts du WWW
@@ -287,6 +293,22 @@ section.language-markup
       li.fragment Toujours indispensable
 
   section
+    h2 Structure simplifiée
+    p.fragment Document valide HTML5
+    pre.fragment
+      code.
+        &lt;!doctype html>
+        &lt;html lang="fr">
+          &lt;head>
+            &lt;meta charset="utf-8">
+            &lt;title>Titre&lt;/title>
+          &lt;/head>
+          &lt;body>
+            &lt;p>Contenu&lt;/p>
+          &lt;/body>
+        &lt;/html>
+
+  section
     h2 Nouveaux éléments
     ul
       li.fragment Nouvelles balises sémantiques
@@ -458,7 +480,8 @@ section
       li.fragment 1998: CSS2
         ul
           li.fragment Abandonnée, car trop complexe
-      li.fragment 2011: CSS2.1
+      li.fragment 2011: 
+        a(href='http://www.w3.org/TR/CSS2/') CSS2.1
         ul
           li.fragment Version corrigée de CSS2
       li.fragment Depuis 1999: CSS3
@@ -477,6 +500,7 @@ section
         ul
           li.fragment Sélecteurs Niveau 3, Niveau 4
           li.fragment Masques Niveau 1
+      li.fragment Plusieurs modules déjà en recommandation
 
   section
     h2 Sélecteurs CSS3
@@ -587,7 +611,20 @@ section
         }
 
   section
-    h2 Hands-on
+    h2 Positionnement
+    ul
+      li.fragment Nouveaux modes de positionnements
+      li.fragment Flexbox!
+    pre.fragment
+      code.
+        .e {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-around;
+        }
+        .e-item {
+          flex: 1;
+        }
 
   section
     h2 Transitions / Animations
@@ -671,6 +708,8 @@ section
       li.fragment Transforme en 3D
       li.fragment Animable!
       li.fragment
+        a(href='http://www.css3create.com/Flip-card-avec-les-transformations-3D-CSS') Flip-card
+      li.fragment
         a(href='http://www.css3create.com/Effet-coverflow-en-full-CSS') Effet coverflow 3D
       li.fragment
         a(href='http://iamthecu.be/') Rubik's cube
@@ -712,6 +751,26 @@ section
       li.fragment
         a(href='http://mediaqueri.es') Showcase mediaqueri.es
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- API JavaScript
 
 section
 
@@ -759,10 +818,14 @@ section
     pre.fragment.language-js
       code.
         window.addEventListener('deviceorientation', function(event) {
-          var a = event.alpha;
-          var b = event.beta;
-          var g = event.gamma;
+          var a = event.alpha; // autour de Z
+          var b = event.beta; // autour de X
+          var g = event.gamma; // autour de Y
         }, false);
+    +img('device-axes.png')
+    ul
+      li.fragment
+        a(href='http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html') Démo
 
   section
     h2 Web Storage
@@ -771,19 +834,25 @@ section
         code localStorage
         |, 
         code sessionStorage
-      li.fragment Stockage persistent dans le navigateur
+      li.fragment Stockage persistent dans le navigateur (seulement pour la session pour sessionStorage)
       li.fragment Clé / valeur simples
     pre.fragment.language-js
       code.
         localStorage.setItem('value', value);
         localStorage.getItem('value');
+    ul
+      li.fragment
+        a(href='http://demos.w3avenue.com/html5-unleashed-tips-tricks-and-techniques/sample-10-localstorage-demo.html') Démo
 
   section
     h2 IndexedDB
     ul
       li.fragment Stockage persistent dans le navigateur
-      li.fragment Base de donnée indexée
+      li.fragment Base de données indexée
       li.fragment Clé / valeur complexes
+    ul
+      li.fragment
+        a(href="http://www.html5rocks.com/en/tutorials/indexeddb/todo/") Démo
 
   section
     h2 Appcache
@@ -822,6 +891,9 @@ section
       li.fragment Lancer des scripts en parallèle
       li.fragment Threads
       li.fragment Performance
+    ul
+      li.fragment
+        a(href="http://afshinm.github.io/50k/") Démo
 
   section
     h2 Graphiques
@@ -830,6 +902,8 @@ section
         code canvas
         |  pour du dessin matriciel (via JavaScript)
         ul
+          li.fragment
+            a(herf='http://jsbin.com/yayec/8/edit') Démo simple
           li.fragment
             a(href='http://www.craftymind.com/factory/html5video/CanvasVideo.html') Video Explosion
       li.fragment SVG inline pour du dessin vectoriel
