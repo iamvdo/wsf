@@ -267,7 +267,7 @@ section.language-markup
       li.fragment Attributs booléens sans valeur, autorisé
     pre.fragment
       code.
-        &lt;input type="checkox" checked>
+        &lt;input type="checkbox" checked>
         &lt;p contenteditable>Texte éditable&lt;/p>
     ul
       li.fragment Un élément inline peut contenir des éléments blocs
@@ -360,8 +360,6 @@ section.language-markup
       li.fragment Meilleure intégration dans les apps
       li.fragment Aide l'utilisateur, notamment sur mobile
         +img('mobile-forms.jpg')
-      li.fragment Pré-validation client inclue
-        +img('html5-forms-validation.png')
     ul
       li.fragment Nouveaux 
         code &lt;input type="..."/>
@@ -384,6 +382,11 @@ section.language-markup
             code range
           li.fragment
             code color
+      li.fragment Pré-validation client inclue
+        +img('html5-forms-validation.png')
+
+  section
+    h2 Nouveaux formulaires
     ul
       li.fragment Nouveaux attributs:
         ul
@@ -425,6 +428,9 @@ section.language-markup
           &lt;div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content&lt;/div>
           &lt;div id="ch2Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 2 content&lt;/div>
         &lt;/div>
+    ul
+      li.fragment
+        a(href="http://www.oaa-accessibility.org/examples/") ARIA exemples
 
 
   section
@@ -460,7 +466,7 @@ section.language-markup
 
 //- CSS
 
-section
+section.language-css
 
   section
     h1 HTML5: CSS!
@@ -600,7 +606,7 @@ section
     h2 Arrières-plans
     ul
       li.fragment Taille, origin, rognage
-      li.fragment -size, -origin, -clip
+      li.fragment <code>-size</code>, <code>-origin</code>, <code>-clip</code>
     ul
       li.fragment Arrière-plans étirables
     pre.fragment
@@ -772,7 +778,7 @@ section
 
 //- API JavaScript
 
-section
+section.language-javascript
 
   section
     h1 HTML5: API JavaScript!
@@ -783,6 +789,7 @@ section
       li.fragment Interactions avancées
       li.fragment Stockage
       li.fragment Accès système
+      li.fragment etc.
 
   section
     h2 Native drag and drop
@@ -800,7 +807,7 @@ section
         ul
           li.fragment Basé sur IP
           li.fragment Basé sur puce GPS
-    pre.fragment.language-js
+    pre.fragment
       code.
         navigator.geolocation.getCurrentPosition(function(position) {
           console.log(position.coords.latitude, position.coords.longitude);
@@ -815,7 +822,7 @@ section
       li.fragment Position du device dans l'espace
         ul
           li.fragment Angles alpha, beta, gamma
-    pre.fragment.language-js
+    pre.fragment
       code.
         window.addEventListener('deviceorientation', function(event) {
           var a = event.alpha; // autour de Z
@@ -836,7 +843,7 @@ section
         code sessionStorage
       li.fragment Stockage persistent dans le navigateur (seulement pour la session pour sessionStorage)
       li.fragment Clé / valeur simples
-    pre.fragment.language-js
+    pre.fragment
       code.
         localStorage.setItem('value', value);
         localStorage.getItem('value');
@@ -857,8 +864,8 @@ section
   section
     h2 Appcache
     ul
-      li.fragment Cache Manifest
       li.fragment Gestion précise du cache
+      li.fragment Cache Manifest
     pre.fragment.language-markup
       code.
         &lt;html manifest="cache.appcache">
@@ -906,8 +913,6 @@ section
             a(herf='http://jsbin.com/yayec/8/edit') Démo simple
           li.fragment
             a(href='http://www.craftymind.com/factory/html5video/CanvasVideo.html') Video Explosion
-          li.fragment
-            a(href='http://pablotheflamingo.com/') Pablo The Flamingo
       li.fragment SVG inline pour du dessin vectoriel
         ul
           li.fragment
@@ -919,7 +924,11 @@ section
           li.fragment
             a(href='http://kostar111.github.io/rando3D/demo/v1.2') Randonnée 3D
           li.fragment
+            a(href='http://pablotheflamingo.com/') Pablo The Flamingo
+          li.fragment
             a(href='http://race.assassinscreedpirates.com/') Assassin's Creed Pirates
+          li.fragment
+            a(href='http://babylon.js') BabylonJS
 
   section
     h2 WebSockets
@@ -928,9 +937,9 @@ section
       li.fragment Le serveur et le client peuvent envoyer des données
       li.fragment Web temps-réel!
       li.fragment
-        a(href='http://mrdoob.com/projects/multiuserpad/') Pad multiutilisateur
+        a(href='http://rumpetroll.com/') Rumpetroll
       li.fragment
-        a(href='http://vladimir.sh/lab/bird') Flappy Bird temps-réel multijoueur
+        a(href='http://kosmala.fr/lab/bird') <strike>Flappy Bird temps-réel multijoueur</strike>
 
 section
   h2 Environnement client
@@ -979,6 +988,9 @@ section
     li.fragment Windows Phone & Windows
     li.fragment Firefox OS
     li.fragment Tizen
+
+section
+  h2 ...
 
 
 
