@@ -95,7 +95,9 @@ ul, ol, div, p {
 .reveal .slides {
 	position: static;
 	width: 100%;
-	height: auto;
+	height: auto !important;
+	zoom: 1 !important;
+	transform: translate(-50%, -50%) scale(1) translate(50%, 50%) !important;
 
 	left: auto;
 	top: auto;
@@ -187,4 +189,8 @@ ul, ol, div, p {
 }
 .reveal small a {
 	font-size: 16pt !important;
+}
+
+.reveal-overlay {
+	display: none;
 }
