@@ -8,6 +8,7 @@
 
     <meta name="description" content="">
     <meta name="author" content="Vincent De Oliveira">
+    <meta name="robots" content="noindex, nofollow, noarchive">
     <link rel="icon" href="http://iamvdo.me/images/favicon.png"/>
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
