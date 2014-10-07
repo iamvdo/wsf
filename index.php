@@ -46,6 +46,9 @@
       <div class="slides" id="slides">
         <section>
           <h2>Cours / TP</h2>
+          <?php 
+          if ($a == 2) { 
+          ?>
           <p>Mineure</p>
           <ul>
             <li><a href="?2-intro">2A - Intégration</a></li>
@@ -62,6 +65,12 @@
             <li><a href="tp/transitions/">TP: Transitions CSS</a></li>
             <li><a href="tp/animations">TP: Animations CSS</a></li>
           </ul>
+          <?php 
+          } else {
+          ?>
+          <p>Année 1</p>
+          <?php
+          } ?>
         </section>
       </div>
 
@@ -69,7 +78,7 @@
 
     <div class="reveal-overlay"></div>
 
-    <div class="retour"><a href="/">Retour accueil cours</a></div>
+    <div class="retour"><a href="/<?php echo $a; ?>">Retour accueil cours</a></div>
 
     <script src="/browserify.js"></script>
     <script>
