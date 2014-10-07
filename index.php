@@ -52,23 +52,23 @@
           <p>Mineure</p>
           <ul>
             <li><a href="?2-intro">2A - Intégration</a></li>
-            <li><a href="tp/intro">TP: Site d'intro</a></li>
+            <li><a href="/tp/intro">TP: Site d'intro</a></li>
           </ul>
           <p>Majeure</p>
           <ul>
             <li><a href="?2-html">2A - HTML</a></li>
             <li><a href="?2-css">2A - CSS</a></li>
             <li><a href="?2-rwd">2A - RWD</a></li>
-            <li><a href="tp/balises/index_html5.html">TP: Balises HTML5</a></li>
-            <li><a href="tp/form">TP: Formulaire</a></li>
-            <li><a href="tp/css3ftw">TP: Boutons CSS3</a></li>
-            <li><a href="tp/transitions/">TP: Transitions CSS</a></li>
-            <li><a href="tp/animations">TP: Animations CSS</a></li>
+            <li><a href="/tp/balises/index_html5.html">TP: Balises HTML5</a></li>
+            <li><a href="/tp/form">TP: Formulaire</a></li>
+            <li><a href="/tp/css3ftw">TP: Boutons CSS3</a></li>
+            <li><a href="/tp/transitions/">TP: Transitions CSS</a></li>
+            <li><a href="/tp/animations">TP: Animations CSS</a></li>
           </ul>
           <?php 
           } else {
           ?>
-          <p>Année 1</p>
+          <p>Année 1 non encore disponible...</p>
           <?php
           } ?>
         </section>
