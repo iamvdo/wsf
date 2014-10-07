@@ -1,0 +1,36 @@
+.buttons {
+	text-align: center;
+	margin: 100px;
+}
+.myButton {
+	display: inline-block;
+	margin: 3px;
+	outline: none;
+	font-size: medium;
+	padding: .3em .3em .3em 30px;
+	border: none;
+	background-image: url('sprite-icones.png'),
+	                  linear-gradient(orange, orangered);
+	background-repeat: no-repeat;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.4),
+							0 3px 3px rgba(0,0,0,.5);
+	text-shadow: 0 1px 0 rgba(255,255,255,.4);
+}
+.myButton:active {
+	background-image: url('sprite-icones.png'),
+	            linear-gradient(rgba(0,0,0,.4), transparent),
+	            linear-gradient(orange, orangered);
+	box-shadow: inset 0 2px 2px rgba(0,0,0,.4),
+							0 1px 0 rgba(255,255,255,.5);
+	text-shadow: none;
+}
+.myButton--jeux {
+	background-position: 0 -28px, 0 0, 0 0;
+}
+.myButton--musique {
+	background-position: 0 -56px, 0 0, 0 0;
+}
+.myButton--reglages {
+	background-position: 0 -84px, 0 0, 0 0;
+}

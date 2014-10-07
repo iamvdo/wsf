@@ -37,7 +37,28 @@ body {
 .reveal .slides > section > section {
     height: 100%;
 }
-
+.reveal .u-small {
+  font-size: .8em;
+  color: #888;
+  text-align: center;
+}
+.retour {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.retour a {
+  font: 1em sans-serif;
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  padding: 10px 10px 20px 20px;
+  background: #f03d36;
+}
+.retour a:hover,
+.retour a:focus {
+  text-decoration: underline;
+}
 ::selection {
   color: white;
   background: rgba(0, 0, 0, 0.99);
