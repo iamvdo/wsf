@@ -42,7 +42,6 @@
     time: document.querySelector('.time')
   };
   var setTime = function () {
-    console.log('timer');
     var elapsed = (video.obj.currentTime * 100) / video.obj.duration;
     if (elapsed >= 100) {
       video.stopVideo();

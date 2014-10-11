@@ -1,0 +1,262 @@
+/**
+ *
+ * Formulaire
+ * 
+ */
+@import url(../boutons.css);
+section:first-of-type {
+  background: #999;
+}
+form {
+  width: 300px;
+  padding: 30px;
+  margin: auto;
+  border-radius: 3px;
+  background: #222;
+  color: #FFF;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+}
+.invalid {
+  -webkit-animation: invalid .7s 1;
+          animation: invalid .7s 1;
+}
+input {
+  display: block;
+  font-size: 1.1em;
+  padding: .3em;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 3px;
+  border: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  background: #000;
+  color: deepskyblue;
+}
+input:focus {
+  outline: none;
+  -webkit-animation: pulse 1s infinite alternate;
+          animation: pulse 1s infinite alternate;
+}
+/* override buttons */
+.button {
+  display: block;
+  margin: 20px auto 10px;
+  font-size: .8em;
+  box-shadow: none;
+}
+.button:hover,
+.button:focus {
+  box-shadow: none;
+}
+::-webkit-input-placeholder {
+  line-height: 1.6em;
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}::-moz-placeholder {
+  line-height: 1.6em;
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}:-ms-input-placeholder {
+  line-height: 1.6em;
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}::placeholder {
+  line-height: 1.6em;
+  font-style: italic;
+  font-size: .8em;
+  color: #888;
+}
+
+@-webkit-keyframes invalid {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  20% {
+    -webkit-transform: translateX(18px);
+            transform: translateX(18px);
+  }
+  30% {
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+  }
+  40% {
+    -webkit-transform: translateX(14px);
+            transform: translateX(14px);
+  }
+  50% {
+    -webkit-transform: translateX(-12px);
+            transform: translateX(-12px);
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  70% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+  80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  90% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes invalid {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  20% {
+    -webkit-transform: translateX(18px);
+            transform: translateX(18px);
+  }
+  30% {
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+  }
+  40% {
+    -webkit-transform: translateX(14px);
+            transform: translateX(14px);
+  }
+  50% {
+    -webkit-transform: translateX(-12px);
+            transform: translateX(-12px);
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  70% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+  80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  90% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    box-shadow: 0 0 3px deepskyblue;
+  }
+  to {
+    box-shadow: 0 0 14px deepskyblue;
+  }
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 3px deepskyblue;
+  }
+  to {
+    box-shadow: 0 0 14px deepskyblue;
+  }
+}
+
+
+
+
+
+
+/**
+ *
+ * Animer au chargement
+ * 
+ */
+
+.browsers {
+  text-align: center;
+}
+.browsers-item {
+  display: inline-block;
+  margin: 30px;
+
+  position: relative;
+  top: 0;
+  opacity: 1;
+
+  -webkit-animation: anim .6s 1 cubic-bezier(.5,2,.5,.8) backwards;
+          animation: anim .6s 1 cubic-bezier(.5,2,.5,.8) backwards;
+
+}
+
+/* with delay */
+.browsers-item:nth-child(2) {
+  -webkit-animation-delay: .15s;
+          animation-delay: .15s;
+}
+.browsers-item:nth-child(3) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+.browsers-item:nth-child(4) {
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+.browsers-item:nth-child(5) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+@-webkit-keyframes anim {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

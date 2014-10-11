@@ -53,18 +53,22 @@
           <p>Mineure</p>
           <ul>
             <li><a href="?2-intro">2A - Intégration</a></li>
-            <li><a href="/tp/intro">TP: Site d'intro</a></li>
+            <li><a href="/tp/2/intro"><strong>TP:</strong> Site d'intro</a></li>
           </ul>
           <p>Majeure</p>
           <ul>
             <li><a href="?2-html">2A - HTML</a></li>
             <li><a href="?2-css">2A - CSS</a></li>
             <li><a href="?2-rwd">2A - RWD</a></li>
-            <li><a href="/tp/balises/index_html5.html">TP: Balises HTML5</a></li>
-            <li><a href="/tp/form">TP: Formulaire</a></li>
-            <li><a href="/tp/css3ftw">TP: Boutons CSS3</a></li>
-            <li><a href="/tp/transitions/">TP: Transitions CSS</a></li>
-            <li><a href="/tp/animations">TP: Animations CSS</a></li>
+            <li><a href="/tp/2/balises/index_html5.html"><strong>TP:</strong> Balises HTML5</a></li>
+            <li><a href="/tp/2/form"><strong>TP:</strong> Formulaire</a></li>
+            <li><a href="/tp/2/css3ftw"><strong>TP:</strong> Boutons CSS3</a></li>
+            <li><a href="/tp/2/transitions"><strong>TP:</strong> Transitions CSS</a></li>
+            <li><a href="/tp/2/animations"><strong>TP:</strong> Animations CSS</a></li>
+            <li><a href="/tp/2/transforms"><strong>TP:</strong> Transformations</a></li>
+            <li><a href="/tp/2/rwd"><strong>TP:</strong> RWD</a></li>
+            <li><a href="/tp/2/video"><strong>TP:</strong> Vidéo HTML5</a></li>
+            <li><a href="/tp/2/microdata"><strong>TP:</strong> Microdonnées</a></li>
           </ul>
           <?php 
           } else {
