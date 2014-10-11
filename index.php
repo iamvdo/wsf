@@ -4,7 +4,9 @@
   <head>
     <meta charset="utf-8">
 
-    <title>WSF</title>
+    <?php if ($a) { $msg = ' - Année ' . $a; } ?>
+
+    <title>WSF<?php echo $msg; ?></title>
 
     <meta name="description" content="">
     <meta name="author" content="Vincent De Oliveira">
@@ -71,11 +73,15 @@
             <li><a href="/tp/2/microdata"><strong>TP:</strong> Microdonnées</a></li>
           </ul>
           <?php 
-          } else {
+          } elseif ($a == 1) {
           ?>
-          <p>Année 1 non encore disponible...</p>
+            <p>Année 1 non encore disponible...</p>
           <?php
-          } ?>
+          } else { ?>
+            <p>Choisissez une année dans l'URL</p>
+          <?php 
+          }
+          ?>
         </section>
       </div>
 
