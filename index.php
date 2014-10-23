@@ -75,7 +75,9 @@
           <?php 
           } elseif ($a == 1) {
           ?>
-            <p>Année 1 non encore disponible...</p>
+            <ul>
+              <li><a href="?1-intro">Introduction au WWW</a></li>
+            </ul>
           <?php
           } else { ?>
             <p>Choisissez une année dans l'URL</p>

@@ -1,0 +1,388 @@
+section
+  h1 Intégration web
+  p.u-small Utilisez les flèches ← et → pour naviguer. Esc pour une vue générale.
+
+section
+  h2 Intégrer, c'est quoi?
+  ul
+    li.fragment Transposer les maquettes graphiques en pages web, en assemblant tous les éléments (textes, images, sons, etc.) dans le respect des normes et des standards.
+    li.fragment Métier: intégrateur web
+    li.fragment Métiers liés: designer web, développeur web, architecte web, (webmaster)
+
+section
+  h2 Le WWW
+  ul
+    li.fragment 1989 (~25ans)
+    li.fragment Créé par Tim Berners-Lee
+    li.fragment
+      a(href='http://info.cern.ch/hypertext/WWW/TheProject.html') Première page web
+    li.fragment Internet existe déjà depuis 60ans! (fin des années 50)
+    li.fragment Standardisé par le 
+      a(href='http://w3.org') W3C
+
+section
+  h2 Architecture Web
+  ul
+    li.fragment Client / Serveur
+    li.fragment Communiquent entre eux via un protocole
+  ul
+    li.fragment Clients:
+      ul
+        li.fragment Navigateurs, robots, services, etc.
+        li.fragment Font des requêtes
+    li.fragment Serveurs:
+      ul
+        li.fragment Ordinateurs
+        li.fragment Programme qui traite les requêtes
+        li.fragment Peux se connecter à d'autres serveurs (applicatifs, BDD)
+  +img('archi1.jpg')
+
+section
+  h2 Le web
+  ul
+    li.fragment Repose sur:
+      ul
+        li.fragment DNS (nom de domaine)
+        li.fragment URLs (protocole HTTP)
+        li.fragment Langage HTML
+
+section
+  h2 DNS
+  ul
+    li.fragment Domain Name System
+    li.fragment Traduit un nom de domaine en adresse IP
+  +img('dns.gif')
+
+section
+  h2 URLs
+  ul
+    li.fragment Uniform Resource Locator
+    li.fragment Ce sont les ressources du WWW
+    li.fragment Identifie précisément une ressource (page, images, torrent, etc.)
+    li.fragment Un sous-ensemble d'URI (Uniform Resource Identifier)
+
+section
+  h2 URLs
+  p
+    +img2('url.jpg')
+  ul
+    li.fragment
+      code http://
+      |  Protocole HTTP
+    li.fragment
+      code www
+      |  Sous-domaine
+    li.fragment 
+      code exemple.com
+      |  Nom de domaine (+extension)
+    li.fragment 
+      code :80
+      |  Port (défaut 80)
+    li.fragment 
+      code chemin/page.html
+      |  Chemin de la ressource
+    li.fragment 
+      code ?id=8&name=nom
+      |  Paramètres de la requête (query string)
+    li.fragment 
+      code #ancre
+      |  Fragment
+
+section
+  h2 Protocole HTTP
+  ul
+    li.fragment HyperText Transfer Protocol
+    li.fragment Protocole de communication client-serveur
+    li.fragment Repose sur le protocole TCP/IP
+      +img('pile-protocole.jpg')
+    li.fragment Plusieurs méthodes:
+      ul
+        li.fragment GET: demande une ressource
+        li.fragment POST: envoi des données
+        li.fragment Et d'autres: PUT, DELETE, HEAD, etc.
+    li.fragment Variante sécurisée HTTPS
+
+section
+  h2 Protocole HTTP
+  ul
+    li.fragment Métadonnées en entêtes HTTP
+  p.fragment Requête HTTP:
+  pre.fragment
+    code.
+      GET /page.html HTTP/1.0
+      Host: example.com
+  p.fragment Réponse HTTP:
+  pre.fragment
+    code.
+      HTTP/1.0 200 OK
+      Date: Sat, 11 Oct 2014 13:18:48 GMT
+      Server: Apache/2.2.26 (Unix)
+      Content-Type: text/html
+      Content-Length: 14
+
+      &lt;p>Content&lt;/p>
+  +img('entete-http.jpg')
+
+section
+  h2 HTML
+  ul
+    li.fragment HyperText Markup Language
+    li.fragment Langage pour écrire les pages
+    li.fragment Pas un langage de programmation
+    li.fragment Langage de description
+    li.fragment Basé sur 2 notions:
+      ul
+        li.fragment Hypertexte: lier des pages entre elles
+        li.fragment Markup: balises pour décrire les données transmises
+    li.fragment Doit permettre l'accessibilité des données
+
+section
+  h2 Accessibilité
+  ul
+    li.fragment Problématique de l'accès aux services et contenus en ligne
+    li.fragment Média web permet cela (contrairement au papier par ex.)
+  p.fragment Pour qui?
+  ul
+    li.fragment Handicap
+    li.fragment Sénior
+    li.fragment Toute personne en situation non "normale"
+
+section
+  h2 Accessibilité
+  ul
+    li.fragment Multitude d'écrans, de moyen d'accès au web
+    li.fragment Lecteur d'écran (contenu texte vs. images)
+    li.fragment Toute autre aide (plage braille, etc.)
+
+section
+  h2 Séparation fond / forme
+  ul
+    li.fragment Séparation contenu et mise en forme
+    li.fragment Feuille de style unique pour documents multiples
+    li.fragment Mises à jour simplifiées
+    li.fragment Meilleure accessibilité
+    li.fragment Styles alternatifs
+  +img('separation-fond-forme.jpg')
+
+section
+  h2 Langages client
+  ul
+    li.fragment HTML, pour le contenu
+    li.fragment CSS, pour la mise en forme
+    li.fragment JavaScript, pour l'interactivité
+
+section
+  h2 Langages serveur
+  ul
+    li.fragment Beaucoup!
+    li.fragment PHP
+    li.fragment JAVA, ASP, .Net
+    li.fragment JavaScript (Node.js)
+
+section
+  h2 HTML
+  ul
+    li.fragment Langage à balises de données hypertextes
+    li.fragment Définit:
+      ul
+        li.fragment le contenu de la page (textes, images, vidéos, etc)
+        li.fragment la sémantique de ces éléments
+        li.fragment la structure
+        li.fragment les liens entre les ressources
+    li.fragment Fichier texte 
+      code .html
+
+section
+  h2 CSS
+  ul
+    li.fragment Cascading Style Sheets
+    li.fragment Feuilles de styles en cascade
+    li.fragment Langage de description
+    li.fragment Définit le rendu visuel des documents XML
+    li.fragment Fichier texte 
+      code .css
+
+section
+  h2 JavaScript
+  ul
+    li.fragment Langage de programmation de script
+    li.fragment Ne pas dire Java, c'est un autre langage
+    li.fragment Utilisé pour
+      ul
+        li.fragment interactivité des pages
+        li.fragment interagir avec le DOM
+        li.fragment logique applicative
+    li.fragment Fichier texte 
+      code .js
+
+section
+  h2 Navigateurs
+  ul
+    li.fragment Chrome (Google)
+    li.fragment Firefox (Mozilla)
+    li.fragment Internet Explorer (Microsoft)
+    li.fragment Safari (Apple)
+    li.fragment Opera (Opera Sofware)
+  ul
+    li.fragment Sur mobile également
+
+section
+  h2 Moteurs de navigateurs
+  ul
+    li.fragment Gecko (Firefox & Co.)
+    li.fragment WebKit (Safari) / Blink (Chrome, Opera)
+    li.fragment Trident (IE)
+    li.fragment Presto (anciennement Opera)
+
+section
+  h2 Parseur XML
+  ul
+    li.fragment Convertit fichier HTML en objet XML
+    li.fragment Récupère la structure, les contenus, les attributs, etc.
+    li.fragment Crée l'arbre du document
+    li.fragment Différent du code source
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Outils
+
+section
+
+  section
+    h1 Outils
+    p.u-small Utilisez les flèches ↓ et ↑
+
+  section
+    h2 Éditeurs de textes
+    ul
+      li.fragment Coloration syntaxique
+      li.fragment Autocomplétion
+      li.fragment EDI (Environnement de développement complet)
+      li.fragment Plugins
+    ul
+      li.fragment
+        a(href='http://www.sublimetext.com/') Sublime Text
+      li.fragment 
+        a(href='http://brackets.io') Brackets
+      li.fragment Pleins d'autres: VIM, PSPad, NotePad++, TextEdit, Smultron, Atom, etc.
+
+  section
+    h2 Navigateurs
+    ul
+      li.fragment Tester le rendu
+      li.fragment 
+        a(href='http://www.google.fr/chrome/') Chrome
+        |, 
+        a(href='https://www.mozilla.org/fr/firefox/new/') Firefox
+        |, 
+        a(href='https://www.apple.com/fr/safari/') Safari (Mac seulement)
+        |, 
+        a(href='http://www.opera.com/fr') Opera
+        |, 
+        a(href='http://windows.microsoft.com/fr-fr/internet-explorer/download-ie') Internet Explorer (Windows seulement)
+
+  section
+    h2 Machines virtuelles
+    ul
+      li.fragment Tester le rendu (encore)
+      li.fragment 
+        a(href='http://modern.ie') Modern.ie
+    ul
+      li.fragment VirtualBox, Parallels, VMWare (Windows, Mac, Linux)
+
+  section
+    h2 Débogage
+    ul
+      li.fragment Outils intégrés aux navigateurs
+
+  section
+    h2 Serveur
+    ul
+      li.fragment Hébergement
+      li.fragment Nom de domaine
+    ul
+      li.fragment Serveur local de développement
+        ul
+          li.fragment
+            a(href='http://www.easyphp.org') EasyPHP
+          li.fragment 
+             a(href='http://www.wampserver.com/') WAMP
+             |, 
+             a(href='http://www.mamp.info') MAMP
+             |, 
+             a(href='http://doc.ubuntu-fr.org/lamp') LAMP
+
+  section
+    h2 Transfert
+    ul
+      li.fragment Vers le serveur
+      li.fragment Protocole FTP (ftp://)
+      li.fragment
+        a(href='http://fireftp.net') FireFTP (extension Firefox)
+        |, 
+        a(href='http://www.sftpclient.co.uk') sFTP Client (extension Chrome)
+        |, 
+        a(href='http://filezilla.fr') FileZilla
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Démo
+
+section
+  
+  section
+    h1 Démo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
