@@ -1,2 +1,205 @@
 section
   h1 HTML
+
+section
+  h2 Concept
+  ul
+    li.fragment Décrire les données
+    li.fragment Définir la structure du document
+    li.fragment Pas le rendu visuel
+    li.fragment Permettre l'accessibilité
+
+section
+  h2 Standard
+  ul
+    li.fragment Respect des normes
+    li.fragment W3C
+    li.fragment Plusieurs versions du standard HTML
+
+section.language-markup
+  h2 Element HTML
+  pre.fragment
+    code.
+      &lt;p>Texte&lt;/p>
+  ul
+    li.fragment 2 balises
+      ul
+        li.fragment une ouvrante
+        li.fragment une fermante
+    li.fragment Définit la sémantique
+
+section
+  h2 Sémantique
+  ul
+    li.fragment Donne le sens d'une balise
+    li.fragment Définit son rôle
+    li.fragment Aucune notion de rendu, d'affichage
+    li.fragment Le but: code structuré, accessible, référencement facilité.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Règles HTML
+
+section.language-markup
+
+  section
+    h1 Règles XHTML
+
+  section
+    ul
+      li.fragment Nom des balises en minuscule
+      li.fragment Les balises s'ouvrent et se referment
+      li.fragment Même balise img, hr, input
+      li.fragment Chaque balise à une sémantique
+      li.fragment Les balises peuvent s'imbriquer
+      li.fragment Complète les balises avec des attributs (obligatoires ou non)
+      li.fragment Deux types (bloc ou inline): balise inline obligatoirement dans balise bloc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Structure HTML
+
+section.language-markup
+
+  section
+    h1 Structure HTML
+
+  section
+    h2 Type de document
+    ul
+      li.fragment Le DOCTYPE
+      li.fragment Première déclaration d'un document HTML
+      li.fragment Indispensable
+
+  section
+    h2 Quel DOCTYPE?
+    p.fragment HTML4
+    pre.fragment
+      code.
+        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    p.fragment XHTML1 Strict
+    pre.fragment
+      code.
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    p.fragment HTML5
+    pre.fragment
+      code.
+        &lt;!DOCTYPE html>
+    p.fragment
+      a(href='http://www.alsacreations.com/article/lire/560-dtd-doctype-html-xhtml-comment-choisir.html') Les différents DOCTYPE
+
+  section
+    h2 Zone racine
+    ul
+      li.fragment Element
+        code &lt;html>
+      li.fragment Début et fin du document
+      li.fragment Englobe tous les autres éléments
+
+  section
+    h2 Attributs sur 
+      code &lt;html>
+    p.fragment En XHTML1
+    pre.fragment
+      code.
+        &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    p.fragment En HTML5
+    pre.fragment
+      code.
+        &lt;html lang="fr">
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Element
+        code &lt;head>
+      li.fragment Début et fin des informations non affichées
+      li.fragment Définit:
+        ul
+        li.fragment Encodage du fichier
+        li.fragment Feuille de styles utilisées
+        li.fragment Scripts
+        li.fragment Favicon
+        li.fragment Toutes les autres métadonnées
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Element
+        code &lt;title>
+      li.fragment Définit:
+        ul
+        li.fragment Titre de la page
+        li.fragment Utilisé comme titre d'onglet (navigateur)
+        li.fragment Utilisé comme titre de résultat (Google)
+        li.fragment etc.
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Element
+        code &lt;meta> pour l'encodage
+    p.fragment XHTML1
+    pre.fragment
+      code.
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    p.fragment En HTML5
+    pre.fragment
+      code.
+        &lt;meta charset="utf-8">
+    ul
+      li.fragment Définit l'encodage du fichier
+      li.fragment
+        a(href='http://fr.wikipedia.org/wiki/UTF-8') UTF-8
+        |,  
+        a(href='http://fr.wikipedia.org/wiki/ISO_8859-1') ISO-8859-1
+      li.fragment Utile au navigateur
+      li.fragment Vérifier à enregistrer votre fichier en UTF-8
+      li.fragment Configurez votre éditeur de texte
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Element
+        code &lt;meta name="description" content="">
+
+  section
+    h2 Corps de la page
+    ul
+      li.fragment Element
+        code &lt;body>
+      li.fragment Contient les éléments visibles de la page
