@@ -1,0 +1,509 @@
+// - Éléments HTML
+
+section.language-markup
+
+  section
+    h1 Éléments HTML
+
+  section
+    h2 Les textes
+    p.fragment Élément 
+      code &lt;p>
+    ul
+      li.fragment Paragraphe (block)
+      li.fragment Attention aux sauts de ligne (<code>&lt;br></code>)
+
+  section
+    h2 Les textes
+    p.fragment Élément 
+      code &lt;strong>
+    ul
+      li.fragment Texte important (inline)
+      li.fragment Par défaut en gras
+    p.fragment Élément 
+      code &lt;em>
+    ul
+      li.fragment Texte accentué (inline)
+      li.fragment Encadre des portions de texte
+      li.fragment Titre d'oeuvre, de film, etc.
+      li.fragment Utilisé aussi pour mots en langues étrangères
+      li.fragment Par défaut en italique
+    ul
+      li.fragment
+        strong Attention! (sémantique ≠ mise en forme)
+
+  section
+    h2 Les textes
+    pre.fragment
+      code.
+        &lt;p>Voici un paragraphe de texte et &lt;strong>cette partie est très importante&lt;/strong>.&lt;/p>
+        &lt;p>J'ai lu le livre &lt;em>CSS3 Le design web moderne&lt;/em>&lt;/p>
+
+  section
+    h2 Les titres
+    p.fragment Éléments 
+      code &lt;h1>
+      |  à 
+      code &lt;h6>
+    ul
+      li.fragment Titres 1 à 6 (block)
+      li.fragment Structurent les pages de manière logique
+      li.fragment Important aussi pour le référencement
+      li.fragment Taille par défaut dans les navigateurs
+
+  section
+    h2 Les listes à puces
+    p.fragment Éléments 
+      code &lt;ul>
+      |  et 
+      code &lt;li>
+    ul
+      li.fragment
+        code &lt;ul>
+        |: la liste à puce (block)
+      li.fragment
+        code &lt;li>
+        |: chaque élément de liste, une puce (block)
+      li.fragment Ordre sans importance
+      li.fragment Liste imbriquées possible
+    pre.fragment
+      code.
+        &lt;p>Voici les 4 éléments:&lt;/p>
+        &lt;ul>
+          &lt;li>la Terre&lt;/li>
+          &lt;li>le Feu&lt;/li>
+          &lt;li>l'Eau&lt;/li>
+          &lt;li>le Vent&lt;/li>
+        &lt;ul>
+
+  section
+    h2 Les listes à puces
+    p.fragment Éléments 
+      code &lt;ol>
+      |  et 
+      code &lt;li>
+    ul
+      li.fragment Idem
+      li.fragment Mais ordre important
+    pre.fragment
+      code.
+        &lt;p>Voici le podium à l'arrivée:&lt;/p>
+        &lt;ol>
+          &lt;li>le premier&lt;/li>
+          &lt;li>le deuxième&lt;/li>
+          &lt;li>le troisième&lt;/li>
+        &lt;ol>
+
+  section
+    h2 Les liens
+    p.fragment Élément 
+      code &lt;a>
+    ul
+      li.fragment Lien hypertexte (inline)
+      li.fragment Attribut 
+        code href
+        |  obligatoire: destination du lien
+    pre.fragment
+       code.
+         &lt;p>Un lien vers &lt;a href="http://google.fr">Google&lt;/a>&lt;/p>
+
+  section
+    h2 Les URLs
+    p.fragment Deux types d'URLs
+    ul
+      li.fragment Absolues
+        ul
+          li.fragment Commencent par protocole (http://, https://)
+          li.fragment Toujours accessible, peut importe l'endroit du lien
+      li.fragment Relatives
+        ul
+          li.fragment Les autres
+          li.fragment Relatives à l'URL actuelle
+    pre.fragment
+      code.
+        &lt;a href="http://google.fr">Google&lt;/a>
+        &lt;a href="pages/page.html">Google&lt;/a>
+
+  section
+    h2 Les URLs
+    p.fragment Technique simple:
+    ul
+      li.fragment Retirez le nom de fichier à l'URL actuelle
+      li.fragment Collez l'URL relative
+      li.fragment L'URL complète doit cibler la ressource
+    pre.fragment
+      code.
+        &lt;!-- URL actuelle -->
+        http://a.fr/page/test.html
+
+        &lt;!-- lien dans la page -->
+        &lt;a href="page.html">lien&lt;/a>
+
+        &lt;!-- URL de la ressource -->
+        http://a.fr/page/page.html
+
+  section
+    h2 Les URLs
+    ul
+      li.fragment URL qui commencent par 
+        code /
+        |: relative à la racine
+      li.fragment
+        code ../
+        |  pour remonter d'un dossier
+      li.fragment URL qui commencent par 
+        code #
+        |: lien dans la page (ancre)
+
+  section
+    h2 Les neutres
+    p.fragment Éléments 
+      code &lt;div>
+      |  et 
+      code &lt;span>
+    ul
+      li.fragment Éléments sans sémantique
+      li.fragment
+        code &lt;div> de type block
+      li.fragment
+        code &lt;span> de type inline
+    ul
+      li.fragment Permet de regrouper des éléments
+      li.fragment Sans donner de sémantique particulière
+      li.fragment Souvent pour faire de la mise en forme
+      li.fragment
+        code &lt;span> très peu utilisé
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Les attributs id et class
+section.language-markup
+
+  section
+    h1 Les attributs 
+      code id
+      |  et 
+      code class
+
+  section
+    h2 Attributs importants
+    ul
+      li.fragment Nommer ou regrouper des éléments
+      li.fragment Sens commun
+      li.fragment Mise en forme commune
+      li.fragment Sur tous les éléments
+
+  section
+    h2 Attribut 
+      code id
+    ul
+      li.fragment Identifiant
+      li.fragment Identifier un élément précis
+      li.fragment Un 
+        code id
+        |  est unique (1 seule fois par page)
+    pre.fragment
+      code.
+        &lt;div id="menu">
+          &lt;ul>
+            &lt;li>...&lt;/li>
+          &lt;/ul>
+        &lt;/div>
+    ul
+      li.fragment Permet aussi de faire une ancre
+
+  section
+    h2 Attribut 
+      code class
+    ul
+      li.fragment Identique à 
+        code id
+      li.fragment Mais utilisable plusieurs fois par page
+      li.fragment Même sur des éléments différents
+    pre.fragment
+      code.
+        &lt;div class="module">
+          ...
+        &lt;/div>
+        &lt;div class="module">
+          ...
+        &lt;/div>
+        &lt;a class="module" href="#">
+          ...
+        &lt;/a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Les images
+
+section.language-markup
+
+  section
+    h1 Les images
+
+  section
+    h2 Les images
+    p.fragment Élément 
+      code &lt;img>
+    ul
+      li.fragment Image (inline)
+      li.fragment Image sémantique (pas décoration)
+      li.fragment Attribut 
+        code src
+        |  obligatoire: source de l'image
+      li.fragment Attribut 
+        code alt
+        |  obligatoire: texte alternatif
+    pre.fragment
+      code.
+        &lt;p>&lt;img src="image.jpg" alt="Une image..." />&lt;/p>
+
+  section
+    h2 Source
+    p.fragment Attribut 
+      code src
+    ul
+      li.fragment URL de l'image
+      li.fragment Identique aux URLs de liens
+    
+  section
+    h2 Texte alternatif
+    p.fragment Attribut 
+      code alt
+    ul
+      li.fragment Texte de remplacement
+      li.fragment Accessibilité
+      li.fragment Référencement
+      li.fragment 
+        a(href='http://www.pompage.net/traduction/Bien-utiliser-le-texte-alternatif') Bien utiliser le texte alternatif
+
+  section
+    h2 Les formats
+    ul
+      li.fragment GIF
+      li.fragment JPG
+      li.fragment PNG
+    ul
+      li.fragment WebP (trop récent)
+  
+  section
+    h2 GIF
+    ul
+      li.fragment 256 couleurs max
+      li.fragment Transparence (1 niveau)
+      li.fragment Optimisation
+        ul
+          li.fragment Limiter le nombre de couleurs
+
+  section
+    h2 JPG
+    ul
+      li.fragment M de couleurs
+      li.fragment Pas de transparence
+      li.fragment Optimisation
+        ul
+          li.fragment Baisser la qualité
+          li.fragment Compression plus forte
+
+  section
+    h2 PNG
+    ul
+      li.fragment M de couleurs
+      li.fragment Transparence (256 niveaux)
+      li.fragment Optimisation
+        ul
+          li.fragment Limiter le nombre de couleurs
+
+  section
+    h2 Outils
+    ul
+      li.fragment Photoshop
+      li.fragment
+        a(href="http://smush.it") Smush.it
+      li.fragment
+        a(href="https://tinypng.com/") TinyPNG
+      li.fragment
+        a(href="https://imageoptim.com/fr.html") ImageOptim
+      li.fragment
+        a(href="http://compresspng.com/") CompressPNG
+      li.fragment Et beaucoup d'autres
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Autres éléments
+
+section.language-markup
+
+  section
+    h1 Autres éléments
+
+  section
+    h2 Liste de définition
+    p.fragment Éléments 
+      code &lt;dl>
+      |, 
+      code &lt;dt>
+      |  et 
+      code &lt;dd>
+      |  (blocks)
+    ul
+      li.fragment Liste de définition
+      li.fragment Chaque élément est défini par un titre et une définition
+    pre.fragment
+      code.
+        &lt;dl>
+          &lt;dt>Légumes&lt;/dt>
+          &lt;dd>Haricots Verts&lt;/dd>
+          &lt;dd>Carottes&lt;/dd>
+          &lt;dd>Courgettes&lt;/dd>
+          &lt;dt>Fruits&lt;/dt>
+          &lt;dd>Pommes&lt;/dd>
+          &lt;dd>Poires&lt;/dd>
+          &lt;dd>Oranges&lt;/dd>
+        &lt;/dl>
+    ul
+      li.fragment
+        a(href='http://www.pompage.net/traduction/listesdefinitions') Liste de définitions 
+
+
+  section
+    h2 Les tableaux
+    ul
+      li.fragment Structurer les données
+      li.fragment Élément 
+        code &lt;table> (block)
+        ul
+          li.fragment L'élément englobant
+      li.fragment Élément 
+        code &lt;tr> (block)
+        ul
+          li.fragment Une ligne de tableau
+      li.fragment Élément 
+        code &lt;td> (block)
+        ul
+          li.fragment Une cellule de ligne
+      li.fragment Élément 
+        code &lt;th> (block)
+        ul
+          li.fragment Une cellule d'entête de ligne
+
+  section
+    h2 Les tableaux
+    pre.fragment
+      code.
+        &lt;table>
+          &lt;tr>
+            &lt;th>Nom&lt;/th>
+            &lt;th>Prénom&lt;/th>
+          &lt;/tr>
+          &lt;tr>
+            &lt;td>De Oliveira&lt;/td>
+            &lt;td>Vincent&lt;/td>
+          &lt;/tr>
+        &lt;/table>
+
+  section
+    h2 Citations
+    p.fragment Élément 
+      code &lt;q>
+    ul
+      li.fragment Citation courte (inline)
+      li.fragment Au fil du texte
+      li.fragment Guillemets en fonction de la langue (attribut <code>lang</code>)
+    p.fragment Élément 
+      code &lt;blockquote>
+    ul
+      li.fragment Bloc de citation (block)
+      li.fragment Peut contenir un titre, un texte, l'auteur, etc.
+
+  section
+    h2 Citations
+    pre.fragment
+      code.
+        &lt;blockquote>
+          &lt;p>Luke, je suis ton père!&lt;/p>
+          &lt;p>- Dark Vador&lt;/p>
+        &lt;/blockquote>
+
+        &lt;p>Et là, Dark Vador lance: &lt;q>Luke, je suis ton père&lt;/q>&lt;/p>
+
+  section
+    h2 Abbréviations
+    p.fragment Élément 
+      code &lt;abbr>
+    ul
+      li.fragment Les mots abrégés
+      li.fragment Les acronymes
+      li.fragment etc.
+      li.fragment Avec l'attribut 
+        code title
+    pre.fragment
+      code.
+        &lt;p>Je sui étudiant à la &lt;abbr title="Web School Factory">WSF&lt;/abbr>&lt;/p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

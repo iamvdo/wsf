@@ -77,6 +77,8 @@
           ?>
             <ul>
               <li><a href="?1-intro">Introduction au WWW</a></li>
+              <li><a href="?1-html/regles">HTML - Concept, règles et structure</a></li>
+              <li><a href="?1-html/elements">HTML - Éléments</a></li>
             </ul>
           <?php
           } else { ?>

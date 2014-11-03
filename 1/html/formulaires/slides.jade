@@ -1,0 +1,257 @@
+section
+  h1 Formulaires
+
+section
+  h2 A quoi ça sert ?
+  ul
+    li.fragment Récupérer des informations
+    li.fragment Interagir avec l'utilisateur
+
+section.language-markup
+
+  section
+    h1 Création
+
+  section
+    h2 Création
+    p.fragment Élément 
+        code &lt;form> (block)
+    ul
+      li.fragment Attributs :
+        ul
+          li.fragment
+            code action
+            |  : la page qui traite le formulaire (langage serveur)
+          li.fragment 
+            code method
+            |  : la méthode d'envoi du formulaire
+
+  section
+    h2 Méthode d'envoi
+    ul
+      li.fragment
+        code GET
+        ul
+          li.fragment Envoi par défaut
+          li.fragment Données dans l'URL
+          li.fragment Query String (après <code>?</code>)
+      li.fragment
+        code POST
+        ul
+          li.fragment Données dans entêtes HTTP
+    pre.fragment
+      code.language-javascript.
+        // GET
+        http://a.fr/page.php?id=8
+
+        // POST
+        http://a.fr/page.php
+          // dans entête HTTP: id=8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.language-markup
+
+  section
+    h1 Champs
+
+  section
+    h2 Ajouter des champs
+    ul
+      li.fragment Pour tous les champs :
+        ul
+          li.fragment
+            code type
+            |  le type de champ pour les 
+            code input
+          li.fragment 
+            code name
+            |  le nom de la variable créée
+          li.fragment (inline)
+
+  section
+    h2 Texte
+    p.fragment Élément 
+      code &lt;input type="text">
+    pre.fragment
+      code.
+        &lt;input type="text" name="nom" value="Vincent">
+
+  section
+    h2 Mot de passe
+    p.fragment Élément 
+      code &lt;input type="password">
+    pre.fragment
+      code.
+        &lt;input type="password" name="password" value="Vincent">
+    ul
+      li.fragment Identique à texte
+      li.fragment Mais masquage du contenu
+      li.fragment Pas de sécurité
+
+  section
+    h2 Boutons radio
+    p.fragment Élément 
+      code &lt;input type="radio">
+    pre.fragment
+      code.
+        &lt;label>Oui&lt;input type="radio" name="ouinon" value="1">&lt;/label>
+        &lt;label>Non&lt;input type="radio" name="ouinon" value="0">&lt;/label>
+    ul
+      li.fragment Boutons radios avec 
+        code name
+        |  identiques == même groupe
+
+  section
+    h2 Case à cocher
+    p.fragment Élément 
+      code &lt;input type="checkbox">
+    pre.fragment
+      code.
+        &lt;label>Voyages&lt;input type="checkbox" name="loisirs[]">&lt;/label>
+        &lt;label>Cinéma&lt;input type="checkbox" name="loisirs[]">&lt;/label>
+        &lt;label>Sport&lt;input type="checkbox" name="loisirs[]">&lt;/label>
+
+  section
+    h2 Menu de sélection
+    p.fragment Élément 
+      code &lt;select>
+      |  avec des 
+      code &lt;option>
+    pre.fragment
+      code.
+        &lt;select name="age">
+          &lt;option value="20">0-20ans&lt;/option>
+          &lt;option value="40" selected>21-40ans&lt;/option>
+          &lt;option value="60">41-60ans&lt;/option>
+          &lt;option value="80">61ans+&lt;/option>
+        &lt;/select>
+    ul
+      li.fragment Attribut
+        code name
+        |  sur 
+        code &lt;select>
+      li.fragment Attribut 
+        code value
+        |  pour spécifier une valeur différente
+
+  section
+    h2 Texte multiligne
+    p.fragment Élément 
+      code &lt;textarea>
+    pre.fragment
+      code.
+        &lt;textarea name="infos">&lt;/textarea>
+
+  section
+    h2 Vaidation
+    p.fragment Élément 
+      code &lt;input type="submit">
+    p.fragment Élément
+      code &lt;button>
+    pre.fragment
+      code.
+        &lt;input type="submit" value="Envoyez!">
+        &lt;button>Envoyez!&lt;/button>
+    ul
+      li.fragment Valide tous les champs du même formulaire
+
+  section
+    h2 Champ masqué
+    p.fragment Élément 
+      code &lt;input type="hidden">
+    ul
+      li.fragment Information masquée à l'utilisateur
+      li.fragment Permet de valider des données
+
+  section
+    h2 Les étiquettes
+    p.fragment Élément 
+      code &lt;label> (inline)
+    ul
+      li.fragment Précise ce qui est attendu dans le champ
+      li.fragment Accessibilité
+      li.fragment Deux techniques :
+        ul
+          li.fragment Entoure le champ
+          li.fragment Fait référence avec 
+            code for
+            |  et 
+            code id
+    pre.fragment
+      code.
+        &lt;label>Nom&lt;input type="text">&lt;/label>
+
+        &lt;label for="nom">Nom&lt;/label>
+        &lt;input type="text" id="nom">
+
+  section
+    h2 Regroupement
+    p.fragment Élément 
+      code &lt;fieldset> (block)
+    ul
+      li.fragment Regrouper sémantiquement des champs
+      li.fragment Élément 
+        code legend
+        |  pour préciser le regroupement
+    pre.fragment
+      code.
+        &lt;fieldset>
+          &lt;legend>Civilité&lt;/legend>
+
+          &lt;label>Homme&lt;input type="radio" name="sexe" value="1">&lt;/label>
+          &lt;label>Femme&lt;input type="radio" name="sexe" value="0">&lt;/label>
+
+          &lt;label for="nom">Nom&lt;/label>
+          &lt;input type="text" name="nom" id="nom">
+
+          &lt;label for="prenom">Prénom&lt;/label>
+          &lt;input type="text" name="prenom" id="prenom">
+
+        &lt;/fieldset>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

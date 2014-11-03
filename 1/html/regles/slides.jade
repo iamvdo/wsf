@@ -1,0 +1,436 @@
+section
+  h1 HTML
+
+section
+  h2 Concept
+  ul
+    li.fragment Décrire les données
+    li.fragment Définir la structure du document
+    li.fragment Pas le rendu visuel
+    li.fragment Permettre l'accessibilité
+
+section
+  h2 HTML
+  ul
+    li.fragment Fichier texte
+    li.fragment Extension 
+      code .html
+    li.fragment Code source d'une page
+    li.fragment Langage statique
+
+section
+  h2 Standard
+  ul
+    li.fragment Respect des normes
+    li.fragment
+      a(href="http://w3.org") W3C
+    li.fragment Plusieurs versions du standard HTML (
+      a(href="http://www.w3.org/TR/html401/") HTML4
+      |,  
+      a(href="http://www.w3.org/TR/xhtml1/") XHTML1
+      |,  
+      a(href="http://www.w3.org/TR/html5/") HTML5
+
+section.language-markup
+  h2 Élément HTML
+  pre.fragment
+    code.
+      &lt;p>Texte&lt;/p>
+  ul
+    li.fragment 2 balises
+      ul
+        li.fragment une ouvrante:
+          code &lt;p>
+        li.fragment une fermante:
+          code &lt/p>
+    li.fragment Nom de la balise = sémantique de l'élément
+    li.fragment ~100 éléments
+
+section
+  h2 Sémantique
+  ul
+    li.fragment Donne le sens d'une balise
+    li.fragment Définit son rôle
+    li.fragment Aucune notion de rendu, d'affichage
+    li.fragment Le but
+      ul
+        li.fragment Code structuré
+        li.fragment Accessibilité
+        li.fragment Référencement facilité
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Règles HTML
+
+section.language-markup
+
+  section
+    h1 Règles XHTML
+  
+  section
+    h2 1
+    ul
+      li.fragment Chaque balise à une sémantique
+      li.fragment Définit le rôle
+      li.fragment Pas la mise en forme
+    pre.fragment
+      code.
+        &lt;strong>Texte&lt;/strong>
+    ul
+      li.fragment
+        code &lt;strong>
+        |  = important, pas mise en gras
+
+  section
+    h2 2
+    ul
+      li.fragment Nom des éléments en minuscule
+      li.fragment Jamais de majuscule (c'était avant)
+    pre.fragment
+      code.
+        &lt;p>Texte&lt;/p>
+
+  section
+    h2 3
+    ul
+      li.fragment Les balises ouvrantes et fermantes sont obligatoires
+    pre.fragment
+      code.
+        &lt;!-- OK -->
+        &lt;p>Texte&lt;/p>
+        &lt;p>Texte&lt;/p>
+
+        &lt;!-- NOK -->
+        &lt;p>Texte
+        &lt;p>Texte
+
+  section
+    h2 3
+    ul
+      li.fragment Certains éléments s'auto-ferment
+      li.fragment Les éléments sans contenus
+    pre.fragment
+      code.
+        &lt;!-- OK -->
+        &lt;img />
+        &lt;meta />
+        &lt;input />
+
+  section
+    h2 4
+    ul
+      li.fragment Les éléments peuvent s'imbriquer
+      li.fragment Ordre d'imbrication à respecter
+    pre.fragment
+      code.
+        &lt;!-- OK -->
+        &lt;p>Texte &lt;strong>important&lt;/strong>&lt;/p>
+
+        &lt;!-- NOK -->
+        &lt;p>Texte &lt;strong>important&lt;/p>&lt;/strong>
+
+  section
+    h2 5
+    ul
+      li.fragment Un élément peut avoir un ou plusieurs attributs
+      li.fragment Un attribut: 
+        ul
+          li.fragment 
+            code attribut="valeur"
+          li.fragment Nom de l'attribut
+          li.fragment Valeur obligatoire
+          li.fragment Dans la balise ouvrante
+      li.fragment Obligatoires ou non
+      li.fragment Métadonnées de l'élément
+    pre.fragment
+      code.
+        &lt;!-- OK -->
+        &lt;a href="http://google.fr">Un lien&lt;/a>
+
+        &lt;!-- NOK -->
+        &lt;a>Un lien&lt;/a>
+
+  section
+    h2 6
+    ul
+      li.fragment Deux types d'éléments
+        ul
+          li.fragment bloc (block)
+          li.fragment en ligne (inline)
+      li.fragment Élément inline obligatoirement dans élément block
+      li.fragment Élément inline ne peut pas contenir d'élément block
+    pre.fragment
+      code.
+        &lt;!-- OK -->
+        &lt;p>Un &lt;a href="http://google.fr">lien&lt;/a>&lt;/p>
+
+        &lt;!-- NOK -->
+        &lt;a>Un lien&lt;/a>
+
+        &lt;!-- NOK -->
+        &lt;a>&lt;p>Un lien&lt;/p>&lt;/a>
+
+  section
+    h2 7
+    ul
+      li.fragment Les commentaires ont une syntaxe particulière
+    pre.fragment
+      code.
+        &lt;!-- Un commentaire -->
+
+  section
+    h2 Règles HTML5
+    ul
+      li.fragment XML moins strict
+      li.fragment Balise auto-fermantes simplifiées
+      li.fragment Attributs booléens sans valeur, autorisé
+    pre.fragment
+      code.
+        &lt;!-- / de fin pas obligatoire -->
+        &lt;img>
+        &lt;input>
+    ul
+      li.fragment Un élément inline peut contenir des éléments blocs
+      li.fragment En vrai, plus complexe que ça
+    pre.fragment
+      code.
+        &lt;a href="#">
+          &lt;h1>Titre&lt;/h1>
+          &lt;p>Texte&lt;/p>
+        &lt;/a>
+
+  section
+    h2 Validation
+    ul
+      li.fragment Outil pour valider la syntaxe
+      li.fragment
+        a(href="http://validator.w3.org/") En ligne
+      li.fragment Dans le navigateur: extension 
+        a(href='http://chrispederick.com/work/web-developer/') Web Developer
+      li.fragment D'autres sur 
+        a(href='https://www.google.fr/search?q=web+developer+extension') Google
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Structure HTML
+
+section.language-markup
+
+  section
+    h1 Structure HTML
+
+  section
+    h2 Type de document
+    ul
+      li.fragment Le DOCTYPE
+      li.fragment Première déclaration d'un document HTML
+      li.fragment Indispensable
+      li.fragment Seul élément avec une syntaxe particulière
+
+  section
+    h2 Quel DOCTYPE?
+    p.fragment HTML4
+    pre.fragment
+      code.
+        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    p.fragment XHTML1 Strict
+    pre.fragment
+      code.
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    p.fragment HTML5
+    pre.fragment
+      code.
+        &lt;!DOCTYPE html>
+    p.fragment
+      a(href='http://www.alsacreations.com/article/lire/560-dtd-doctype-html-xhtml-comment-choisir.html') Les différents DOCTYPE
+
+  section
+    h2 Zone racine
+    ul
+      li.fragment Élément 
+        code &lt;html>
+      li.fragment Début et fin du document
+      li.fragment Englobe tous les autres éléments
+
+  section
+    h2 Attributs sur 
+      code &lt;html>
+    p.fragment En XHTML1
+    pre.fragment
+      code.
+        &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    p.fragment En HTML5
+    pre.fragment
+      code.
+        &lt;html lang="fr">
+    ul
+      li.fragment
+        code lang
+        |  non obligatoire mais fortement recommandé
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Élément 
+        code &lt;head>
+      li.fragment Début et fin des informations non affichées
+      li.fragment Définit:
+        ul
+          li.fragment Encodage du fichier
+          li.fragment Feuille de styles utilisées
+          li.fragment Scripts
+          li.fragment Favicon
+          li.fragment Toutes les autres métadonnées
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Élément 
+        code &lt;title>
+      li.fragment Définit:
+        ul
+          li.fragment Titre de la page
+          li.fragment Utilisé comme titre d'onglet (navigateur)
+          li.fragment Utilisé comme titre de résultat (Google)
+          li.fragment etc.
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Élément 
+        code &lt;meta> pour l'encodage
+    p.fragment XHTML1
+    pre.fragment
+      code.
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    p.fragment En HTML5
+    pre.fragment
+      code.
+        &lt;meta charset="utf-8">
+    ul
+      li.fragment Définit l'encodage du fichier
+      li.fragment Permet d'utiliser n'importe quel caractère
+      li.fragment Sinon, 
+        a(href="http://alexandre.alapetite.fr/doc-alex/alx_special.html") entités HTML
+
+  section
+    h2 Encodage
+    ul
+      li.fragment 
+        a(href='http://fr.wikipedia.org/wiki/UTF-8') UTF-8
+        |,  
+        a(href='http://fr.wikipedia.org/wiki/ISO_8859-1') ISO-8859-1
+      li.fragment Utile au navigateur
+      li.fragment Vérifier à enregistrer votre fichier en UTF-8
+      li.fragment Configurez votre éditeur de texte
+      li.fragment Non obligatoire mais fortement recommandé (pas UTF-8 par défaut)
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Élément 
+        code &lt;meta> pour la description
+    pre.fragment
+      code.
+        &lt;meta name="description" content="Le contenu ...">
+    ul
+      li.fragment Description de la page
+      li.fragment Une ou deux phrases
+      li.fragment 60-70 mots
+      li.fragment Utile au référencement
+
+  section
+    h2 Métadonnées
+    ul
+      li.fragment Les autres 
+        a(href='http://www.alsacreations.com/article/lire/628-balises-meta.html') &lt;meta> utiles ou non
+      li.fragment Cas typique: 
+        code &lt;meta name="keywords">
+
+  section
+    h2 Appel ressources externes
+    p.fragment CSS
+    pre.fragment
+      code.
+        &lt;!-- XHTML1 -->
+        &lt;link rel="stylesheet" type="text/css" href="styles.css" />
+        &lt;!-- HTML5 -->
+        &lt;link rel="stylesheet" href="styles.css">
+    p.fragment JavaScript
+    pre.fragment
+      code.
+        &lt;!-- XHTML1 -->
+        &lt;script src="script.js" type="text/javascript">&lt;/script>
+        &lt;!-- HTML5 -->
+        &lt;script src="script.js">&lt;/script>
+
+  section
+    h2 Corps de la page
+    ul
+      li.fragment Élément 
+        code &lt;body>
+      li.fragment Contient les éléments visibles de la page
+  
+  section
+    h2 Structure minimale XHTML1
+    pre.fragment
+      code.
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+          &lt;head>
+            &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            &lt;title>Titre&lt;/title>
+          &lt;/head>
+          &lt;body>
+            &lt;p>Contenu&lt;/p>
+          &lt;/body>
+        &lt;/html>
+
+  section
+    h2 Structure minimale HTML5
+    pre.fragment
+      code.
+        &lt;!doctype html>
+        &lt;html lang="fr">
+          &lt;head>
+            &lt;meta charset="utf-8">
+            &lt;title>Titre&lt;/title>
+          &lt;/head>
+          &lt;body>
+            &lt;p>Contenu&lt;/p>
+          &lt;/body>
+        &lt;/html>
+    p &nbsp;
