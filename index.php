@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <?php if ($a) { $msg = ' - Année ' . $a; } ?>
+    <?php $msg = ''; if (isset($a)) { $msg = ' - Année ' . $a; } ?>
 
     <title>WSF<?php echo $msg; ?></title>
 
@@ -50,39 +50,41 @@
         <section>
           <h2>Cours / TP</h2>
           <?php 
-          if ($a == 2) { 
-          ?>
-          <p>Mineure</p>
-          <ul>
-            <li><a href="?2-intro">2A - Intégration</a></li>
-            <li><a href="/tp/2/intro"><strong>TP:</strong> Site d'intro</a></li>
-          </ul>
-          <p>Majeure</p>
-          <ul>
-            <li><a href="?2-html">2A - HTML</a></li>
-            <li><a href="?2-css">2A - CSS</a></li>
-            <li><a href="?2-rwd">2A - RWD</a></li>
-            <li><a href="/tp/2/balises/index_html5.html"><strong>TP:</strong> Balises HTML5</a></li>
-            <li><a href="/tp/2/form"><strong>TP:</strong> Formulaire</a></li>
-            <li><a href="/tp/2/css3ftw"><strong>TP:</strong> Boutons CSS3</a></li>
-            <li><a href="/tp/2/transitions"><strong>TP:</strong> Transitions CSS</a></li>
-            <li><a href="/tp/2/animations"><strong>TP:</strong> Animations CSS</a></li>
-            <li><a href="/tp/2/transforms"><strong>TP:</strong> Transformations</a></li>
-            <li><a href="/tp/2/rwd"><strong>TP:</strong> RWD</a></li>
-            <li><a href="/tp/2/video"><strong>TP:</strong> Vidéo HTML5</a></li>
-            <li><a href="/tp/2/microdata"><strong>TP:</strong> Microdonnées</a></li>
-          </ul>
-          <?php 
-          } elseif ($a == 1) {
-          ?>
+          if (isset($a)) {
+            if ($a == 2) { 
+            ?>
+            <p>Mineure</p>
             <ul>
-              <li><a href="?1-intro">Introduction au WWW</a></li>
-              <li><a href="?1-html/regles">HTML - Concept, règles et structure</a></li>
-              <li><a href="?1-html/elements">HTML - Éléments</a></li>
+              <li><a href="?2-intro">2A - Intégration</a></li>
+              <li><a href="/tp/2/intro"><strong>TP:</strong> Site d'intro</a></li>
             </ul>
-          <?php
+            <p>Majeure</p>
+            <ul>
+              <li><a href="?2-html">2A - HTML</a></li>
+              <li><a href="?2-css">2A - CSS</a></li>
+              <li><a href="?2-rwd">2A - RWD</a></li>
+              <li><a href="/tp/2/balises/index_html5.html"><strong>TP:</strong> Balises HTML5</a></li>
+              <li><a href="/tp/2/form"><strong>TP:</strong> Formulaire</a></li>
+              <li><a href="/tp/2/css3ftw"><strong>TP:</strong> Boutons CSS3</a></li>
+              <li><a href="/tp/2/transitions"><strong>TP:</strong> Transitions CSS</a></li>
+              <li><a href="/tp/2/animations"><strong>TP:</strong> Animations CSS</a></li>
+              <li><a href="/tp/2/transforms"><strong>TP:</strong> Transformations</a></li>
+              <li><a href="/tp/2/rwd"><strong>TP:</strong> RWD</a></li>
+              <li><a href="/tp/2/video"><strong>TP:</strong> Vidéo HTML5</a></li>
+              <li><a href="/tp/2/microdata"><strong>TP:</strong> Microdonnées</a></li>
+            </ul>
+            <?php 
+            } elseif ($a == 1) {
+            ?>
+              <ul>
+                <li><a href="?1-intro">Introduction au WWW</a></li>
+                <li><a href="?1-html/regles">HTML - Concept, règles et structure</a></li>
+                <li><a href="?1-html/elements">HTML - Éléments</a></li>
+              </ul>
+            <?php
+            }
           } else { ?>
-            <p>Choisissez une année dans l'URL</p>
+            <p><a href="1">Année 1</a> ou <a href="2">Année 2</a></p>
           <?php 
           }
           ?>
