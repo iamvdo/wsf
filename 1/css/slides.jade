@@ -1,2 +1,86 @@
 section
   h1 CSS
+
+section
+  h2 CSS?
+  ul
+    li.fragment Cascading Style Sheets
+    li.fragment Feuilles de styles en cascade
+
+section
+  h2 Concept
+  ul
+    li.fragment Mettre en forme les données
+    li.fragment Séparation contenu / mise en forme
+    li.fragment Permettre l'accessibilité
+    li.fragment 
+      a(href='http://www.csszengarden.com') CSS Zen Garden
+
+section
+  h2 CSS
+  ul
+    li.fragment Fichier texte
+    li.fragment Extension 
+      code .css
+    li.fragment Langage statique
+
+section
+  h2 Standard
+  ul
+    li.fragment Respect des normes
+    li.fragment
+      a(href="http://w3.org") W3C
+    li.fragment Plusieurs versions du standard CSS (
+      a(href="http://www.w3.org/TR/CSS1/") CSS1
+      |,  
+      a(href="http://www.w3.org/TR/CSS2/") CSS2.1
+      |,  
+      a(href="http://www.w3.org/Style/CSS/current-work") CSS3
+    li.fragment Contrairement au HTML, pas de différence de syntaxe
+
+section
+  h2 Ajoutez du CSS
+  ul
+    li.fragment Précisez dans le HTML
+    li.fragment 3 méthodes:
+      ul
+        li.fragment Feuille de style externe
+        li.fragment Inclus dans <code>&lt;head></code> HTML
+        li.fragment Inclus dans l'élément
+
+section
+  h2 Feuille de style externe
+  ul
+    li.fragment Méthode privilégiée
+    li.fragment Données bien séparées
+  pre.fragment
+    code.
+      &lt;!-- XHTML1 -->
+      &lt;link rel="stylesheet" type="text/css" href="styles.css" />
+      &lt;!-- HTML5 -->
+      &lt;link rel="stylesheet" href="styles.css">
+
+section
+  h2 Inclus dans <code>&lt;head></code>
+  pre.fragment
+    code.
+      &lt;!-- XHTML1 -->
+      &lt;style type="text/css">
+      /* CSS */
+      &lt;/style>
+      &lt;!-- HTML5 -->
+      &lt;style>
+      /* CSS */
+      &lt;/style>
+      
+section
+  h2 Inclus dans l'élément
+  ul
+    li.fragment Pas conseillé
+    li.fragment Perte de la séparation de contenu
+    li.fragment Utile pour styles dynamiques
+  pre.fragment
+    code.
+      &lt;p style="/* CSS */">Texte&lt;/p>
+
+
