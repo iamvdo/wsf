@@ -3,10 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-
-    <?php $msg = ''; if (isset($a)) { $msg = ' - Année ' . $a; } ?>
-
-    <title>WSF<?php echo $msg; ?></title>
+    <title>WSF</title>
 
     <meta name="description" content="">
     <meta name="author" content="Vincent De Oliveira">
@@ -35,7 +32,6 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
     </script>
-
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -55,14 +51,14 @@
             ?>
             <p>Mineure</p>
             <ul>
-              <li><a href="?2-intro">2A - Intégration</a></li>
+              <li><a href="/?2">2A - Intégration</a></li>
               <li><a href="/tp/2/intro"><strong>TP:</strong> Site d'intro</a></li>
             </ul>
             <p>Majeure</p>
             <ul>
-              <li><a href="?2-html">2A - HTML</a></li>
-              <li><a href="?2-css">2A - CSS</a></li>
-              <li><a href="?2-rwd">2A - RWD</a></li>
+              <li><a href="/?2/html">2A - HTML</a></li>
+              <li><a href="/?2/css">2A - CSS</a></li>
+              <li><a href="/?2/rwd">2A - RWD</a></li>
               <li><a href="/tp/2/balises/index_html5.html"><strong>TP:</strong> Balises HTML5</a></li>
               <li><a href="/tp/2/form"><strong>TP:</strong> Formulaire</a></li>
               <li><a href="/tp/2/css3ftw"><strong>TP:</strong> Boutons CSS3</a></li>
@@ -77,9 +73,9 @@
             } elseif ($a == 1) {
             ?>
               <ul>
-                <li><a href="?1-intro">Introduction au WWW</a></li>
-                <li><a href="?1-html/regles">HTML - Concept, règles et structure</a></li>
-                <li><a href="?1-html/elements">HTML - Éléments</a></li>
+                <li><a href="/?1">Introduction au WWW</a></li>
+                <li><a href="/?1/html/regles">HTML - Concept, règles et structure</a></li>
+                <li><a href="/?1/html/elements">HTML - Éléments</a></li>
               </ul>
             <?php
             }
@@ -95,17 +91,16 @@
 
     <div class="reveal-overlay"></div>
 
-    <div class="retour"><a href="/<?php echo $a; ?>">Retour accueil cours</a></div>
+    <div class="retour"><a id="retourLien" href="#">Retour accueil cours</a></div>
 
     <script src="/browserify.js"></script>
+
     <script>
-    var re = /\?([0-9]{1})-(\S+)/gi; 
-    var str = window.location.search;
-    var m = re.exec(str);
-    var annee = m[1];
-    var seance = m[2];
+    var path = window.location.search.replace('?', '');
+    var link = document.getElementById('retourLien');
+    link.href = '/' + path[0];
     </script>
-    <script>VDO('slides', annee, seance);</script>
+    <script>VDO('slides', path);</script>
     <script src="/reveal/plugin/live-coding/live-coding.js"></script>
     <script src="/reveal/lib/js/head.min.js"></script>
     <script src="/reveal/js/reveal.js"></script>

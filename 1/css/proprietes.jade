@@ -1,0 +1,539 @@
+//- Propriétés
+section
+  h1 Propriétés CSS
+
+section.language-css
+
+  section
+    h1 La couleur
+
+  section
+    h2 La couleur
+    ul
+      li.fragment
+        code color
+        |  pour le texte
+      li.fragment
+        code background-color
+        |  pour l'arrière plan
+    pre.fragment
+      code.
+        p {
+          color: blue;
+          background-color: gray;
+        }
+
+  section
+    h2 Choix de couleurs
+    ul
+      li.fragment Mot-clé: 
+        code red
+        |, 
+        code black
+        |, 
+        code blue
+        |, 
+        code orange
+        |, 
+        code pink
+        |, etc.
+      li.fragment Code héxadécimal: 
+        code #FFFFFF
+        |, 
+        code #325F9A
+        |, 
+        code #09C
+        |, etc.
+      li.fragment Fonction 
+        code rgb(R,V,B)
+    ul
+      li.fragment
+        a(href='http://www.pourpre.com') Chromafiltre
+      li.fragment 
+        a(href='http://kuler.adobe.com') Kuler
+      li.fragment 
+         a(href='http://stylescss.free.fr/couleurs.php') Toutes les couleurs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.language-css
+
+  section
+    h1 Les textes
+
+  section
+    h2 La police
+    ul
+      li.fragment Propriété 
+        code font-family
+      li.fragment Police doit être chez le client
+      li.fragment Proposez une liste de polices
+      li.fragment Finir par le type:
+        ul
+          li.fragment
+            code serif
+            |  avec empatements (type Times)
+          li.fragment
+            code sans-serif
+            |  sans empatements (type Arial)
+    pre.fragment
+      code.
+        html {
+          font-family: Verdana, Arial, sans-serif;
+        }
+
+  section
+    h2 La taille
+    ul
+      li.fragment Propriété 
+        code font-size
+      li.fragment Deux types d'unités:
+        ul
+          li.fragment Absolues: 
+            code px
+          li.fragment Relatives: 
+            code em
+      li.fragment Unités absolues déconseillées
+      li.fragment Préférez toujours relatives
+
+  section
+    h2 La taille
+    ul
+      li.fragment 
+    pre.fragment
+      code.
+        html {
+          font-size: 0.9em;
+        }
+        p {
+          font-size: 1.1em;
+        }
+    ul
+      li.fragment Attention: les <code>&lt;p></code> seront à 0.9x1.1 soit 0.99x la taille par défaut.
+      li.fragment Imbrication complexe
+
+  section
+    h2 La graisse
+    ul
+      li.fragment Propriété 
+        code font-weight
+      li.fragment Mettre en gras
+      li.fragment Enlever le gras aussi!
+    pre.fragment
+      code.
+        p {
+          font-weight: bold;
+        }
+        strong {
+          font-weight: normal;
+        }
+
+  section
+    h2 L'italique
+    ul
+      li.fragment Propriété 
+        code font-style
+      li.fragment Idem graisse
+    pre.fragment
+      code.
+        p {
+          font-style: italic;
+        }
+        em {
+          font-style: normal;
+        }
+
+  section
+    h2 Le soulignement
+    ul
+      li.fragment Propriété 
+        code text-decoration
+      li.fragment Ajouter ou enlever le soulignement
+      li.fragment Valeurs possibles:
+        code underline
+        |, 
+        code overline
+        |, 
+        code line-through
+        |, 
+        code none
+    pre.fragment
+      code.
+        p {
+          text-decoration: underline;
+        }
+        a {
+          text-decoration: none;
+        }
+
+  section
+    h2 Les listes
+    ul
+      li.fragment Propriété 
+        code list-style
+      li.fragment Changer le style des puces
+      li.fragment Enlever les puces
+      li.fragment 
+        a(href='https://developer.mozilla.org/fr/docs/Web/CSS/list-style-type') Tous les choix de listes
+    pre.fragment
+      code.
+        li {
+          list-style: circle;
+        }
+        li {
+          list-style: none;
+        }
+
+  section
+    h2 Alignements
+    ul
+      li.fragment Propriété  
+        code text-align
+      li.fragment Aligne le texte
+      li.fragment Valeurs: 
+        code left
+        |, 
+        code right
+        |, 
+        code center
+        |, 
+        code justify
+    pre.fragment
+      code.
+        p {
+          text-align: center;
+        }
+    p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Modèle de boite
+section.language-css
+
+  section
+    h1 Modèle de boite
+
+  section
+    h2 Les dimensions
+    ul
+      li.fragment Chaque élément est une boite
+      li.fragment Deux types de boites: Élément block ou inline
+    p.fragment Élément block
+    ul
+      li.fragment Largeur égale à celle de son parent
+    p.fragment Élément inline
+    ul
+      li.fragment Largeur égale à son contenu
+
+  section
+    h2 Les dimensions
+    ul
+      li.fragment Possible de modifier la largeur et la hauteur
+      li.fragment
+        strong Seulement sur des éléments block
+    ul
+      li.fragment Propriétés:
+        ul
+          li.fragment
+            code width
+            |  pour la largeur
+          li.fragment 
+            code height
+            |  pour la hauteur
+    pre.fragment
+      code.
+        #menu {
+          width: 200px;
+          height: 400px;
+        }
+        /* sans effet sur élément inline */
+        a {
+          width: 200px;
+        }
+
+  section
+    h2 Les bordures
+    ul
+      li.fragment Chaque boite a une bordure
+      li.fragment 3 propriétés:
+        ul
+          li.fragment
+            code border-style
+            |  pour le style de bordure
+          li.fragment
+            code border-color
+            |  pour la couleur
+          li.fragment
+            code border-width
+            |  pour la taille
+      li.fragment Propriété raccourcie
+        code border
+    pre.fragment
+      code.
+        p {
+          border: 3px solid black;
+        }
+    ul
+      li.fragment Attention, la bordure n'est pas inclue dans la taille d'une boite
+
+
+  section
+    h2 Les marges
+    p.fragment Deux types de marges:
+    ul
+      li.fragment
+        code margin
+        |  pour les marges externes
+      li.fragment
+        code padding
+        |  pour les marges internes
+
+  section
+    h2 Marges externes
+    ul
+      li.fragment Marges par rapport aux autres boites
+      li.fragment Permet de décaler les boites les unes des autres
+
+  section
+    h2 Marges internes
+    ul
+      li.fragment Marges au sein de la boite
+      li.fragment Permet de décaler le contenu de la boite par rapport à son bord
+
+  section
+    h2 Les marges
+    ul
+      li.fragment Une valeur: 4 marges identiques
+      li.fragment Deux valeurs: marges hautes/basses et gauches/droites
+      li.fragment Quatre valeurs: chaque marge a sa propre marge
+    ul
+      li.fragment Propriétés longues suffixées:
+        code -top
+        |, 
+        code -bottom
+        |, 
+        code -right
+        |  et 
+        code -left
+
+  section
+    h2 Les marges
+    pre.fragment
+      code.
+        #menu {
+          margin: 20px;
+          padding: 10px;
+        }
+
+        #menu {
+          padding: 10px 20px;
+          margin-top: 10px;
+        }
+
+  section
+    h2 Les marges
+    ul
+      li.fragment Attention, les marges ne sont pas inclues dans la taille d'une boite
+      li.fragment Le padding augmente la taille
+
+  section
+    h2 Alignements
+    ul
+      li.fragment Pour aligner un élément block dans son parent: marges automatiques!
+      li.fragment Seulement à gauche et à droite
+    pre.fragment
+      code.
+        p {
+          margin: auto;
+        }
+
+  section
+    h2 Le modèle de boite
+    +img2('modeleBoite.jpg')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Images
+section.language-css
+
+  section
+    h1 Les images
+
+  section
+    h2 Les images CSS
+    ul
+      li.fragment Image de décoration
+      li.fragment Même formats que pour image HTML (GIF, JPG, PNG, SVG)
+      li.fragment Propriété 
+        code background-image
+      li.fragment Fonction 
+        code url()
+        |  pour cibler une ressource
+    pre.fragment
+      code.
+        p {
+          background-image: url('images/fond.png');
+        }
+
+  section
+    h2 Contrôles
+    ul
+      li.fragment Différents contrôles possibles:
+        ul
+          li.fragment Répétition
+          li.fragment Positionnement
+          li.fragment Taille
+          li.fragment etc.
+
+  section
+    h2 Répétition
+    ul
+      li.fragment Propriété 
+        code background-repeat
+      li.fragment Valeurs: 
+        code repeat
+        |, 
+        code no-repeat
+        |, 
+        code repeat-x
+        |, 
+        code repeat-y
+    pre.fragment
+      code.
+        p {
+          background-repeat: no-repeat;
+        }
+
+  section
+    h2 Positionnement
+    ul
+      li.fragment Propriété 
+        code background-position
+      li.fragment Valeurs: 
+        ul
+          li.fragment Mot-clés
+          li.fragment Numériques
+    pre.fragment
+      code.
+        p {
+          background-position: top center;
+        }
+        p {
+          background-position: 50px 50px;
+        }
+
+  section
+    h2 Taille
+    ul
+      li.fragment Propriété 
+        code background-size
+      li.fragment Valeurs: 
+        ul
+          li.fragment Mot-clés 
+            code cover
+            |  et 
+            code contain
+          li.fragment Numériques
+    pre.fragment
+      code.
+        p {
+          background-size: cover;
+        }
+        p {
+          background-size: 50px 50px;
+        }
+
+  section
+    h2 Images multiples
+    ul
+      li.fragment Séparez avec une virgule
+      li.fragment Du haut vers le bas
+    pre.fragment
+      code.
+        p {
+          background-image: url('image1.png'), url('image2.png');
+          background-repeat: no-repeat, repeat;
+          background-position: 50px 5px, center;
+          background-size: 20px, auto;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

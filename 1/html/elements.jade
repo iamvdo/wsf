@@ -331,8 +331,9 @@ section.language-markup
       li.fragment GIF
       li.fragment JPG
       li.fragment PNG
-    ul
       li.fragment WebP (trop récent)
+    ul
+      li.fragment SVG (vectoriel)
   
   section
     h2 GIF
@@ -342,6 +343,7 @@ section.language-markup
       li.fragment Optimisation
         ul
           li.fragment Limiter le nombre de couleurs
+      li.fragment Animable
 
   section
     h2 JPG
@@ -361,6 +363,7 @@ section.language-markup
       li.fragment Optimisation
         ul
           li.fragment Limiter le nombre de couleurs
+      li.fragment Animable (mais peu supporté)
 
   section
     h2 Outils
@@ -375,6 +378,17 @@ section.language-markup
       li.fragment
         a(href="http://compresspng.com/") CompressPNG
       li.fragment Et beaucoup d'autres
+
+  section
+    h2 SVG
+    ul
+      li.fragment Format vectoriel
+      li.fragment Basé sur XML (comme HTML)
+      li.fragment Pas de 
+        a(href='http://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg') problème de redimensionnement
+      li.fragment 
+        a(href='http://www.alsacreations.com/tuto/lire/1421-svg-initiation-syntaxe-outils.html') Un article d'introduction à SVG
+    +img2('twitter.svg')
 
 
 

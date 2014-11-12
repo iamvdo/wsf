@@ -1,0 +1,170 @@
+//- Sélecteurs
+section
+  h1 Sélecteurs CSS
+
+section.language-css
+  h2 Sélecteur de balise
+  ul
+    li.fragment Le nom de l'élément HTML
+    li.fragment Sélectionne tous les éléments de même type
+  pre.fragment
+    code.
+      p { }
+      html { }
+      a { }
+      img { }
+
+section.language-css
+  h2 Sélecteur multiple
+  ul
+    li.fragment Séparer les sélecteurs avec <code>,</code>
+    li.fragment Applique rapidement le même style
+    li.fragment Permet l'héritage rapide
+  pre.fragment
+    code.
+      /* les titres h1, h2 et h3 */
+      h1, h2, h3 { }
+      /* que h1 */
+      h1 { }
+      /* que h2 */
+      h2 { }
+
+section.language-css
+  h2 Sélecteur hiérarchique
+  ul
+    li.fragment Un élément contenu dans un autre (un enfant)
+    li.fragment Séparer les sélecteurs avec espace
+  pre.fragment
+    code.
+      /* toutes les puces */
+      li { }
+      /* les puces dans ul */
+      ul li { }
+      /* les puces dans ol */
+      ol li { }
+      /* les liens dans une liste à puce */
+      ul li a { }
+
+section.language-css
+  h2 Sélecteur d'identifiant
+  ul
+    li.fragment Cible un élément grâce à son attribut <code>id</code>
+    li.fragment Le caractère <code>#</code>
+  pre.fragment
+    code.
+      #texte { }
+      p#texte { }
+      #menu ul li { }
+
+section.language-css
+  h2 Sélecteur de classe
+  ul
+    li.fragment Cible un (des) élément(s) grâce à son (leurs) attribut(s) <code>class</code>
+    li.fragment Le caractère <code>.</code>
+  pre.fragment
+    code.
+      .module { }
+      p.module { }
+      p .item { }
+      #menu ul .item { }
+
+section.language-css
+  h2 Autres sélecteurs
+  ul
+    li.fragment <code>></code> sélecteur hiérarchique direct
+    li.fragment <code>+</code> sélectionne l'élément qui suit un élément
+    li.fragment <code>~</code> sélectionne les éléments qui suivent indirectement un élément
+  ul
+    li.fragment Sélecteur d'attributs: <code>[]</code>
+    li.fragment Contient, commence, termine, etc.
+  pre.fragment
+    code.
+      /* les liens qui commencent par http */
+      a[href^="http"] { }
+
+section
+  h2 Pseudo-classes
+  ul
+    li.fragment Cibler des éléments sans attributs HTML
+    li.fragment Interactions
+
+section
+  h2 Pseudo-classes
+  ul
+    li.fragment <code>:first-child</code> pour le premier enfant d'un élément
+    li.fragment <code>:last-child</code> pour le dernier enfant d'un élément
+    li.fragment <code>:nth-child()</code> pour le nième enfant
+
+section
+  h2 Pseudo-classes
+  ul
+    li.fragment <code>:hover</code> pour le survol à la souris
+    li.fragment <code>:focus</code> pour le focus au clavier (touche tabulation)
+    li.fragment <code>:active</code> pendant l'activation d'un élément (click bas)
+
+section
+  h2 Pseudo-éléments
+  ul
+    li.fragment Cibler des éléments sans balisage HTML
+
+section
+  h2 Pseudo-classes
+  ul
+    li.fragment <code>::first-letter</code> pour la première lettre
+    li.fragment <code>::first-line</code> pour la première ligne
+
+section.language-css
+  h2 Contenu généré
+  ul
+    li.fragment <code>::before</code> pour créer un élément avant
+    li.fragment <code>::after</code> pour créer un élément après
+  ul
+    li.fragment Chaque élément à un <code>::before</code> et un <code>::after</code>
+    li.fragment Propriété <code>content</code> pour généré le contenu
+    li.fragment Stylable comme n'importe quel autre élément
+    li.fragment UNIQUEMENT de la décoration (contenu = HTML)
+  pre.fragment
+    code.
+      a::after {
+        content: ''
+      }
+
+section
+  h2 Spécificité des sélecteurs
+  p.fragment Cascade:
+  ul
+    li.fragment Récupération de tous les styles
+    li.fragment Tri: Navigateur > Utilisateur > Dev > Dev !important > Utilisateur !important
+    li.fragment Classement par spécificité (poids)
+    li.fragment Tri par position
+
+section
+  h2 Spécificité des sélecteurs
+  ul
+    li.fragment Poids de chaque sélecteur
+    li.fragment Quels styles s'appliquent?
+  ul
+    li.fragment Concaténation de 3 nombres:
+      ul
+        li.fragment A: Nombre d’<code>id</code> dans le sélecteur
+        li.fragment B: Nombre de classes, de pseudo-classes et d’attributs dans le sélecteur
+        li.fragment C: Nombre d’éléments dans le sélecteur
+  ul
+    li.fragment <code>#toto { ... }</code> a une spécificité de 1,0,0
+    li.fragment <code>.inner ul li a { ... }</code> a une spécificité de 0,1,3
+    li.fragment <code>a:hover { ... }</code> a une spécificité de 0,1,1
+  ul
+    li.fragment
+      a(href='http://specificity.keegan.st/') Specificity Calculator
+
+section.language-css
+  h2 Spécificité des sélecteurs
+  ul
+    li.fragment Les styles en ligne (avec l'attribut <code>style</code>) sont plus spécifiques
+    li.fragment La directive !important encore plus
+    li.fragment A éviter
+  pre.fragment
+    code.
+      a {
+        color: red !important;
+      }
