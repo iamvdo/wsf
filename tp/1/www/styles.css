@@ -1,0 +1,25 @@
+html {
+  font-family: sans-serif;
+  background-color: #333;
+  color: #FFF;
+}
+a {
+  color: #FFF;
+}
+
+#entete {
+  text-align: center;
+  background: orangered;
+}
+
+#contenu h2 {
+  background: #111;
+  color: orangered;
+}
+#contenu strong {
+  color: orangered;
+}
+
+#footer {
+  background: #111;
+}
