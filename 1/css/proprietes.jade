@@ -377,16 +377,26 @@ section.language-css
     h2 Les marges
     ul
       li.fragment Attention, les marges ne sont pas inclues dans la taille d'une boite
-      li.fragment Le padding augmente la taille
+      li.fragment Le <code>padding</code> augmente la taille
 
   section
     h2 Alignements
+    p.fragment Au sein d'une boite (contenu)
     ul
-      li.fragment Pour aligner un élément block dans son parent: marges automatiques!
+      li.fragment
+        code text-align: center
+      li.fragment Aligne les éléments inline
+    p.fragment La boite elle-même (dans son parent)
+    ul
+      li.fragment
+        code margin: auto
+      li.fragment Marges automatiques
       li.fragment Seulement à gauche et à droite
+      li.fragment La largeur doit être définie et plus petite que celle de son parent
     pre.fragment
       code.
         p {
+          width: 500px;
           margin: auto;
         }
 
