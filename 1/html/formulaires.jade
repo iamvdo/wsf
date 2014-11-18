@@ -151,6 +151,9 @@ section.language-markup
       li.fragment Attribut 
         code value
         |  pour spécifier une valeur différente
+      li.fragment Attribut 
+        code selected
+        |  pour l'élément sélectionné par défaut
 
   section
     h2 Texte multiligne
@@ -161,7 +164,7 @@ section.language-markup
         &lt;textarea name="infos">&lt;/textarea>
 
   section
-    h2 Vaidation
+    h2 Validation
     p.fragment Élément 
       code &lt;input type="submit">
     p.fragment Élément
@@ -172,6 +175,13 @@ section.language-markup
         &lt;button>Envoyez!&lt;/button>
     ul
       li.fragment Valide tous les champs du même formulaire
+
+  section
+    h2 Button
+    ul
+      li.fragment Utilisable aussi hors formulaire
+      li.fragment Bouton dans une application
+      li.fragment Souvent action en JavaScript
 
   section
     h2 Champ masqué
@@ -197,8 +207,10 @@ section.language-markup
             code id
     pre.fragment
       code.
+        &lt;!-- entoure le champ -->
         &lt;label>Nom&lt;input type="text">&lt;/label>
 
+        &lt;!-- fait référence -->
         &lt;label for="nom">Nom&lt;/label>
         &lt;input type="text" id="nom">
 
@@ -211,6 +223,7 @@ section.language-markup
       li.fragment Élément 
         code legend
         |  pour préciser le regroupement
+      li.fragment Utilisé aussi pour formulaires en plusieurs "écrans"
     pre.fragment
       code.
         &lt;fieldset>
@@ -226,7 +239,7 @@ section.language-markup
           &lt;input type="text" name="prenom" id="prenom">
 
         &lt;/fieldset>
-      
+    p
 
 
 
