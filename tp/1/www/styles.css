@@ -8,8 +8,15 @@ a {
 }
 
 #entete {
-  text-align: center;
   background: orangered;
+  padding: 20px;
+}
+.inner {
+  width: 980px;
+  margin: auto;
+}
+#entete .inner {
+  text-align: right;
 }
 
 #contenu h2 {
@@ -22,4 +29,6 @@ a {
 
 #footer {
   background: #111;
+  padding: 20px;
+  text-align: center;
 }
