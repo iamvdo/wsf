@@ -1,0 +1,56 @@
+html {
+  font-family: sans-serif;
+  background-color: #333;
+  color: #FFF;
+}
+body {
+  margin: 0;
+}
+a {
+  color: #FFF;
+}
+
+#entete {
+  background: orangered;
+  padding: 10px;
+  text-align: right;
+}
+.inner {
+  width: 980px;
+  margin: auto;
+}
+
+#contenu h2 {
+  padding: 20px;
+  margin-top: 50px;
+  background: #111;
+  color: orangered;
+}
+#contenu strong {
+  color: orangered;
+}
+#contenu table {
+  border-collapse: collapse;
+  margin: auto;
+  border: 2px solid orangered;
+}
+#contenu td,
+#contenu th {
+  border: 1px solid black;
+  padding: 10px;
+}
+#contenu th {
+  background: orangered;
+  color: #FFF;
+}
+#footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+}
+
+
+
+
+
+
