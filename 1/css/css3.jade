@@ -1,0 +1,153 @@
+section
+  h1 CSS3: les effets graphiques
+
+section
+  h2 Les coins arrondis
+  pre.fragment
+    code.
+      .e {
+        border-radius: 2px;
+      }
+  ul
+    li.fragment Crée des angles arrondis
+    li.fragment La contenu est masqué par les arrondis
+
+section
+  h2 Les ombres sur textes
+  pre.fragment
+    code.
+      .e {
+        text-shadow: 2px 2px 5px black;
+      }
+  ul
+    li.fragment Ajoute une ou plusieurs ombres sur le texte
+  h3.fragment Utilisation
+  ul
+    li.fragment 4 valeurs:
+      ul
+        li.fragment Décalage vers la droite
+        li.fragment Décalage vers le bas
+        li.fragment Valeur du flou
+        li.fragment Couleur de l'ombre
+
+section
+  h2 Les ombres sur boites
+  pre.fragment
+    code.
+      .e {
+        box-shadow: 2px 2px 5px (5px) black (inset);
+      }
+  ul
+    li.fragment Ajoute une ou plusieurs ombres sur une boite
+  h3.fragment Utilisation
+  ul
+    li.fragment 4 valeurs:
+      ul
+        li.fragment Décalage vers la droite
+        li.fragment Décalage vers le bas
+        li.fragment Valeur du flou
+        li.fragment Couleur de l'ombre
+    li.fragment 2 options:
+      ul
+        li.fragment Ombre interne avec code inset
+        li.fragment Agrandissement / réduction de l'ombre
+
+section
+  h2 L'opacité
+  pre.fragment
+    code.
+      .e {
+        opacity:0.5;
+      }
+  ul
+    li.fragment Rends un élément transparent (et tous ses enfants)
+    li.fragment Valeur entre 0 et 1:
+      ul
+        li.fragment 0 rend invisible
+        li.fragment 1 rend visible
+
+section
+  h2 Les fonctions de couleur
+  pre.fragment
+    code.
+      .e {
+        background: rgba(235, 162, 53, .5);
+      }
+  ul
+    li.fragment Fonction 
+      code rgba 
+      | pour red, green, blue, alpha
+    li.fragment Applique une couleur RVB avec transparence
+    li.fragment Extension de 
+      code rgb(r,v,b)
+
+section
+  h2 Les dégradés CSS
+  ul
+    li.fragment Création d'images à la volée
+    li.fragment S'utilise avec les propriétés d'images
+      ul
+        li
+          code background-image
+          |, 
+          code list-style-image
+          |, etc.
+    li.fragment 2 types de dégradés: linéaires et radiaux
+
+section
+  h2 Dégradés linéaires
+  pre.fragment
+    code.
+      .e {
+        background: linear-gradient(to left, red, green);
+      }
+  ul
+    li.fragment Crée un dégradé linéaire
+    li.fragment 3 valeurs:
+      ul
+        li.fragment La direction avec le mot-clé 
+          code to
+          |  (optionnelle, 
+          code to bottom
+          |  par défaut)
+        li.fragment Couleur de départ
+        li.fragment Couleur de fin
+    li.fragment Nombre de couleurs illimité
+    li.fragment Positionnement des color-stops automatiques/manuels
+
+section
+  h2 Les color-stops
+  ul
+    li.fragment Les couleurs du dégradé
+    li.fragment Automatiques
+      ul
+        li.fragment 
+          code linear-gradient(red, green, blue)
+        li.fragment red à 0%, green à 50% et blue à 100%
+    li.fragment Manuels
+      ul
+        li.fragment 
+          code linear-gradient(red 20%, green 30%, blue)
+        li.fragment red à 20%, green à 30% et blue à 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
