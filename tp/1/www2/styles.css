@@ -43,6 +43,31 @@ a {
   background: orangered;
   color: #FFF;
 }
+#contenu form {
+  width: 500px;
+  margin: auto;
+}
+#contenu .input {
+  color: #000;
+  width: 500px;
+  font-size: 1.2em;
+  padding: 10px;
+}
+#contenu textarea {
+  height: 160px;
+}
+#contenu .radio {
+  margin: 0 50px 0 20px;
+}
+#contenu .submit {
+  display: block;
+  margin: auto;
+  width: 250px;
+  background: orangered;
+  border: none;
+  font-size: 1.2em;
+  padding: 10px;
+}
 #footer {
   padding: 20px;
   text-align: center;
