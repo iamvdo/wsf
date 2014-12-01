@@ -79,6 +79,8 @@
                 <li><a href="/?1/css/regles">CSS - Introduction</a></li>
                 <li><a href="/?1/css/selecteurs">CSS - Sélecteurs</a></li>
                 <li><a href="/?1/css/proprietes">CSS - Propriétés</a></li>
+                <li><a href="/?1/css/positionnement">CSS - Positionnement</a></li>
+                <li><a href="/?1/css/css3">CSS - Effets graphiques CSS3</a></li>
               </ul>
             <?php
             }
