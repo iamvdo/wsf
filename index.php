@@ -76,6 +76,7 @@
                 <li><a href="/?1">Introduction au WWW</a></li>
                 <li><a href="/?1/html/regles">HTML - Concept, règles et structure</a></li>
                 <li><a href="/?1/html/elements">HTML - Éléments</a></li>
+                <li><a href="/?1/html/formulaires">HTML - Formulaires</a></li>
                 <li><a href="/?1/css/regles">CSS - Introduction</a></li>
                 <li><a href="/?1/css/selecteurs">CSS - Sélecteurs</a></li>
                 <li><a href="/?1/css/proprietes">CSS - Propriétés</a></li>
