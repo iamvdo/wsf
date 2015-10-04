@@ -4,8 +4,8 @@ section
 section
   h2 Intégrer, c'est quoi?
   ul
-    li.fragment Transposer les maquettes graphiques en pages web, en assemblant tous les éléments (textes, images, sons, etc.) dans le respect des normes et des standards.
-    li.fragment Métiers liés: développeur web, architecte web, (webmaster)
+    li.fragment Transposer les maquettes graphiques en pages web, en assemblant tous les éléments (textes, images, sons, etc.) dans le respect des standards, des normes et de l'accessibilité.
+    li.fragment Métiers liés: Intégrateur, Développeur web, Développeur front, Architecte web, Développeur Full-stack, Designer front, etc.
 
 section
   h2 Rappels...
@@ -732,7 +732,8 @@ section.language-css
       li.fragment Animable!
       li.fragment
         a(href='http://www.css3create.com/Effets-de-survol-avec-transitions-et-filtres-CSS') Galerie photo
-
+      li.fragment
+        a(href='http://iamvdo.me/blog/filtres-css-avances') Filtres avancés
   section
     h2 Media-queries
     ul
@@ -754,8 +755,10 @@ section.language-css
     +img('responsive.png')
     ul
       li.fragment Philosophie de développement
+      li.fragment Mobile First
       li.fragment
         a(href='http://mediaqueri.es') Showcase mediaqueri.es
+      li.fragment Adaptive Design
 
 
 
@@ -832,7 +835,7 @@ section.language-javascript
     +img('device-axes.png')
     ul
       li.fragment
-        a(href='http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html') Démo
+        a(href='http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html') Démo (goo.gl/K3KNKL)
 
   section
     h2 Web Storage
@@ -859,10 +862,16 @@ section.language-javascript
       li.fragment Clé / valeur complexes
     ul
       li.fragment
-        a(href="http://www.html5rocks.com/en/tutorials/indexeddb/todo/") Démo
+        a(href="http://jsfiddle.net/unclelongmao/VrS32/") Démo
 
   section
-    h2 Appcache
+    h2 Offline
+    ul
+      li.fragment Mode déconnecté
+      li.fragment Philosophie Offline first
+
+  section
+    h2 Offline: Appcache
     ul
       li.fragment Gestion précise du cache
       li.fragment Cache Manifest
@@ -882,7 +891,20 @@ section.language-javascript
         NETWORK:
         *
     ul
-      li.fragment Permet mode offline sous conditions
+      li.fragment Adapté aux SPA (Single Page App)
+
+  section
+    h2 Offline: Service Workers
+    ul
+      li.fragment Proxy programmable entre le navigateur et le réseau
+      li.fragment Permet:
+        ul
+          li.fragment Expérience offline
+          li.fragment Intercepter les requêtes
+          li.fragment Gérer les assets
+          li.fragment Gérer le cache
+          li.fragment etc.
+      li.fragment Architecture future!
 
   section
     h2 File API (desktop drag in, drag out)
@@ -910,7 +932,7 @@ section.language-javascript
         |  pour du dessin matriciel (via JavaScript)
         ul
           li.fragment
-            a(herf='http://jsbin.com/yayec/8/edit') Démo simple
+            a(href='http://jsbin.com/yayec/8/edit') Démo simple
           li.fragment
             a(href='http://www.craftymind.com/factory/html5video/CanvasVideo.html') Video Explosion
       li.fragment SVG inline pour du dessin vectoriel
@@ -928,6 +950,8 @@ section.language-javascript
           li.fragment
             a(href='http://race.assassinscreedpirates.com/') Assassin's Creed Pirates
           li.fragment
+            a(href='http://flightarcade.com/') Flight Arcade
+          li.fragment
             a(href='http://babylonjs.com') BabylonJS
 
   section
@@ -939,7 +963,7 @@ section.language-javascript
       li.fragment
         a(href='http://rumpetroll.com/') Rumpetroll
       li.fragment
-        a(href='http://kosmala.fr/lab/bird') <strike>Flappy Bird temps-réel multijoueur</strike>
+        a(href='https://protected-hollows-7891.herokuapp.com/') <strike>Flappy Bird temps-réel multijoueur (http://goo.gl/n22xll)</strike>
 
 section
   h2 Environnement client
@@ -961,30 +985,68 @@ section
       ul
         li.fragment Géolocalisation, FileAPI, Battery, SMS, etc.
 
-section
-  h2 Applications
-  ul
-    li.fragment Création d'application Full HTML5
-    li.fragment Applications mobiles
-    li.fragment Et même, des OS!
 
-section
-  h2 Applications mobiles
-  p.fragment Développement natif
-  ul
-    li.fragment iOS (Objective C, Swing)
-    li.fragment Android (JAVA)
-    li.fragment Windows Phone (C#)
-  p.fragment Développement hybride
-  ul
-    li.fragment
-      a(href='http://phonegap.com/') PhoneGap
-    li.fragment 
-      a(href='http://www.sencha.com/products/touch/') Sencha Touch
-    li.fragment
-      a(href='http://jquerymobile.com/') jQuery Mobile
-  p.fragment Développement mobile (HTML5/JS)
-  ul
-    li.fragment Windows Phone & Windows
-    li.fragment Firefox OS
-    li.fragment Tizen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Mobile
+
+section.language-javascript
+
+  section
+    h1 Applications mobiles
+
+  section
+    h2 Applications natives
+    ul
+      li.fragment iOS (Objective C, Swing)
+      li.fragment Android (JAVA)
+      li.fragment Windows Phone (C#)
+
+  section
+    h2 Applications hybrides
+    ul
+      li.fragment Site web mobile
+      li.fragment Webview + API pour accéder au hardware
+      li.fragment
+        a(href='https://cordova.apache.org/') Cordova
+      li.fragment
+        a(href='http://phonegap.com/') PhoneGap
+
+  section
+    h2 Applications hybrides
+    ul
+      li.fragment Dev JS
+      li.fragment Compiler vers natif
+      li.fragment
+        a(href='https://facebook.github.io/react-native/') ReactNative
+      li.fragment
+        a(href='http://ionicframework.com/') Ionic
+
+  section
+    h2 Application HTML5/JS
+    ul
+      li.fragment Windows Phone & Windows
+      li.fragment Firefox OS
+      li.fragment Tizen
+
+  section
+    h2 Et même des OS
+    ul
+      li.fragment Firefox OS
+      li.fragment Tout est HTML5
