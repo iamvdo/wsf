@@ -14,136 +14,271 @@ section
     li.fragment Ordre des éléments du code source
 
 section.language-css
-  h2: code display
-  ul
-    li.fragment Chaque boite a un affichage par défaut
-    li.fragment Possible de modifier le comportement de chaque boite
-  ul
-    li.fragment
-      code display: block
-      |  convertit un élément en block
-    li.fragment
-      code display: inline
-      |  convertit un élément en inline
-    li.fragment
-      code display: none
-      |  masque un élément
 
-section
-  h2 Inline en block
-  ul
-    li.fragment Un élément inline peut devenir un block
-    li.fragment Suit le modèle de boite block:
-      ul
-        li.fragment Largeur, hauteur, marges internes et externes
+  section
+    h1: code display
 
-section.language-css
-  h2 Hybride
-  ul
-    li.fragment
-      code display: inline-block
-    li.fragment Entre les deux modes
-    li.fragment Élément inline
-      ul
-        li.fragment Ne crée pas de nouveau bloc autonome
-        li.fragment S'affiche sur la même ligne
-    li.fragment Élément block
-      ul
-        li.fragment Suit le modèle de boite block (taille, marges)
-    li.fragment Alignement vertical entre les éléments frères
-
-section.language-css
-  h2: code float
-  ul
-    li.fragment Positionnement flottant
-    li.fragment Sort l'élément du flux (mais conserve sa place)
-    li.fragment Pas prévu pour faire du positionnement à la base
-    li.fragment Un des plus utilisés!
-    li.fragment 2 valeurs: 
-      code left
-      |  ou 
-      code right
-
-section
-  h2 Flottant
-  ul
-    li.fragment Lorsqu'un élément est flottant,
-    li.fragment l'élément suivant prend la place disponible sur le coté inverse au float.
-    li.fragment Si la place restante est disponible
-
-section
-  h2 Problèmes
-  ul
-    li.fragment Un élément dont tous les enfants sont flottants à une hauteur de 0
-    li.fragment Pour annuler l'effet du float, propriété 
-      code clear
-
-section.language-css
-  h2: code position
-  ul
-    li.fragment Modifie le flux de la page
-    li.fragment Permet de créer des calques
-    li.fragment 4 valeurs: 
-      code static
-      |, 
-      code absolute
-      |, 
-      code relative
-      |  ou 
-      code fixed
-    li.fragment Positionné avec 4 propriétés:
-     ul
+  section.language-css
+    h2: code display
+    ul
+      li.fragment Chaque boite a un affichage par défaut
+      li.fragment Possible de modifier le comportement de chaque boite
+    ul
       li.fragment
-        code top
-        |, 
-        code bottom
-        |, 
+        code display: block
+        |  convertit un élément en block
+      li.fragment
+        code display: inline
+        |  convertit un élément en inline
+      li.fragment
+        code display: none
+        |  masque un élément
+
+  section
+    h2 Inline en block
+    ul
+      li.fragment Un élément inline peut devenir un block
+      li.fragment Suit le modèle de boite block:
+        ul
+          li.fragment Largeur, hauteur, marges internes et externes
+
+  section.language-css
+    h2 Hybride
+    ul
+      li.fragment
+        code display: inline-block
+      li.fragment Entre les deux modes
+      li.fragment Élément inline
+        ul
+          li.fragment Ne crée pas de nouveau bloc autonome
+          li.fragment S'affiche sur la même ligne
+      li.fragment Élément block
+        ul
+          li.fragment Suit le modèle de boite block (taille, marges)
+      li.fragment Alignement vertical entre les éléments frères
+
+section.language-css
+
+  section
+    h1: code float
+
+  section.language-css
+    h2: code float
+    ul
+      li.fragment Positionnement flottant
+      li.fragment Sort l'élément du flux (mais conserve sa place)
+      li.fragment Pas prévu pour faire du positionnement à la base
+      li.fragment Un des plus utilisés!
+      li.fragment 2 valeurs: 
         code left
-        |  et 
+        |  ou 
         code right
 
-section
-  h2: code static
-  ul
-    li.fragment Valeur par défaut de tous les éléments
-    li.fragment Ne modifie pas le flux
+  section
+    h2 Flottant
+    ul
+      li.fragment Lorsqu'un élément est flottant,
+      li.fragment l'élément suivant prend la place disponible sur le coté inverse au float.
+      li.fragment Si la place restante est disponible
 
-section
-  h2: code absolute
-  ul
-    li.fragment Sort l'élément de la page
-    li.fragment Positionné sur son propre calque
-    li.fragment Superpose les autres éléments
-  ul
-    li.fragment Positionné par rapport à la fenêtre
-    li.fragment Ou, au premier élément parent en relative
-
-section
-  h2: code fixed
-  ul
-    li.fragment Identique absolute
-    li.fragment Mais l'élement est fixe pendant le scroll
-
-section
-  h2: code relative
-  ul
-    li.fragment Ne sort pas l'élément du flux
-    li.fragment Permet de définir les limites des éléments inclus en 
-      code position: absolute 
+  section
+    h2 Problèmes
+    ul
+      li.fragment Un élément dont tous les enfants sont flottants à une hauteur de 0
+      li.fragment Pour annuler l'effet du float, propriété 
+        code clear
 
 section.language-css
-  h2 Ordre d'affichage
-  ul
-    li.fragment Propriété 
-      code z-index
-    li.fragment Gérer les superpositions des éléments positionnés
-  pre.fragment
-    code.
-      .element {
-        position: absolute;
-        top: 0; right: 0;
-        z-index: 5;
-      }
+
+  section
+    h1 Flexbox
+
+  section
+    h2 Flexbox: La promesse
+    ul
+      li.fragment Affichage en bloc ou en ligne
+      li.fragment Flexibilité des boites
+      li.fragment Réorganisation des éléments
+      li.fragment Alignements verticaux et horizontaux
+      li.fragment Responsive design facilité
+    ul
+      li.fragment Plusieurs versions co-existent encore
+      li.fragment Promesse tenue!
+
+  section
+    h2 L'élément Flexbox
+    pre.fragment
+      code.
+        .e {
+          display: flex;
+        }
+    ul
+      li.fragment Définit l'élément principal Flexbox
+      li.fragment Les Flex items (enfants) «subissent» ce mode
+
+  section
+    h2 Les axes du Flexbox
+    pre.fragment
+      code.
+        .e {
+          flex-flow: row wrap;
+        }
+    ul
+      li.fragment Propriété <code>flex-flow</code>, un raccourci de 2 autres
+        ul
+          li.fragment <code>flex-direction</code> définit <strong>l'axe principal</strong> du Flexbox
+            ul
+              li.fragment <code>column</code>, <code>column-reverse</code>: affichage en colonnes
+              li.fragment <code>row</code>, <code>row-reverse</code>: affichage en lignes
+          li.fragment <strong>L'axe secondaire</strong> est donc l'axe perpendiculaire
+      li.fragment <code>flex-wrap</code> gestion du débordement des lignes
+        ul
+          li <code>nowrap</code>
+          li <code>wrap</code>, <code>wrap-reverse</code>
+
+  section
+    h2 La flexibilité
+    pre.fragment
+      code.
+        .e {
+          flex: 1 100px;
+        }
+    ul
+      li.fragment Propriété <code>flex</code>, un raccourci de 3 autres:
+        ul
+          li.fragment <code>flex-grow</code> contrainte d'agrandissement
+          li.fragment <code>flex-shrink</code> contrainte de réduction
+          li.fragment <code>flex-basis</code> taille de base
+      li.fragment S'applique sur chaque Flex item (enfant)
+
+  section
+    h2 Ordre d'affichage
+    pre.fragment
+      code.
+        .e {
+          order: 2;
+        }
+    ul
+      li.fragment Propriété <code>order</code> change l'ordre d'apparition au cas par cas
+      li.fragment Pratique pour réorganiser, mais attention à l'accessibilité
+
+  section
+    h2 Alignements
+    ul
+      li.fragment Marges classiques
+      li.fragment Marges automatiques: <code>margin: auto</code>
+    ul
+      li.fragment Alignements en fonction de l'axe (principal ou secondaire)
+      li.fragment Suit le <a href="http://dev.w3.org/csswg/css3-align/">Box Alignment Module</a> (non spécifique à Flexbox)
+
+  section
+    h2 Alignement axe principal
+    ul
+      li.fragment <code>justify-content</code> sur le parent Flexbox
+        ul
+          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>
+    +img('alignPrincipal.jpg')
+
+  section
+    h2 Alignement axe secondaire
+    ul
+      li.fragment <code>align-items</code> sur le parent Flexbox
+        ul
+          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+    +img('alignSecondaire.jpg')
+
+  section
+    h2 Alignement axe secondaire
+    ul
+      li.fragment Un élément peut avoir son propre alignement
+      li.fragment <code>align-self</code> sur un Flexbox item (enfant)
+        ul
+          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+    +img('alignSelf.jpg')
+
+  section
+    h2 Support flexbox
+    ul
+      li.fragment IE10+ avec le préfixe <code>-ms-</code>, IE11+
+      li.fragment Firefox avec le préfixe <code>-moz-</code>, Firefox 28+
+      li.fragment Chrome avec le préfixe <code>-webkit-</code>, Chrome 29+
+      li.fragment Safari avec le préfixe <code>-webkit-</code>
+    
+    ul
+      li.fragment Nécessité d'outil comme Autoprefixer, 
+        a(href='http://pleeease.io/play') Pleeease playground
+
+section.language-css
+
+  section
+    h1: code position
+
+  section.language-css
+    h2: code position
+    ul
+      li.fragment Modifie le flux de la page
+      li.fragment Permet de créer des calques
+      li.fragment 4 valeurs: 
+        code static
+        |, 
+        code absolute
+        |, 
+        code relative
+        |  ou 
+        code fixed
+      li.fragment Positionné avec 4 propriétés:
+       ul
+        li.fragment
+          code top
+          |, 
+          code bottom
+          |, 
+          code left
+          |  et 
+          code right
+
+  section
+    h2: code static
+    ul
+      li.fragment Valeur par défaut de tous les éléments
+      li.fragment Ne modifie pas le flux
+
+  section
+    h2: code absolute
+    ul
+      li.fragment Sort l'élément de la page
+      li.fragment Positionné sur son propre calque
+      li.fragment Superpose les autres éléments
+    ul
+      li.fragment Positionné par rapport à la fenêtre
+      li.fragment Ou, au premier élément parent en relative
+
+  section
+    h2: code fixed
+    ul
+      li.fragment Identique absolute
+      li.fragment Mais l'élement est fixe pendant le scroll
+
+  section
+    h2: code relative
+    ul
+      li.fragment Ne sort pas l'élément du flux
+      li.fragment Permet de définir les limites des éléments inclus en 
+        code position: absolute 
+
+  section.language-css
+    h2 Ordre d'affichage
+    ul
+      li.fragment Propriété 
+        code z-index
+      li.fragment Gérer les superpositions des éléments positionnés
+    pre.fragment
+      code.
+        .element {
+          position: absolute;
+          top: 0; right: 0;
+          z-index: 5;
+        }
 
 
 
