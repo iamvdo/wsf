@@ -1,0 +1,214 @@
+﻿* {
+    box-sizing: border-box;
+}
+html {
+    font: 1em/1.5 sans-serif;
+    color: #181818;
+    background: radial-gradient(100% 50% at top center, rgba(255,255,255,.5) 50%, rgba(255,255,255,0)) no-repeat, lightblue;
+}
+body {
+    width: 900px;
+    margin: auto;
+}
+a {
+    color: inherit;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    border-bottom: 1px solid #333;
+}
+#titres {
+    display: inline-block;
+}
+#titres h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+#titres p {
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav {
+    position: absolute;
+    bottom: 0; right: 0;
+}
+nav ul {
+  padding: 0;
+}
+nav li {
+    display: inline-block;
+    list-style-type: none;
+}
+nav a {
+    display: block;
+    font-size: 1.3em;
+    padding: .2em 1em;
+    text-decoration: none;
+}
+nav a:hover,
+nav a:focus {
+    color: white;
+    background: #181818;
+}
+
+/* Bannière */
+
+.banniere {
+    position: relative;
+    color: white;
+    margin: 1.5em 0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px rgba(0,0,0,.5);
+}
+.banniere img {
+    display: block;
+    border-radius: inherit;
+}
+.banniere-overlay {
+    position: absolute;
+    bottom: 0; right: 0; left: 0;
+    padding: 15px;
+    background: rgba(0,0,0,.8);
+}
+.banniere-link {
+    position: absolute;
+    bottom: 15px; right: 15px;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+.banniere-link::after {
+    content: '▶';
+    padding-left: 1em;
+}
+.banniere-link:hover,
+.banniere-link:focus {
+    border-bottom: 1px solid white;
+}
+
+
+/* Corps */
+
+.section {
+    display: flex;
+}
+article,
+aside {
+    
+}
+article {
+    width: 625px;
+    padding-right: 15px;
+    text-align: justify;
+}
+article h1 {
+    line-height: 40px;
+    padding-left: 60px;
+    background: url('images/sf.png') no-repeat;
+}
+aside {
+    width: 275px;
+    margin-top: 40px;
+    padding: 15px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+}
+.drapeau {
+    margin: 0;
+    text-align: center;
+}
+.drapeau-image {
+    width: 245px;
+}
+.drapeau-legende {
+    text-align: center;
+    font-style: italic;
+    font-size: .9em;
+}
+aside dl {
+    display: flex;
+    flex-flow: row wrap;
+}
+aside dt,
+aside dd {
+    width: 50%;
+    margin: 0;
+}
+aside dt {
+    font-weight: bold;
+}
+aside dd + dd {
+    margin-left: 50%;
+}
+.reseaux {
+    padding: 0;
+    text-align: center;
+}
+.reseaux-item {
+    display: inline-block;
+    margin-right: 5px;
+}
+.reseaux-item a {
+    display: block;
+    width: 32px;
+    height: 0;
+    padding-top: 32px;
+    overflow: hidden;
+}
+.reseaux-item:first-child a {
+    background: url('images/facebook.png');
+}
+.reseaux-item:nth-child(2) a {
+    background: url('images/twitter.png');
+}
+.reseaux-item:nth-child(3) a {
+    background: url('images/flickr.png');
+}
+.reseaux-item:nth-child(4) a {
+    background: url('images/rss.png');
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    border-top: 1px solid #333;
+    padding-top: 1.5em;
+    margin-top: 2em;
+    font-size: 0.8em;
+}
+footer h2 {
+    font-size: 1.3em;
+}
+.footer-item {
+    flex: 0 0 33.333%;
+}
+.galerie {
+    padding: 0;
+    text-align: center;
+}
+.galerie-item {
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid #333;
+}
+.galerie-item img {
+    display: block;
+}
+.list {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
