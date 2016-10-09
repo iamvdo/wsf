@@ -3,58 +3,58 @@ section
 
 section
   h2 CSS3 n'existe pas!
-  ul.fragment
+  ul
     li C'est la suite logique au langage CSS, le langage des feuilles de styles.
-  h3.fragment CSS1
-  ul.fragment
+  h3 CSS1
+  ul
     li Recommandation en 1996
     li Sélecteurs simples, positionnements basiques, tailles, marges, couleurs, polices, etc.
 
 section
   h2 CSS3 n'existe pas!
-  h3.fragment CSS2
-  ul.fragment
+  h3 CSS2
+  ul
     li Abandonnée en 1998
     li Trop de choses, trop complexes ou sous-spécifiées
     li Pseudo-classes dynamiques, pseudo-éléments, polices personnalisées, gestion des médias, ombres sur les textes, etc.
-  h3.fragment CSS2.1
-  ul.fragment
+  h3 CSS2.1
+  ul
     li Version "corrigée" de CSS2, ce qui a été retiré est mis à l'étude dans CSS3
     li Recommandation en juin 2011
 
 section
   h2 CSS3 n'existe pas!
-  h3.fragment CSS3
-  ul.fragment
+  h3 CSS3
+  ul
     li En cours depuis 1999
     li Standard fragmenté en modules
     li 5 modules en Recommandation, une trentaine à l'étude
-  h3.fragment CSS4
-  ul.fragment
+  h3 CSS4
+  ul
     li Ne verra jamais le jour
 
 section
   h2 Les modules
   ul
-    li.fragment Les sélecteurs
-    li.fragment Les couleurs
-    li.fragment Les unités
-    li.fragment Les animations
-    li.fragment Les transformations
-    li.fragment etc.
+    li Les sélecteurs
+    li Les couleurs
+    li Les unités
+    li Les animations
+    li Les transformations
+    li etc.
 
 section
   h2 Démocratisation de CSS3
-  p.fragment Pourquoi entends t'on beaucoup parler de CSS3?
+  p Pourquoi entends t'on beaucoup parler de CSS3?
   ul
-    li.fragment Meilleur ami de HTML5
-    li.fragment Sélecteurs étoffés
-    li.fragment Effets graphiques simplifiés: opacité, angles arrondis, ombres, dégradés, polices personnalisées, etc. (maintenance++)
-    li.fragment Accès à ce qui était réservé avant à JavaScript (interaction, animation, etc.)
-    li.fragment Nouveaux modes de positionnement
-    li.fragment Support amélioré de CSS2.1 par les navigateurs
+    li Meilleur ami de HTML5
+    li Sélecteurs étoffés
+    li Effets graphiques simplifiés: opacité, angles arrondis, ombres, dégradés, polices personnalisées, etc. (maintenance++)
+    li Accès à ce qui était réservé avant à JavaScript (interaction, animation, etc.)
+    li Nouveaux modes de positionnement
+    li Support amélioré de CSS2.1 par les navigateurs
       ul
-        li.fragment Fin de IE6, IE7, IE8
+        li Fin de IE6, IE7, IE8
 
 section.language-css
 
@@ -63,56 +63,56 @@ section.language-css
 
   section
     h2 Utiliser CSS3?
-    p.fragment Oui!
-      strong.fragment Mais comment?
+    p Oui!
+      strong Mais comment?
     ul
-      li.fragment Connaitre l'état d'avancement des modules, des propriétés
+      li Connaitre l'état d'avancement des modules, des propriétés
         ul
-          li.fragment Stable, brouillon, ...
-      li.fragment Un site: 
+          li Stable, brouillon, ...
+      li Un site: 
         a(href="http://caniuse.com") caniuse.com
         ul
-          li.fragment Et aussi: 
+          li Et aussi: 
             a(href="http://css3test.com") css3test.com
-      li.fragment Conserver la 
+      li Conserver la 
         strong dégradation gracieuse
-      li.fragment Mettre en place l'
+      li Mettre en place l'
         strong amélioration progressive
 
   section
     h2 Dégradation gracieuse / Amélioration progressive
     ul
-      li.fragment Plus ou moins la même chose
-      li.fragment La 
+      li Plus ou moins la même chose
+      li La 
         strong dégradation gracieuse
         |, c'est prévoir des solutions de recours pour des navigateurs anciens
-      li.fragment L'
+      li L'
         strong amélioration progressive
         |, c'est mettre en place des solutions pour les navigateurs récents, sans altérer le rendu sur navigateurs anciens
     ul
-      li.fragment Pas forcément pour un résultat identique
+      li Pas forcément pour un résultat identique
 
   section
     h2 Dégradation gracieuse / Amélioration progressive
     ul
-      li.fragment Pour cela:
+      li Pour cela:
         ul
-          li.fragment Ne rien faire
-          li.fragment Utilisation de styles alternatifs, via la cascade CSS.
-          li.fragment Utilisation des préfixes
-          li.fragment Détection de fonctionnalités (CSS ou JavaScript)
+          li Ne rien faire
+          li Utilisation de styles alternatifs, via la cascade CSS.
+          li Utilisation des préfixes
+          li Détection de fonctionnalités (CSS ou JavaScript)
 
   section
     h2 1. Ne rien faire
     ul
-      li.fragment Par exemple, mettre en place les coins arrondis
-    pre.fragment
+      li Par exemple, mettre en place les coins arrondis
+    pre
       code.
         .e {
           border-radius: 20px;
         }
     ul
-      li.fragment Pas de bords arrondis sur les 
+      li Pas de bords arrondis sur les 
         a(href='http://caniuse.com/#feat=border-radius') anciens navigateurs
         |  (mais c'est pas grave)
 
@@ -122,14 +122,14 @@ section.language-css
       li Par exemple, 
         code rgba
         |  pour la transparence
-    pre.fragment
+    pre
       code.
         .e {
           background: rgba(0, 0, 0, .5);
         }
     ul
-      li.fragment devient:
-    pre.fragment
+      li devient:
+    pre
       code.
         .e {
           background: #000;
@@ -139,12 +139,12 @@ section.language-css
   section
     h2 3. Utilisation des préfixes
     ul
-      li.fragment Compatibilité entre navigateurs
-      li.fragment De moins en moins le cas (politique différente)
-      li.fragment Utilisation facilitée par des outils
+      li Compatibilité entre navigateurs
+      li De moins en moins le cas (politique différente)
+      li Utilisation facilitée par des outils
     ul
-      li.fragment Par exemple, Android &lt;3 supporte les ombres, mais avec la propriété préfixée
-    pre.fragment
+      li Par exemple, Android &lt;3 supporte les ombres, mais avec la propriété préfixée
+    pre
       code.
         .e {
           -webkit-box-shadow: 0 0 5px green;
@@ -154,23 +154,25 @@ section.language-css
   section
     h2 4. Détection de fonctionnalités
     ul
-      li.fragment CSS: utilisation de 
+      li CSS: utilisation de 
         code @supports
-      li.fragment JS: utilisation d'outil comme 
+      li JS: utilisation d'outil comme 
         a(href='http://modernizr.com') Modernizr
     ul
-      li.fragment Par exemple, ajout d'une bordure si le navigateur ne supporte pas les ombres.
-    pre.fragment
+      li Par exemple, ajout d'une bordure si le navigateur ne supporte pas les ombres.
+    pre
       code.
         .e {
           -webkit-box-shadow: 0 0 5px green;
                   box-shadow: 0 0 5px green;
         }
-        @supports not (box-shadow) {
+        @supports not (box-shadow: none) {
           .e {
             border: 1px solid green;
           }
         }
+    p
+
 
 
 
@@ -201,43 +203,43 @@ section.language-css
   section
     h2 Les sélecteurs CSS1, 2.1 et 3
     ul
-      li.fragment Plus de 40 sélecteurs
+      li Plus de 40 sélecteurs
         ul
-          li.fragment Sélecteur de descendants (
+          li Sélecteur de descendants (
             code E F
             |), d'enfants (
             code E>F
             |)
-          li.fragment Sélecteur de frères suivants (
+          li Sélecteur de frères suivants (
             code E+F
             |, 
             code E~F
             |)
-          li.fragment Sélecteur d'id (
+          li Sélecteur d'id (
             code E#id
             |) et de classe (
             code E.class
             |)
-          li.fragment Pseudo-classes (
+          li Pseudo-classes (
             code E:first-child
             |, 
             code E:last-child
             |, etc.)
-          li.fragment Pseudo-classes dynamiques (
+          li Pseudo-classes dynamiques (
             code E:hover
             |, 
             code E:focus
             |, 
             code E:active
             |, etc.)
-          li.fragment Pseudo-éléments (
+          li Pseudo-éléments (
             code E::first-letter
             |, 
             code E::after
             |, 
             code E::before
             |, etc.)
-      li.fragment Notez la différence entre 
+      li Notez la différence entre 
         code :
         |  et 
         code ::
@@ -245,22 +247,22 @@ section.language-css
   section
     h2 Les sélecteurs d'attributs
     ul
-      li.fragment Cibler des éléments en fonction de leur attributs (et de leurs valeurs), mêmes les 
+      li Cibler des éléments en fonction de leur attributs (et de leurs valeurs), mêmes les 
         em data-attributes
         |  de HTML5.
-      li.fragment 
+      li 
         code [attr]
         |, 
         code [attr=val]
         |, 
         code [attr~=val]
-      li.fragment 
+      li 
         code [attr^=abc]
         |: commençant par
-      li.fragment 
+      li 
         code [attr$=abc]
         |: finissant par
-      li.fragment 
+      li 
         code [attr*=abc]
         |: contient
 
@@ -268,35 +270,35 @@ section.language-css
     h2 La pseudo-classe 
       code :nth-child()
     ul
-      li.fragment Cible le n
+      li Cible le n
         sup ième
         |  enfant d'un élément
         ul
-          li.fragment 
+          li 
             code :nth-child(3)
             |  cible le 3
             sup ème
             | enfant
-          li.fragment 
+          li 
             code :nth-child(an+b)
             |  ou a et b sont des entiers
-      li.fragment Ex: 
+      li Ex: 
         code :nth-child(3n+2), pour chaque valeur de n:
         ul
-          li.fragment n=0, 3x0 + 2, total= 2
-          li.fragment n=1, 3x1 + 2, total= 5
-          li.fragment n=2, 3x2 + 2, total= 8
-          li.fragment Les 2e, 5e et 8e enfants sont sélectionnés.
+          li n=0, 3x0 + 2, total= 2
+          li n=1, 3x1 + 2, total= 5
+          li n=2, 3x2 + 2, total= 8
+          li Les 2e, 5e et 8e enfants sont sélectionnés.
 
   section
     h2 La pseudo-classe 
       code :nth-child()
     ul
-      li.fragment Se décline:
+      li Se décline:
         ul
-          li.fragment 
+          li 
             code :nth-last-child()
-          li.fragment 
+          li 
             code :nth-of-type()
             |, 
             code :nth-last-of-type()
@@ -305,19 +307,19 @@ section.language-css
     h2 La pseudo-classe 
       code :not()
     ul
-      li.fragment
+      li
         code :not()
         |  permet de retirer un sélecteur simple:
         ul
-          li.fragment 
+          li 
             code div:not(.toto)
-          li.fragment 
+          li 
             code ul li a:not(:hover)
-          li.fragment 
+          li 
             code .toto:not(p)
-          li.fragment 
+          li 
             code a:not([href^=http])
-      li.fragment Pas de sélecteurs avancés
+      li Pas de sélecteurs avancés
         ul
           li
             code :not(div p)
@@ -326,31 +328,31 @@ section.language-css
   section
     h2 Les pseudo-classes de formulaires
     ul
-      li.fragment
+      li
         code :valid
         |, 
         code :invalid
         |, 
         code :required
-      li.fragment
+      li
         code :enabled
         |, 
         code :disabled
-      li.fragment
+      li
         code :checked
 
   section
     h2 Les pseudo-éléments de formulaires
     ul
-      li.fragment Aie!
-      li.fragment
+      li Aie!
+      li
         a(href='http://tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls') Liste complète
-      li.fragment Accéder au Shadow DOM
+      li Accéder au Shadow DOM
 
   section
     h2 Support
     ul
-      li.fragment À partir d'IE8 (sélecteurs d'attributs) et IE9 (autres sélecteurs)
+      li À partir d'IE8 (sélecteurs d'attributs) et IE9 (autres sélecteurs)
 
 
 
@@ -381,121 +383,121 @@ section.language-css
 
   section
     h2 Arrière-plans multiples
-    pre.fragment
+    pre
       code.
         .e {
           background: url(img.png), url(img2.png);
         }
     ul
-      li.fragment Plusieurs images séparées par une virgule:
+      li Plusieurs images séparées par une virgule:
         ul
-          li.fragment La première image est au dessus
-          li.fragment Les images suivantes sont affichées en dessous
-      li.fragment Nécessité de transparence dans les images
+          li La première image est au dessus
+          li Les images suivantes sont affichées en dessous
+      li Nécessité de transparence dans les images
 
   section
     h2 Rogner l'arrière-plan
-    pre.fragment
+    pre
       code.
         .e {
           background-clip: content-box;
         }
     ul
-      li.fragment Rogne une image d'arrière-plan:
+      li Rogne une image d'arrière-plan:
         ul
-          li.fragment
+          li
             code border-box
             |: limite de bordure (valeur par défaut)
-          li.fragment
+          li
             code padding-box
             |: limite des marges internes
-          li.fragment
+          li
             code content-box
             |: limite du contenu
 
   section
     h2 Origine de l'arrière-plan
-    pre.fragment.large
+    pre.large
       code.
         .e {
           background-origin: content-box;
         }
     ul
-      li.fragment Définit l'origine d'une image d'arrière-plan:
+      li Définit l'origine d'une image d'arrière-plan:
         ul
-          li.fragment
+          li
             code border-box
             |: limite de bordure (valeur par défaut)
-          li.fragment
+          li
             code padding-box
             |: limite des marges internes
-          li.fragment
+          li
             code content-box
             |: limite du contenu
-      li.fragment
+      li
         code background-position
         |  est calculé par rapport à cette origine
 
   section
     h2 Taille de l'arrière-plan
-    pre.fragment
+    pre
       code.
         .e {
           background-size: 100%;
         }
     ul
-      li.fragment Définit la taille d'une image d'arrière-plan
-      li.fragment Valeur 
+      li Définit la taille d'une image d'arrière-plan
+      li Valeur 
         code auto
         |  par défaut
-      li.fragment 2 mots-clés: 
+      li 2 mots-clés: 
         code cover
         |  et 
         code contain
     ul
-      li.fragment Attention à la pixellisation
-      li.fragment Préférez SVG à PNG
+      li Attention à la pixellisation
+      li Préférez SVG à PNG
 
   section
     h2 SVG vs PNG
     ul
-      li.fragment Format vectoriel (SVG) vs format bitmap (PNG, JPG, GIF)
-      li.fragment Bitmap:
+      li Format vectoriel (SVG) vs format bitmap (PNG, JPG, GIF)
+      li Bitmap:
         ul
-          li.fragment Composé de pixels
-          li.fragment Redimensionnement difficile
-      li.fragment Vectoriel:
+          li Composé de pixels
+          li Redimensionnement difficile
+      li Vectoriel:
         ul
-          li.fragment Construit à partir de formes géométriques
-          li.fragment Attributs de tailles, de position, de couleurs, etc.
-          li.fragment Redimensionnement facilité, réutilisable par morceaux (format XML), stylable par CSS, etc.
+          li Construit à partir de formes géométriques
+          li Attributs de tailles, de position, de couleurs, etc.
+          li Redimensionnement facilité, réutilisable par morceaux (format XML), stylable par CSS, etc.
 
   section
     h2 Les coins arrondis
-    pre.fragment
+    pre
       code.
         .e {
           border-radius: 2px;
         }
     ul
-      li.fragment Crée des angles arrondis
-      li.fragment La contenu est masqué par les arrondis
+      li Crée des angles arrondis
+      li La contenu est masqué par les arrondis
 
   section
     h2 Utilisation
     ul
-      li.fragment 1 valeur:
+      li 1 valeur:
         ul
           li les 4 arrondis sont identiques
           li ex: 
             code border-radius: 2px;
-      li.fragment 2 valeurs:
+      li 2 valeurs:
         ul
           li la première pour l'angle NW et l'angle SE
           li la seconde pour l'angle NE et l'angle SW
           li ex: 
             code border-radius: 2px 5px;
-      li.fragment 4 valeurs:
+      li 4 valeurs:
         ul
           li chaque angle a son propre arrondi
           li ex: 
@@ -504,7 +506,7 @@ section.language-css
   section
     h2 Utilisation
     ul
-      li.fragment Également des propriétés dédiées:
+      li Également des propriétés dédiées:
         ul
           li
             code border-top-left-radius
@@ -518,110 +520,110 @@ section.language-css
   section
     h2 Pourcentages
     ul
-      li.fragment Accepte les pourcentages (par rapport à la boite elle-même)
-      li.fragment
+      li Accepte les pourcentages (par rapport à la boite elle-même)
+      li
         code border-radius: 50% 
         |  crée une ellipse. Un rond si la largeur est égale à la hauteur.
 
   section
     h2 Deux valeurs par angles
     ul
-      li.fragment Possible de définir des courbes elliptiques, avec deux valeurs, X et Y
-      li.fragment Séparer les valeurs par un slash
-      li.fragment Ex: 
+      li Possible de définir des courbes elliptiques, avec deux valeurs, X et Y
+      li Séparer les valeurs par un slash
+      li Ex: 
         code border-radius: 80px / 40px
     +img2('borderRadius.png')
     ul
-      li.fragment Possible de combiner. Ex: 
+      li Possible de combiner. Ex: 
         code border-radius: 20px 100px / 100px 20px
 
   section
     h2 Les ombres sur textes
-    pre.fragment
+    pre
       code.
         .e {
           text-shadow: 2px 2px 5px black;
         }
     ul
-      li.fragment Ajoute une ou plusieurs ombres sur le texte
-    h3.fragment Utilisation
+      li Ajoute une ou plusieurs ombres sur le texte
+    h3 Utilisation
     ul
-      li.fragment 4 valeurs:
+      li 4 valeurs:
         ul
-          li.fragment Décalage vers la droite
-          li.fragment Décalage vers le bas
-          li.fragment Valeur du flou
-          li.fragment Couleur de l'ombre
+          li Décalage vers la droite
+          li Décalage vers le bas
+          li Valeur du flou
+          li Couleur de l'ombre
 
   section
     h2 Les ombres sur boites
-    pre.fragment
+    pre
       code.
         .e {
           box-shadow: 2px 2px 5px (5px) black (inset);
         }
     ul
-      li.fragment Ajoute une ou plusieurs ombres sur une boite
-    h3.fragment Utilisation
+      li Ajoute une ou plusieurs ombres sur une boite
+    h3 Utilisation
     ul
-      li.fragment 4 valeurs:
+      li 4 valeurs:
         ul
-          li.fragment Décalage vers la droite
-          li.fragment Décalage vers le bas
-          li.fragment Valeur du flou
-          li.fragment Couleur de l'ombre
-      li.fragment 2 options:
+          li Décalage vers la droite
+          li Décalage vers le bas
+          li Valeur du flou
+          li Couleur de l'ombre
+      li 2 options:
         ul
-          li.fragment Ombre interne avec code inset
-          li.fragment Agrandissement / réduction de l'ombre
+          li Ombre interne avec code inset
+          li Agrandissement / réduction de l'ombre
 
   section
     h2 L'opacité
-    pre.fragment
+    pre
       code.
         .e {
           opacity:0.5;
         }
     ul
-      li.fragment Rends un élément transparent (et tous ses enfants)
-      li.fragment Valeur entre 0 et 1:
+      li Rends un élément transparent (et tous ses enfants)
+      li Valeur entre 0 et 1:
         ul
-          li.fragment 0 rend invisible
-          li.fragment 1 rend visible
+          li 0 rend invisible
+          li 1 rend visible
 
   section
     h2 Les fonctions de couleur
-    pre.fragment
+    pre
       code.
         .e {
           background: rgba(235, 162, 53, .5);
         }
     ul
-      li.fragment Fonction 
+      li Fonction 
         code rgba 
         | pour red, green, blue, alpha
-      li.fragment Applique une couleur RVB avec transparence
-      li.fragment Extension de 
+      li Applique une couleur RVB avec transparence
+      li Extension de 
         code rgb(r,v,b)
 
   section
     h2 Les couleurs HSL
-    pre.fragment
+    pre
       code.
         .e {
           background: hsl(60, 100%, 50%);
         }
     ul
-      li.fragment Modèle HSL pour hue, saturation, lightness (Teinte, Saturation, Luminance)
-      li.fragment Beaucoup plus parlant que RVB
+      li Modèle HSL pour hue, saturation, lightness (Teinte, Saturation, Luminance)
+      li Beaucoup plus parlant que RVB
         ul
-          li.fragment
+          li
             strong Teinte
             |: valeur sur le cercle chromatique de 0 (rouge) à 360 (rouge). À 60: Jaune, à 120: Vert, à 180: Cyan, à 240: Bleu, à 300: Magenta.
-          li.fragment
+          li
             strong Saturation
             |: valeur de 0 à 100%
-          li.fragment
+          li
             strong Luminance
             |: valeur de 0 (entièrement noir) à 100% (entièrement blanc). 50% correspond à la teinte de base
 
@@ -638,141 +640,141 @@ section.language-css
         ul
           li
             code hsl(60, 100%, 50%)
-      li.fragment Plus foncé:
+      li Plus foncé:
         ul
           li
             code hsl(60, 100%, 
               strong(style="color: deepskyblue") 30%
               |)
-      li.fragment Plus clair
+      li Plus clair
         ul
           li
             code hsl(60, 100%, 
               strong(style="color: deepskyblue") 70%
               |)
-      li.fragment Couleur complémentaire (+180°)
+      li Couleur complémentaire (+180°)
         ul
           li
             code hsl(
               strong(style="color: deepskyblue") 240
               |, 100%, 50%)
     ul
-      li.fragment Déclinaison avec transparence 
+      li Déclinaison avec transparence 
         code hsla()
 
   section
     h2 Les dégradés CSS
     ul
-      li.fragment Création d'images à la volée
-      li.fragment S'utilise avec les propriétés d'images
+      li Création d'images à la volée
+      li S'utilise avec les propriétés d'images
         ul
           li
             code background-image
             |, 
             code list-style-image
             |, etc.
-      li.fragment 2 types de dégradés: linéaires et radiaux
+      li 2 types de dégradés: linéaires et radiaux
 
   section
     h2 Dégradés linéaires
-    pre.fragment
+    pre
       code.
         .e {
           background: linear-gradient(to left, red, green);
         }
     ul
-      li.fragment Crée un dégradé linéaire
-      li.fragment 3 valeurs:
+      li Crée un dégradé linéaire
+      li 3 valeurs:
         ul
-          li.fragment La direction avec le mot-clé 
+          li La direction avec le mot-clé 
             code to
             |  (optionnelle, 
             code to bottom
             |  par défaut)
-          li.fragment Couleur de départ
-          li.fragment Couleur de fin
-      li.fragment Nombre de couleurs illimité
-      li.fragment Positionnement des color-stops automatiques/manuels
+          li Couleur de départ
+          li Couleur de fin
+      li Nombre de couleurs illimité
+      li Positionnement des color-stops automatiques/manuels
 
   section
     h2 Les color-stops
     ul
-      li.fragment Les couleurs du dégradé
-      li.fragment Automatiques
+      li Les couleurs du dégradé
+      li Automatiques
         ul
-          li.fragment 
+          li 
             code linear-gradient(red, green, blue)
-          li.fragment red à 0%, green à 50% et blue à 100%
-      li.fragment Manuels
+          li red à 0%, green à 50% et blue à 100%
+      li Manuels
         ul
-          li.fragment 
+          li 
             code linear-gradient(red 20%, green 30%, blue)
-          li.fragment red à 20%, green à 30% et blue à 100%
+          li red à 20%, green à 30% et blue à 100%
 
   section
     h2 Dégradés radiaux
-    pre.fragment
+    pre
       code.
         .e {
           background: radial-gradient(closest-side at 20% 20%, red, green);
         }
     ul
-      li.fragment Crée un dégradé radial
-      li.fragment 3 valeurs:
+      li Crée un dégradé radial
+      li 3 valeurs:
         ul
-          li.fragment La taille et position (optionnelle, code farthest-corner at center par défaut)
-          li.fragment Couleur de départ
-          li.fragment Couleur de fin
-      li.fragment Gestion des couleurs identiques aux dégradés linéaires
+          li La taille et position (optionnelle, code farthest-corner at center par défaut)
+          li Couleur de départ
+          li Couleur de fin
+      li Gestion des couleurs identiques aux dégradés linéaires
 
 
   section
     h2 La taille
     ul
-      li.fragment Unités classiques:
+      li Unités classiques:
         ul
-          li.fragment Ex: 
+          li Ex: 
             code radial-gradient(200px, red, green)
-      li.fragment Mots-clés
+      li Mots-clés
         ul
-          li.fragment
+          li
             code closest-side
             |: jusqu'au plus proche côté
-          li.fragment
+          li
             code farthest-side
             |: jusqu'au plus lointain côté
-          li.fragment
+          li
             code closest-corner
             |: jusqu'au plus proche angle
-          li.fragment
+          li
             code farthest-corner
             |: jusqu'au plus lointain angle
-          li.fragment Ex: 
+          li Ex: 
             code radial-gradient(closest-side, red, green)
-      li.fragment Forme
+      li Forme
         ul
-          li.fragment 
+          li 
             code circle
             |: crée un cercle
-          li.fragment 
+          li 
             code ellipse
             |: crée une ellipse
-          li.fragment Ex: 
+          li Ex: 
             code radial-gradient(circle closest-side, red, green)
 
   section
     h2 La position
     ul
-      li.fragment Mot-clé 
+      li Mot-clé 
         code at
-      li.fragment Unités classiques de positionnement
+      li Unités classiques de positionnement
         ul
-          li.fragment Ex: 
+          li Ex: 
             code radial-gradient(at 100px 100px, red, green)
     ul
-      li.fragment Combiner les deux
+      li Combiner les deux
         ul
-          li.fragment Ex: 
+          li Ex: 
             code radial-gradient(closest-corner at 100px 100px, red, green)
 
 
@@ -804,7 +806,7 @@ section.language-css
   section
     h2 Polices personnalisées
     ul
-    pre.fragment
+    pre
       code.
         @font-face {
           font-family: 'maPolice';
@@ -814,38 +816,38 @@ section.language-css
           font-family: maPolice, sans-serif;
         }
     ul
-      li.fragment
+      li
         a(href='http://caniuse.com/#search=font-face') Support
 
   section
     h2 Différents formats
     ul
-      li.fragment WOFF, WOFF2
+      li WOFF, WOFF2
         ul
-          li.fragment Conçu pour le web, très léger
-      li.fragment TTF/OTF
+          li Conçu pour le web, très léger
+      li TTF/OTF
         ul
-          li.fragment Format historique, plus lourd
-      li.fragment EOT
+          li Format historique, plus lourd
+      li EOT
         ul
-          li.fragment Internet Explorer 8
-      li.fragment SVG
+          li Internet Explorer 8
+      li SVG
         ul
-          li.fragment Tué dans l'oeuf
+          li Tué dans l'oeuf
 
   section
     h2 Polices en ligne
     ul
-      li.fragment Téléchargeable ou hébergée
-      li.fragment
+      li Téléchargeable ou hébergée
+      li
         a(href='https://www.google.com/fonts') Google Webfonts
-      li.fragment
+      li
         a(href='http://www.fontsquirrel.com/') Font Squirrel
-      li.fragment
+      li
         a(href='https://typekit.com/') Typekit
-      li.fragment Et beaucoup d'autres
+      li Et beaucoup d'autres
     ul
-      li.fragment Renseignez-vous sur les licences
+      li Renseignez-vous sur les licences
 
 
 
@@ -876,75 +878,75 @@ section.language-css
   section
     h2 Animez simplement: les transitions
     ul
-      li.fragment C'est quoi une transition?
+      li C'est quoi une transition?
     ul
-      li.fragment Animer une propriété 
+      li Animer une propriété 
         strong d'une valeur A à une valeur B
         ul
-          li.fragment Par exemple de 
+          li Par exemple de 
             code color: red
             |  à 
             code color: green
-      li.fragment Effectuée lors d'un changement d'état
+      li Effectuée lors d'un changement d'état
         ul
-          li.fragment Pour cela, besoin d'un 
+          li Pour cela, besoin d'un 
             strong déclencheur
 
   section
     h2 Déclencheurs
     ul
-      li.fragment Utilisation de pseudo-classes (
+      li Utilisation de pseudo-classes (
         code :hover
         |, 
         code :focus
         |, etc.)
-      li.fragment Modification via JavaScript (ajout de classes)
-      li.fragment Chargement de la page (?)
+      li Modification via JavaScript (ajout de classes)
+      li Chargement de la page (?)
 
   section
     h2 Utilisation
-    pre.fragment
+    pre
       code.
         .e {
           transition: width 1s;
         }
     ul
-      li.fragment 5 propriétés:
+      li 5 propriétés:
         ul
-          li.fragment
+          li
             code transition
             |: propriété raccourcie
-          li.fragment
+          li
             code transition-property
             |: propriété à animer
-          li.fragment
+          li
             code transition-duration
             |: durée de la transition
-          li.fragment
+          li
             code transition-delay
             |: retardement de la transition
-          li.fragment
+          li
             code transition-timing-function
             |: méthode d'interpolation
 
   section
     h2 Durée
     ul
-      li.fragment Utilisation des unités CSS3 de temps
+      li Utilisation des unités CSS3 de temps
         ul
-          li.fragment
+          li
             code s
             |: secondes
-          li.fragment
+          li
             code ms
             |: millisecondes (1/1000e seconde)
 
   section
     h2 Transitions multiples
     ul
-      li.fragment Séparer les déclarations par une virgule
-      li.fragment Ou utilisez les propriétés longues
-    pre.fragment
+      li Séparer les déclarations par une virgule
+      li Ou utilisez les propriétés longues
+    pre
       code.
         .e {
           transition: width 1s, height 2s;
@@ -958,8 +960,8 @@ section.language-css
   section
     h2 Méthodes d'interpolation
     ul
-      li.fragment Contrôle de la vitesse de l'animation dans le temps
-      li.fragment Propriété 
+      li Contrôle de la vitesse de l'animation dans le temps
+      li Propriété 
         code transition-timing-function
 
 
@@ -967,35 +969,35 @@ section.language-css
     h2 Méthodes d'interpolation
     +img2('trTimingFn.png')
     ul
-      li.fragment 5 méthodes:
+      li 5 méthodes:
         ul
-          li.fragment
+          li
             code linear
             |: linéaire
-          li.fragment
+          li
             code ease
             |: départ rapide, arrivée lente (défaut)
-          li.fragment
+          li
             code ease-in
             |: départ lent
-          li.fragment
+          li
             code ease-out
             |: arrivée lente
-          li.fragment
+          li
             code ease-in-out
             |: départ lent, arrivée lente
 
   section
     h2 Interpolation avancée
     ul
-      li.fragment La fonction 
+      li La fonction 
         code cubic-bezier()
-      li.fragment Définit une courbe de Bézier avec 2 points
+      li Définit une courbe de Bézier avec 2 points
     ul
-      li.fragment
+      li
         code cubic-bezier(p1x, p1y, p2x, p2y)
     ul
-      li.fragment Part obligatoirement de 
+      li Part obligatoirement de 
         code (0, 0)
         |  et arrive en 
         code (1, 1)
@@ -1004,34 +1006,34 @@ section.language-css
     h2 Interpolation avancée
     +img2('trCubic.png')
     ul
-      li.fragment Aide: 
+      li Aide: 
         a(href="http://cubic-bezier.com") cubic-bezier.com
   
   section
     h2 Animez plusieurs états: les animations
     ul
-      li.fragment C'est quoi une animation?
+      li C'est quoi une animation?
     
     ul
-      li.fragment Plusieurs transitions qui s'enchainent
-      li.fragment Animer une propriété 
+      li Plusieurs transitions qui s'enchainent
+      li Animer une propriété 
         strong d'une valeur A à une valeur B, puis de B à C, ...
         ul
-          li.fragment Par exemple de 
+          li Par exemple de 
             code color: red
             |  à 
             code color: green
             |  puis vers 
             code color: blue
-      li.fragment Chaque transition est définie sour forme d'étapes
-      li.fragment 2 actions nécessaires
+      li Chaque transition est définie sour forme d'étapes
+      li 2 actions nécessaires
         ul
-          li.fragment Création des étapes-clés
-          li.fragment Utilisation de l'animation créée
+          li Création des étapes-clés
+          li Utilisation de l'animation créée
 
   section
     h2 Création des étapes-clés
-    pre.fragment
+    pre
       code.
         @keyframes nomAnim {
           from {color: red}
@@ -1039,94 +1041,94 @@ section.language-css
           to   {color: blue}
         }
     ul
-      li.fragment Définit 3 étapes, soit 2 transitions:
+      li Définit 3 étapes, soit 2 transitions:
         ul
-          li.fragment de 0 à 40%: de 
+          li de 0 à 40%: de 
             code color: red
             |  à 
             code color: green
-          li.fragment de 40% à 100%: de 
+          li de 40% à 100%: de 
             code color: green
             |  à 
             code color: blue
-      li.fragment Revient à l'état initial une fois l'animation terminée
+      li Revient à l'état initial une fois l'animation terminée
 
   section
     h2 Utilisation
-    pre.fragment
+    pre
       code.
         .e {
           animation: nomAnim 2s ease 5;
         }
     ul
-      li.fragment 6 propriétés:
+      li 6 propriétés:
         ul
-          li.fragment
+          li
             code animation
             |: propriété raccourcie
-          li.fragment
+          li
             code animation-name
             |: nom de l'animation utilisée
-          li.fragment
+          li
             code animation-duration
             |: durée de l'animation
-          li.fragment
+          li
             code animation-delay
             |: retardement de l'animation
-          li.fragment
+          li
             code animation-timing-function
             |: méthode d'interpolation
-          li.fragment
+          li
             code animation-iteration-count
             |: nombre de répétition
 
   section
     h2 Répéter une animation
-    pre.fragment
+    pre
       code.
         .e {
           animation-iteration-count: infinite;
         }
     ul
-      li.fragment Le mot-clé 
+      li Le mot-clé 
         code infinite
         |  permet de répéter une animation en boucle
 
 
   section
     h2 Modifier le sens de l'animation
-    pre.fragment
+    pre
       code.
         .e {
           animation-direction: normal | alternate;
         }
     ul
-      li.fragment Permet de gérer le sens dans lequel est jouée l'animation
+      li Permet de gérer le sens dans lequel est jouée l'animation
         ul
-          li.fragment
+          li
             code normal
             |: l'animation est jouée dans le sens normal
-          li.fragment
+          li
             code alternate
             |: l'animation est jouée une fois sur deux en sens inverse
-          li.fragment
+          li
             code reverse
             |: l'animation est jouée en sens inverse
-      li.fragment Pratique pour reproduire une animation inverse, sans définir de nouvelles étapes clés
+      li Pratique pour reproduire une animation inverse, sans définir de nouvelles étapes clés
 
   section
     h2 Avant et après une animation
-    pre.fragment
+    pre
       code.
         .e {
           animation-fill-mode: backwards | forwards | both;
         }
     ul
-      li.fragment Permet de gérer l'état d'une animation:
+      li Permet de gérer l'état d'une animation:
         ul
-          li.fragment avant le début de celle-ci
-          li.fragment après la fin de celle-ci
-      li.fragment Par défaut, l'animation est jouée et l'état initial de l'élément est appliqué
+          li avant le début de celle-ci
+          li après la fin de celle-ci
+      li Par défaut, l'animation est jouée et l'état initial de l'élément est appliqué
 
 
 
@@ -1157,36 +1159,36 @@ section.language-css
   section
     h2 Transformez facilement les éléments d’une page
     ul
-      li.fragment C'est quoi une transformation?
+      li C'est quoi une transformation?
     ul
-      li.fragment Appliquer des fonctions de modification
+      li Appliquer des fonctions de modification
         ul
-          li.fragment Par exemple des rotations, des translations, des mises à l'échelle, des inclinaisons, etc.
-      li.fragment 2 types de transformations
+          li Par exemple des rotations, des translations, des mises à l'échelle, des inclinaisons, etc.
+      li 2 types de transformations
         ul
-          li.fragment 2D et 3D
+          li 2D et 3D
 
   section
     h2 Utilisation de la 2D
-    pre.fragment
+    pre
       code.
         .e {
           transform: rotate(45deg) translateX(50px);
         }
     ul
-      li.fragment Propriété 
+      li Propriété 
         code transform
-      li.fragment Ici: rotation de 45 degrés, translation X de 50px
+      li Ici: rotation de 45 degrés, translation X de 50px
     ul
-      li.fragment 2 axes de transformation:
+      li 2 axes de transformation:
         ul
-          li.fragment X: de la gauche vers la droite
-          li.fragment Y: du haut vers le bas
+          li X: de la gauche vers la droite
+          li Y: du haut vers le bas
 
   section
     h2 Les fonctions de transformations
     ul
-      li.fragment Translations:
+      li Translations:
         ul
           li
             code translate(x, y)
@@ -1194,11 +1196,11 @@ section.language-css
             code translateX()
             |, 
             code translateY()
-      li.fragment Rotation:
+      li Rotation:
         ul
           li
             code rotate()
-      li.fragment Mises à l'échelle:
+      li Mises à l'échelle:
         ul
           li
             code scale(x, y)
@@ -1206,103 +1208,103 @@ section.language-css
             code scaleX()
             |, 
             code scaleY()
-      li.fragment Inclinaisons:
+      li Inclinaisons:
         ul
           li
             code skewX()
             |, 
             code skewY()
-      li.fragment Matrices:
+      li Matrices:
         ul
           li
             code matrix()
 
   section
     h2 Utilisation de la 3D
-    pre.fragment
+    pre
       code.
         .e {
           transform: rotateX(45deg) translateZ(50deg);
         }
     ul
-      li.fragment Idem que pour la 2D
-      li.fragment Propriété 
+      li Idem que pour la 2D
+      li Propriété 
         code transform
     ul
-      li.fragment Nouvel axe de transformation Z:
+      li Nouvel axe de transformation Z:
         ul
-          li.fragment positif vers l'utilisateur
-          li.fragment négatif vers le fond de l'écran
+          li positif vers l'utilisateur
+          li négatif vers le fond de l'écran
 
   section
     h2 Les fonctions de transformations 3D
     ul
-      li.fragment Translations:
+      li Translations:
         ul
           li
             code translateZ()
             |, 
             code translate3d(x, y, z)
-      li.fragment Rotation:
+      li Rotation:
         ul
           li
             code rotateX()
-              |, 
+            |, 
             code rotateY()
-              |, 
+            |, 
             code rotateZ()
-              |, 
+            |, 
             code rotate3d(x, y, z, angle)
-      li.fragment Mises à l'échelle:
+      li Mises à l'échelle:
         ul
           li
             code scaleZ()
             |, 
             code scale3d(x, y, z)
-      li.fragment Matrices:
+      li Matrices:
         ul
           li
             code matrix3d()
 
   section
     h2 Notion de perspective 3D
-    pre.fragment
+    pre
       code.
         .e {
           perspective: 500px;
         }
     ul
-      li.fragment Permet le rendu de la scène 3D
+      li Permet le rendu de la scène 3D
         ul
-          li.fragment A utiliser sur un parent
-      li.fragment Petite perspective = proche de l'écran = forte impression 3D
-      li.fragment Grande perspective = loin de l'écran = faible impression 3D
+          li A utiliser sur un parent
+      li Petite perspective = proche de l'écran = forte impression 3D
+      li Grande perspective = loin de l'écran = faible impression 3D
     ul
-      li.fragment Sans perspective, aucun effet 3D!
+      li Sans perspective, aucun effet 3D!
 
   section
     h2 Transformations en cascade
-    pre.fragment
+    pre
       code.
         .e {
           transform-style: preserve-3d;
         }
     ul
-      li.fragment Force la propagation de la 3D
-      li.fragment La valeur par défaut est 
+      li Force la propagation de la 3D
+      li La valeur par défaut est 
         code flat
     ul
-      li.fragment Corrige également quelques problèmes dans l'ordre d'apparition des éléments
-      li.fragment Non supporté par IE11 (en cours)
+      li Corrige également quelques problèmes dans l'ordre d'apparition des éléments
+      li Non supporté par IE11 (en cours)
 
   section
     h2 Containing block
     ul
-      li.fragment Contient ses enfants
-      li.fragment Pas obligatoirement le parent
+      li Contient ses enfants
+      li Pas obligatoirement le parent
     
     ul
-      li.fragment Une valeur autre que 
+      li Une valeur autre que 
         code none
         |  pour 
         code transform
@@ -1311,11 +1313,11 @@ section.language-css
   section
     h2 Stacking context
     ul
-      li.fragment Le 
+      li Le 
         code z-index
         |  est limité à son contexte
     ul
-      li.fragment Une valeur autre que 
+      li Une valeur autre que 
         code none
         |  pour 
         code transform
@@ -1349,27 +1351,27 @@ section.language-css
   section
     h2 Le modèle de boite
     ul
-      li.fragment Le box model en CSS2.1
+      li Le box model en CSS2.1
         ul
-          li.fragment <code>width</code> est la largeur du contenu
-          li.fragment largeur totale = <code>width</code> + <code>padding</code> + <code>border</code>
+          li <code>width</code> est la largeur du contenu
+          li largeur totale = <code>width</code> + <code>padding</code> + <code>border</code>
     +img('modeleBoite.jpg')
 
   section
     h2 Le modèle de boite, en mieux!
     ul
-      li.fragment <code>box-sizing</code> modifie le calcul du modèle de boite
+      li <code>box-sizing</code> modifie le calcul du modèle de boite
         ul
-          li.fragment <code>box-sizing: content-box</code>: modèle CSS2.1
-          li.fragment <code>box-sizing: border-box</code>: modèle CSS3
-      li.fragment <code>width</code> devient la largeur totale
+          li <code>box-sizing: content-box</code>: modèle CSS2.1
+          li <code>box-sizing: border-box</code>: modèle CSS3
+      li <code>width</code> devient la largeur totale
     +img('boxsizing.jpg')
 
   section
     h2 Le modèle de boite, en mieux!
     ul
-      li.fragment Préconisé de toujours utiliser ce mode:
-    pre.fragment
+      li Préconisé de toujours utiliser ce mode:
+    pre
       code.
         *,
         *:before,
@@ -1380,182 +1382,182 @@ section.language-css
   section
     h2 Support box-sizing
     ul
-      li.fragment IE8+
-      li.fragment Firefox &lt;= 28 avec préfixe <code>-moz-</code>
-      li.fragment Android &lt;= 3 avec préfixe <code>-webkit-</code>
+      li IE8+
+      li Firefox &lt;= 28 avec préfixe <code>-moz-</code>
+      li Android &lt;= 3 avec préfixe <code>-webkit-</code>
 
   section
     h2 Les différentes «méthodes»
     ul
-      li.fragment La propriété <code>display</code>
+      li La propriété <code>display</code>
         ul
-          li.fragment <code>block</code>, <code>inline</code>, <code>list-item</code>
-          li.fragment <code>inline-block</code>
-          li.fragment <code>table</code>, <code>table-row</code>, <code>table-cell</code>...
-      li.fragment La propriété <code>float</code>
+          li <code>block</code>, <code>inline</code>, <code>list-item</code>
+          li <code>inline-block</code>
+          li <code>table</code>, <code>table-row</code>, <code>table-cell</code>...
+      li La propriété <code>float</code>
         ul
-          li.fragment <code>left</code>, <code>right</code>
-      li.fragment La propriété <code>position</code>
+          li <code>left</code>, <code>right</code>
+      li La propriété <code>position</code>
         ul
-          li.fragment <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>
+          li <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>
 
   section
     h2: code display: inline-block
     ul
-      li.fragment Mode «hybride»
-      li.fragment Éléments en ligne, mais conserve les propriétés de block (dimensionnement, marges, etc.)
-      li.fragment Alignables entre eux avec <code>vertical-align</code>
+      li Mode «hybride»
+      li Éléments en ligne, mais conserve les propriétés de block (dimensionnement, marges, etc.)
+      li Alignables entre eux avec <code>vertical-align</code>
 
   section
     h2: code display: table
     ul
-      li.fragment Mode tabulaire
+      li Mode tabulaire
         ul
-          li.fragment <code>display: table</code> simule un tableau (<code>&lt;table></code>)
-          li.fragment <code>display: table-row</code> simule une ligne de tableau (<code>&lt;tr></code>)
-          li.fragment <code>display: table-cell</code> simule une cellule de tableau (<code>&lt;td></code>)
-      li.fragment Toute la structure n'est pas obligatoire (création d'éléments anonymes)
-      li.fragment <code>table-layout</code> modifie le calcul d'affichage du tableau
+          li <code>display: table</code> simule un tableau (<code>&lt;table></code>)
+          li <code>display: table-row</code> simule une ligne de tableau (<code>&lt;tr></code>)
+          li <code>display: table-cell</code> simule une cellule de tableau (<code>&lt;td></code>)
+      li Toute la structure n'est pas obligatoire (création d'éléments anonymes)
+      li <code>table-layout</code> modifie le calcul d'affichage du tableau
         ul
-          li.fragment <code>auto</code> la taille du tableau s'adapte au contenu
-          li.fragment <code>fixed</code> le contenu s'adapte à la taille du tableau
+          li <code>auto</code> la taille du tableau s'adapte au contenu
+          li <code>fixed</code> le contenu s'adapte à la taille du tableau
 
   section
     h2 Les plus de display: table
     ul
-      li.fragment Pas de sortie de flux
-      li.fragment Éléments frères de même hauteur
-      li.fragment Largeur étirable dans le tableau
-      li.fragment Alignement vertical du contenu avec <code>vertical-align</code>
+      li Pas de sortie de flux
+      li Éléments frères de même hauteur
+      li Largeur étirable dans le tableau
+      li Alignement vertical du contenu avec <code>vertical-align</code>
 
   section
     h2 Les moins de display: table
     ul
-      li.fragment Pas de marges externes
-      li.fragment Réorganisation des éléments difficile
+      li Pas de marges externes
+      li Réorganisation des éléments difficile
         ul
-          li.fragment Possible (un peu) avec <code>table-header-group</code>, <code>table-footer-group</code>
-      li.fragment
+          li Possible (un peu) avec <code>table-header-group</code>, <code>table-footer-group</code>
+      li
         a(href="http://iamvdo.me/blog/imbrication-de-boites-en-css-avec-display-table") Imbrication plus complexe
 
   section
     h2 Support inline-block, table
     ul
-      li.fragment IE8+
+      li IE8+
 
   section
     h2 Flexbox: La promesse
     ul
-      li.fragment Affichage en bloc ou en ligne
-      li.fragment Flexibilité des boites
-      li.fragment Réorganisation des éléments
-      li.fragment Alignements verticaux et horizontaux
-      li.fragment Responsive design facilité
+      li Affichage en bloc ou en ligne
+      li Flexibilité des boites
+      li Réorganisation des éléments
+      li Alignements verticaux et horizontaux
+      li Responsive design facilité
     ul
-      li.fragment Plusieurs versions co-existent encore
-      li.fragment Promesse tenue!
+      li Plusieurs versions co-existent encore
+      li Promesse tenue!
 
   section
     h2 L'élément Flexbox
-    pre.fragment
+    pre
       code.
         .e {
           display: flex;
         }
     ul
-      li.fragment Définit l'élément principal Flexbox
-      li.fragment Les Flex items (enfants) «subissent» ce mode
+      li Définit l'élément principal Flexbox
+      li Les Flex items (enfants) «subissent» ce mode
 
   section
     h2 Les axes du Flexbox
-    pre.fragment
+    pre
       code.
         .e {
           flex-flow: row wrap;
         }
     ul
-      li.fragment Propriété <code>flex-flow</code>, un raccourci de 2 autres
+      li Propriété <code>flex-flow</code>, un raccourci de 2 autres
         ul
-          li.fragment <code>flex-direction</code> définit <strong>l'axe principal</strong> du Flexbox
+          li <code>flex-direction</code> définit <strong>l'axe principal</strong> du Flexbox
             ul
-              li.fragment <code>column</code>, <code>column-reverse</code>: affichage en colonnes
-              li.fragment <code>row</code>, <code>row-reverse</code>: affichage en lignes
-          li.fragment <strong>L'axe secondaire</strong> est donc l'axe perpendiculaire
-      li.fragment <code>flex-wrap</code> gestion du débordement des lignes
+              li <code>column</code>, <code>column-reverse</code>: affichage en colonnes
+              li <code>row</code>, <code>row-reverse</code>: affichage en lignes
+          li <strong>L'axe secondaire</strong> est donc l'axe perpendiculaire
+      li <code>flex-wrap</code> gestion du débordement des lignes
         ul
           li <code>nowrap</code>
           li <code>wrap</code>, <code>wrap-reverse</code>
 
   section
     h2 La flexibilité
-    pre.fragment
+    pre
       code.
         .e {
           flex: 1 100px;
         }
     ul
-      li.fragment Propriété <code>flex</code>, un raccourci de 3 autres:
+      li Propriété <code>flex</code>, un raccourci de 3 autres:
         ul
-          li.fragment <code>flex-grow</code> contrainte d'agrandissement
-          li.fragment <code>flex-shrink</code> contrainte de réduction
-          li.fragment <code>flex-basis</code> taille de base
-      li.fragment S'applique sur chaque Flex item (enfant)
+          li <code>flex-grow</code> contrainte d'agrandissement
+          li <code>flex-shrink</code> contrainte de réduction
+          li <code>flex-basis</code> taille de base
+      li S'applique sur chaque Flex item (enfant)
 
   section
     h2 Ordre d'affichage
-    pre.fragment
+    pre
       code.
         .e {
           order: 2;
         }
     ul
-      li.fragment Propriété <code>order</code> change l'ordre d'apparition au cas par cas
-      li.fragment Pratique pour réorganiser, mais attention à l'accessibilité
+      li Propriété <code>order</code> change l'ordre d'apparition au cas par cas
+      li Pratique pour réorganiser, mais attention à l'accessibilité
 
   section
     h2 Alignements
     ul
-      li.fragment Marges classiques
-      li.fragment Marges automatiques: <code>margin: auto</code>
+      li Marges classiques
+      li Marges automatiques: <code>margin: auto</code>
     ul
-      li.fragment Alignements en fonction de l'axe (principal ou secondaire)
-      li.fragment Suit le <a href="http://dev.w3.org/csswg/css3-align/">Box Alignment Module</a> (non spécifique à Flexbox)
+      li Alignements en fonction de l'axe (principal ou secondaire)
+      li Suit le <a href="http://dev.w3.org/csswg/css3-align/">Box Alignment Module</a> (non spécifique à Flexbox)
 
   section
     h2 Alignement axe principal
     ul
-      li.fragment <code>justify-content</code> sur le parent Flexbox
+      li <code>justify-content</code> sur le parent Flexbox
         ul
-          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>
+          li <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>
     +img('alignPrincipal.jpg')
 
   section
     h2 Alignement axe secondaire
     ul
-      li.fragment <code>align-items</code> sur le parent Flexbox
+      li <code>align-items</code> sur le parent Flexbox
         ul
-          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+          li <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
     +img('alignSecondaire.jpg')
 
   section
     h2 Alignement axe secondaire
     ul
-      li.fragment Un élément peut avoir son propre alignement
-      li.fragment <code>align-self</code> sur un Flexbox item (enfant)
+      li Un élément peut avoir son propre alignement
+      li <code>align-self</code> sur un Flexbox item (enfant)
         ul
-          li.fragment <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+          li <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
     +img('alignSelf.jpg')
 
   section
     h2 Support flexbox
     ul
-      li.fragment IE10+ avec le préfixe <code>-ms-</code>, IE11+
-      li.fragment Firefox avec le préfixe <code>-moz-</code>, Firefox 28+
-      li.fragment Chrome avec le préfixe <code>-webkit-</code>, Chrome 29+
-      li.fragment Safari avec le préfixe <code>-webkit-</code>
+      li IE10+ avec le préfixe <code>-ms-</code>, IE11+
+      li Firefox avec le préfixe <code>-moz-</code>, Firefox 28+
+      li Chrome avec le préfixe <code>-webkit-</code>, Chrome 29+
+      li Safari avec le préfixe <code>-webkit-</code>
     
     ul
-      li.fragment Nécessité d'outil comme Autoprefixer, 
+      li Nécessité d'outil comme Autoprefixer, 
         a(href='http://pleeease.io/play') Pleeease playground
 
 
@@ -1587,5 +1589,5 @@ section
   section
     h2 CSS avancés
     ul
-      li.fragment
+      li
         a(href='http://slides.iamvdo.me/kiwiparty14') Ce que vous avez toujours voulu savoir sur CSS

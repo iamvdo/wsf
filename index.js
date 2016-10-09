@@ -1,5 +1,5 @@
 var jade = require('jade');
-var Prism = require('prismjs');
+//var Prism = require('prismjs');
 
 var Ajax = function (id, path) {
   // path == 1/html/elements
@@ -10,17 +10,19 @@ var Ajax = function (id, path) {
 
   if (r.status === 200) {
 
-    var stringJade = "-var root = '/images/';\nmixin img (name)\n  img.fragment.current-visible.overlay(class!=attributes.class,src=root+name)\nmixin img2 (name)\n  img.fragment(class!=attributes.class,src=root+name)\n" + r.responseText;
+    var stringJade = "-var root = '/images/';\nmixin img (name)\n  img.fragment.current-visible.overlay(class!=attributes.class,src=root+name)\nmixin img2 (name)\n  img(class!=attributes.class,src=root+name)\n" + r.responseText;
     result = jade.render(stringJade);
     document.getElementById(id).innerHTML = result;
 
     // prism code
+    /*
     var codes = document.querySelectorAll('code[class^=language-]');
     for (var i = codes.length - 1; i >= 0; i--) {
       var code = codes[i];
       var lang = code.className.replace('language-','');
       code.innerHTML = Prism.highlight(code.innerHTML, lang);
     };
+    */
 
     // add navigation
     var h1 = document.querySelectorAll('.slides h1');

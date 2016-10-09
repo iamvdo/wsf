@@ -4,90 +4,90 @@ section
 section
   h2 RWD?
   ul
-    li.fragment Mot de l'année en 2013
-    li.fragment Incontournable dans une stratégie web
+    li Mot de l'année en 2013
+    li Incontournable dans une stratégie web
 
 section
   h2 Constat
   ul
-    li.fragment Multitude d'écrans
-    li.fragment De très petit à très grand
+    li Multitude d'écrans
+    li De très petit à très grand
       +img('devices.jpg')
-    li.fragment Nécessité d'adapter le contenu pour:
+    li Nécessité d'adapter le contenu pour:
       ul
-        li.fragment Offrir un confort de navigation
-        li.fragment Expérience de lecture optimale
+        li Offrir un confort de navigation
+        li Expérience de lecture optimale
 
 section
   h2 Stratégie
   ul
-    li.fragment Choix possibles
+    li Choix possibles
       ul
-        li.fragment Affichage 1:1 (taille réelle)
-        li.fragment Affichage au mieux (mise à l'échelle)
-        li.fragment Affichage adaptatif
+        li Affichage 1:1 (taille réelle)
+        li Affichage au mieux (mise à l'échelle)
+        li Affichage adaptatif
   +img2('stategy.jpg')
 
 section
   h2 Techniquement
-  p.fragment Deux méthodes:
+  p Deux méthodes:
   ul
-    li.fragment Site dédié
-    li.fragment Site unique, adaptatif
+    li Site dédié
+    li Site unique, adaptatif
 
 section
   h2 Site dédié
   ul
-    li.fragment Plusieurs sites (URLs) distincts (desktop, mobile, autre)
-    li.fragment Les +:
+    li Plusieurs sites (URLs) distincts (desktop, mobile, autre)
+    li Les +:
       ul
-        li.fragment Contrôle précis du contenu de chaque version
-        li.fragment Workflow séparé
-    li.fragment Les -:
+        li Contrôle précis du contenu de chaque version
+        li Workflow séparé
+    li Les -:
       ul
-        li.fragment Contenu dupliqué (duplicate content)
-        li.fragment Maintenance de plusieurs versions, SEO
-        li.fragment Détection de user-agent (technique non fiable)
+        li Contenu dupliqué (duplicate content)
+        li Maintenance de plusieurs versions, SEO
+        li Détection de user-agent (technique non fiable)
 
 section
   h2 Site adaptatif
   ul
-    li.fragment Un site unique
-    li.fragment Les +:
+    li Un site unique
+    li Les +:
       ul
-        li.fragment Maintenance
-        li.fragment Évolutions
-        li.fragment Déploiement multi-plateformes
-        li.fragment
+        li Maintenance
+        li Évolutions
+        li Déploiement multi-plateformes
+        li
           a(href='http://jsbin.com/yuzahi/1/edit?output') Plusieurs sites sur le même écran
           +img('snap-mode.png')
-    li.fragment Les -:
+    li Les -:
       ul
-        li.fragment Contenu identique entre les "versions"
-        li.fragment Workflow
+        li Contenu identique entre les "versions"
+        li Workflow
 
 section
   h2 Techniquement
-  p.fragment 4 modèles de design:
+  p 4 modèles de design:
   ul
-    li.fragment Design statique
+    li Design statique
       ul
-        li.fragment Dimensions fixes
-        li.fragment Ne s'adapte pas
-    li.fragment Design liquide
+        li Dimensions fixes
+        li Ne s'adapte pas
+    li Design liquide
       ul
-        li.fragment Dimensions fluides (%, em, etc.)
-        li.fragment S'adapte à la page
-    li.fragment Design Adaptative
+        li Dimensions fluides (%, em, etc.)
+        li S'adapte à la page
+    li Design Adaptative
       ul
-        li.fragment Dimensions fixes
-        li.fragment Ne s'adapte pas à la page mais se réorganise
-    li.fragment Design Responsive
+        li Dimensions fixes
+        li Ne s'adapte pas à la page mais se réorganise
+    li Design Responsive
       ul
-        li.fragment Dimensions fluides
-        li.fragment S'adapte à la page et se réorganise
+        li Dimensions fluides
+        li S'adapte à la page et se réorganise
   ul
-    li.fragment
+    li
       a(href='http://liquidapsive.com/') Liquidapsive
 
 
@@ -119,23 +119,23 @@ section.language-css
   section
     h2 CSS et médias
     ul
-      li.fragment Les médias existent depuis toujours
+      li Les médias existent depuis toujours
         ul
-          li.fragment Par exemple le média <code>print</code>
-      li.fragment Attribut <code>media</code> en HTML
+          li Par exemple le média <code>print</code>
+      li Attribut <code>media</code> en HTML
         ul
-          li.fragment <code>&lt;link rel="stylesheet" media="screen" href="screen.css" /></code>
-          li.fragment <code>&lt;link rel="stylesheet" media="print" href="print.css" /></code>
-      li.fragment Règle <code>@media</code> en CSS
+          li <code>&lt;link rel="stylesheet" media="screen" href="screen.css" /></code>
+          li <code>&lt;link rel="stylesheet" media="print" href="print.css" /></code>
+      li Règle <code>@media</code> en CSS
         ul
-          li.fragment <code>@media print { .elem { ... } }</code>
-      li.fragment En CSS3, requête de médias: les media-queries!
+          li <code>@media print { .elem { ... } }</code>
+      li En CSS3, requête de médias: les media-queries!
 
   section
     h2 Media-queries
     ul
-      li.fragment Critères pour cibler des conditions particulières
-    pre.fragment
+      li Critères pour cibler des conditions particulières
+    pre
       code.
         @media (max-width: 600px) {
           .e {
@@ -143,50 +143,50 @@ section.language-css
           }
         }
     ul
-      li.fragment Styles appliqués seulement si la largeur du viewport est inférieure à 600px
+      li Styles appliqués seulement si la largeur du viewport est inférieure à 600px
 
   section
     h2 Media-queries
     ul
-      li.fragment Combinaisons possibles. Exemples:
+      li Combinaisons possibles. Exemples:
         ul
-          li.fragment <code>@media screen and (max-width: 600px)</code>
-          li.fragment <code>@media print and (max-width: 15cm)</code>
-          li.fragment <code>@media (min-width: 200px) and (max-width: 400px)</code>
+          li <code>@media screen and (max-width: 600px)</code>
+          li <code>@media print and (max-width: 15cm)</code>
+          li <code>@media (min-width: 200px) and (max-width: 400px)</code>
     
   section
     h2 Autres critères
     ul
-      li.fragment Largeur et hauteur
+      li Largeur et hauteur
         ul
-          li.fragment <code>(min|max)-device-height</code>
-      li.fragment Orientation
+          li <code>(min|max)-device-height</code>
+      li Orientation
         ul
-          li.fragment <code>orientation: (landscape|portrait)</code>
-      li.fragment Ratio d'écran
+          li <code>orientation: (landscape|portrait)</code>
+      li Ratio d'écran
         ul
-          li.fragment <code>(min|max)-device-aspect-ratio</code>
-      li.fragment Ratio de pixels
+          li <code>(min|max)-device-aspect-ratio</code>
+      li Ratio de pixels
         ul
-          li.fragment <code>(min|max)-resolution</code> (en 
+          li <code>(min|max)-resolution</code> (en 
             code dpi
             |  ou 
             code dppx
             |)
-          li.fragment
+          li
             code (min|max)-device-pixel-ratio
-      li.fragment et d'autres
+      li et d'autres
 
   section
     h2 Support media-queries
     ul
-      li.fragment IE9+, 
+      li IE9+, 
         a(href='https://github.com/scottjehl/Respond') polyfill
         |  pour IE8
     ul
-      li.fragment <code>resolution</code> et <code>dppx</code> non supporté par WebKit (Chrome, Safari)
+      li <code>resolution</code> et <code>dppx</code> non supporté par WebKit (Chrome, Safari)
         ul
-          li.fragment <code>device-pixel-ratio</code> en attendant
+          li <code>device-pixel-ratio</code> en attendant
 
 
 
@@ -209,7 +209,7 @@ section.language-css
 
 //- Affichage
 
-section
+section.language-css
 
   section
     h1 Affichage
@@ -217,69 +217,69 @@ section
   section
     h2 Les surfaces d'affichage
     ul
-      li.fragment Sur mobile, 3 notions d'affichage:
+      li Sur mobile, 3 notions d'affichage:
         ul
-          li.fragment Surface réelle
-          li.fragment Surface déclarée
-          li.fragment Le viewport
+          li Surface réelle
+          li Surface déclarée
+          li Le viewport
     +img2('03-mobile2.jpg')
 
   section
     h2 Surface réelle
     ul
-      li.fragment C'est le nombre physique de pixels de l'écran
-      li.fragment Par exemple:
+      li C'est le nombre physique de pixels de l'écran
+      li Par exemple:
         ul
-          li.fragment iPhone5: 640 x 1136px
-          li.fragment Nexus5: 1080 x 1920px
-          li.fragment iPad mini: 768 x 1024px
-          li.fragment Nexus7 (v1): 800 x 1280px
+          li iPhone5: 640 x 1136px
+          li Nexus5: 1080 x 1920px
+          li iPad mini: 768 x 1024px
+          li Nexus7 (v1): 800 x 1280px
     ul
-      li.fragment En CSS, c'est <code>screen-width</code>, <code>screen-height</code>
-      li.fragment Non modifiable
+      li En CSS, c'est <code>screen-width</code>, <code>screen-height</code>
+      li Non modifiable
 
   section
     h2 Surface déclarée
     ul
-      li.fragment C'est le nombre de pixels que le téléphone pense avoir
-      li.fragment Le nombre de "pixels CSS"
-      li.fragment Par exemple:
+      li C'est le nombre de pixels que le téléphone pense avoir
+      li Le nombre de "pixels CSS"
+      li Par exemple:
         ul
-          li.fragment iPhone5: 320 x 568px (1:2)
-          li.fragment Nexus5: 360 x 640px (1:3)
-          li.fragment iPad mini: 768 x 1024px (1:1)
-          li.fragment Nexus7 (v1): 603 x 966px (1:1.325)
+          li iPhone5: 320 x 568px (1:2)
+          li Nexus5: 360 x 640px (1:3)
+          li iPad mini: 768 x 1024px (1:1)
+          li Nexus7 (v1): 603 x 966px (1:1.325)
     ul
-      li.fragment 1 pixel CSS ne vaut donc pas toujours 1px écran
+      li 1 pixel CSS ne vaut donc pas toujours 1px écran
         ul
-          li.fragment Ratio (unité 
+          li Ratio (unité 
             code dppx
             |)
-      li.fragment En CSS, c'est <code>device-width</code>, <code>device-height</code>
-      li.fragment Non modifiable
+      li En CSS, c'est <code>device-width</code>, <code>device-height</code>
+      li Non modifiable
 
   section
     h2 iPhone6 Plus
     ul
-      li.fragment Complexifie encore
-      li.fragment Surface réelle: 1080x1920px
-      li.fragment Surface déclarée: 414x736px
-      li.fragment Surface rendue (!): 1242x2208px
+      li Complexifie encore
+      li Surface réelle: 1080x1920px
+      li Surface déclarée: 414x736px
+      li Surface rendue (!): 1242x2208px
         ul
-          li.fragment Réduction de ~13% à l'affichage
-          li.fragment Ratio de 3, mais de ~2.6 à l'affichage
+          li Réduction de ~13% à l'affichage
+          li Ratio de 3, mais de ~2.6 à l'affichage
 
   section
     h2 Le viewport
     ul
-      li.fragment C'est la zone fictive d'affichage dans laquelle le site est rendu
-      li.fragment Généralement plus grande au départ
+      li C'est la zone fictive d'affichage dans laquelle le site est rendu
+      li Généralement plus grande au départ
         ul
-          li.fragment Pas égale à la surface réelle, ni à la surface déclarée
-      li.fragment Mais adaptée ensuite dans la surface déclarée
+          li Pas égale à la surface réelle, ni à la surface déclarée
+      li Mais adaptée ensuite dans la surface déclarée
         ul
-          li.fragment Zoom dynamique (facteur d'échelle) = (<code>device-width</code> / viewport)
-          li.fragment Ex: iPhone5: (320 / 980) = 0.326
+          li Zoom dynamique (facteur d'échelle) = (<code>device-width</code> / viewport)
+          li Ex: iPhone5: (320 / 980) = 0.326
 
   section
     h2 Le viewport
@@ -288,69 +288,69 @@ section
   section
     h2 Problèmes
     ul
-      li.fragment Le viewport dépend du navigateur (et même du réglage de l'utilisateur)
-      li.fragment Par exemple:
+      li Le viewport dépend du navigateur (et même du réglage de l'utilisateur)
+      li Par exemple:
         ul
-          li.fragment iPhone5: 980px
-          li.fragment Nexus5: ça dépend
-          li.fragment iPad mini: 980px
-          li.fragment Nexus7 (v1): ça dépend
-      li.fragment Modifiable!
+          li iPhone5: 980px
+          li Nexus5: ça dépend
+          li iPad mini: 980px
+          li Nexus7 (v1): ça dépend
+      li Modifiable!
 
   section
     h2 Modifier le viewport
     ul
-      li.fragment Balise meta
+      li Balise meta
         ul
-          li.fragment
+          li
             code &lt;meta name="viewport" content="">
-          li.fragment Ajouté par Apple pour l'iPhone1
+          li Ajouté par Apple pour l'iPhone1
     ul
-      li.fragment Sans viewport spécifié
+      li Sans viewport spécifié
     +img('meta-viewport1.jpg')
 
   section
     h2 Modifier la taille du viewport
     ul
-      li.fragment
+      li
         code &lt;meta name="viewport" content="width=320px">
     +img('meta-viewport3-1.jpg')
     ul
-      li.fragment Éléments plus grands: agrandissent le viewport
+      li Éléments plus grands: agrandissent le viewport
     +img('meta-viewport3.jpg')
     ul
-      li.fragment Utiliser les constantes du matériel
+      li Utiliser les constantes du matériel
         ul
-          li.fragment
+          li
             code &lt;meta name="viewport" content="width=device-width">
 
   section
     h2 Modifier le zoom d'affichage
     ul
-      li.fragment
+      li
         code &lt;meta name="viewport" content="initial-scale=1">
     +img('meta-viewport2.jpg')
 
   section
     h2 Autres valeurs de viewport
     ul
-      li.fragment
+      li
         code width
         |  et 
         code height
-      li.fragment
+      li
         code initial-scale
         |  et 
         code mininum-scale
         |  et
         code maximum-scale
-      li.fragment
+      li
         code user-scalable
 
   section
     h2 Bugs d'orientation
     ul
-      li.fragment
+      li
         code device-width
         |  en mode paysage sur iPhone
         +img('meta-viewport4.jpg')
@@ -358,24 +358,26 @@ section
   section
     h2 Viewport recommandé
     ul
-      li.fragment
+      li
         code &lt;meta name="viewport" content="width=device-width,initial-scale=1">
-      li.fragment
+      li
         code &lt;meta name="viewport" content="initial-scale=1">
         |  si vous contrôlez la taille de vos éléments.
 
   section
     h2 D'autres infos
     ul
-      li.fragment Viewport non modifiable par le code
-      li.fragment Viewport en CSS 
+      li Viewport non modifiable par le code
+      li Viewport en CSS 
         code @viewport
-    pre.fragment
+        | (pas de consensus)
+    pre
       code.
         @viewport {
           width: 320px;
           zoom: 1;
         }
+    p
 
 
 
@@ -406,29 +408,29 @@ section.language-css
   section
     h2 Ça implique quoi?
     ul
-      li.fragment Grille fluide
-      li.fragment Peu de valeurs en pixels
-      li.fragment Gérer le débordement des images, vidéos, etc.
-      li.fragment Philosophie mobile-first ou non
+      li Grille fluide
+      li Peu de valeurs en pixels
+      li Gérer le débordement des images, vidéos, etc.
+      li Philosophie mobile-first ou non
 
   section
     h2 En CSS
     ul
-      li.fragment Prévoir de s'adapter aux différentes largeurs
-      li.fragment Abandonnez les tailles fixes
+      li Prévoir de s'adapter aux différentes largeurs
+      li Abandonnez les tailles fixes
         ul
-          li.fragment Utilisez les pourcentages
-          li.fragment Utilisez <code>max-width</code>, <code>min-width</code>
-          li.fragment Limitez les <code>float</code>
+          li Utilisez les pourcentages
+          li Utilisez <code>max-width</code>, <code>min-width</code>
+          li Limitez les <code>float</code>
 
   section
     h2 En JavaScript (coté client)
     ul
-      li.fragment Détecter les media-queries
-      li.fragment
+      li Détecter les media-queries
+      li
         code matchMedia
-    pre.fragment
-      code.language-js.
+    pre
+      code.language-javascript.
         if (window.matchMedia("(min-width: 600px)").matches) {
           /* largeur supérieure à 600 px inclus */
         } else {
@@ -438,18 +440,18 @@ section.language-css
   section
     h2 Images
     ul
-      li.fragment Images adaptées
+      li Images adaptées
         ul
-          li.fragment Taille d'écran
-          li.fragment Résolution
-          li.fragment Réseau
+          li Taille d'écran
+          li Résolution
+          li Réseau
 
   section
     h2 Contraintes
     ul
-      li.fragment Beaucoup
-      li.fragment Et complexes!
-      li.fragment
+      li Beaucoup
+      li Et complexes!
+      li
         a(href='http://www.alsacreations.com/article/lire/1559-responsive-web-design-present-futur-adaptation-mobile.html') Adaptation présente et future du RWD
 
 
@@ -480,32 +482,32 @@ section.language-css
   section
     h2 Bonne vieille méthode
     ul
-      li.fragment Resize FTW!
+      li Resize FTW!
 
   section
     h2 Navigateurs
     ul
-      li.fragment Outils intégrés par défaut
+      li Outils intégrés par défaut
         ul
-          li.fragment Firefox (Vue adaptative)
-          li.fragment Chrome (Émulation)
-          li.fragment Internet Explorer (Émulation)
+          li Firefox (Vue adaptative)
+          li Chrome (Émulation)
+          li Internet Explorer (Émulation)
 
   section
     h2 Plugins / Outils
     ul
-      li.fragment
+      li
         a(href='http://responsive.victorcoulon.fr/') RWD Bookmarklet
-      li.fragment 
+      li 
         a(href='http://lab.maltewassermann.com/viewport-resizer/') Viewport Resizer
-      li.fragment
+      li
         a(href='http://tzi.fr/css/responsive/breaq-bookmarklet') Breaq, affiche les points critiques
 
   section
     h2 Meilleure méthode
     ul
-      li.fragment Sur les devices!
+      li Sur les devices!
         +img('devices.jpg')
-      li.fragment Device Lab
+      li Device Lab
         +img('device-lab.jpg')
-      li.fragment Le Bon Coin
+      li Le Bon Coin
