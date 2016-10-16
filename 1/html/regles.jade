@@ -82,7 +82,7 @@ section
 section.language-markup
 
   section
-    h1 Règles XHTML
+    h1 Règles HTML
   
   section
     h2 1
@@ -124,14 +124,14 @@ section.language-markup
   section
     h2 3
     ul
-      li.fragment Certains éléments s'auto-ferment
-      li.fragment Les éléments sans contenus
+      li.fragment Certains éléments n'ont qu'une balise
+      li.fragment Les éléments sans contenu texte
     pre.fragment
       code.
         &lt;!-- OK -->
-        &lt;img />
-        &lt;meta />
-        &lt;input />
+        &lt;img>
+        &lt;meta>
+        &lt;input>
 
   section
     h2 4
@@ -174,18 +174,13 @@ section.language-markup
         ul
           li.fragment bloc (block)
           li.fragment en ligne (inline)
-      li.fragment Élément inline obligatoirement dans élément block
-      li.fragment Élément inline ne peut pas contenir d'élément block
     pre.fragment
       code.
-        &lt;!-- OK -->
+        &lt;!-- crée un bloc autonome (sur sa propre ligne) -->
         &lt;p>Un &lt;a href="http://google.fr">lien&lt;/a>&lt;/p>
 
-        &lt;!-- NOK -->
-        &lt;a>Un lien&lt;/a>
-
-        &lt;!-- NOK -->
-        &lt;a>&lt;p>Un lien&lt;/p>&lt;/a>
+        &lt;!-- ne crée pas de nouveau bloc -->
+        &lt;a href="http://google.fr">Un lien&lt;/a>
 
   section
     h2 7
@@ -194,27 +189,6 @@ section.language-markup
     pre.fragment
       code.
         &lt;!-- Un commentaire -->
-
-  section
-    h2 Règles HTML5
-    ul
-      li.fragment XML moins strict
-      li.fragment Balise auto-fermantes simplifiées
-      li.fragment Attributs booléens sans valeur, autorisé
-    pre.fragment
-      code.
-        &lt;!-- / de fin pas obligatoire -->
-        &lt;img>
-        &lt;input>
-    ul
-      li.fragment Un élément inline peut contenir des éléments blocs
-      li.fragment En vrai, plus complexe que ça
-    pre.fragment
-      code.
-        &lt;a href="#">
-          &lt;h1>Titre&lt;/h1>
-          &lt;p>Texte&lt;/p>
-        &lt;/a>
 
   section
     h2 Validation
@@ -261,16 +235,7 @@ section.language-markup
       li.fragment Seul élément avec une syntaxe particulière
 
   section
-    h2 Quel DOCTYPE?
-    p.fragment HTML4
-    pre.fragment
-      code.
-        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    p.fragment XHTML1 Strict
-    pre.fragment
-      code.
-        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-    p.fragment HTML5
+    h2 DOCTYPE
     pre.fragment
       code.
         &lt;!DOCTYPE html>
@@ -288,11 +253,6 @@ section.language-markup
   section
     h2 Attributs sur 
       code &lt;html>
-    p.fragment En XHTML1
-    pre.fragment
-      code.
-        &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
-    p.fragment En HTML5
     pre.fragment
       code.
         &lt;html lang="fr">
@@ -307,7 +267,7 @@ section.language-markup
       li.fragment Élément 
         code &lt;head>
       li.fragment Début et fin des informations non affichées
-      li.fragment Définit:
+      li.fragment Permet de définir:
         ul
           li.fragment Encodage du fichier
           li.fragment Feuille de styles utilisées
@@ -332,11 +292,6 @@ section.language-markup
     ul
       li.fragment Élément 
         code &lt;meta> pour l'encodage
-    p.fragment XHTML1
-    pre.fragment
-      code.
-        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    p.fragment En HTML5
     pre.fragment
       code.
         &lt;meta charset="utf-8">
@@ -356,7 +311,7 @@ section.language-markup
       li.fragment Utile au navigateur
       li.fragment Vérifier à enregistrer votre fichier en UTF-8
       li.fragment Configurez votre éditeur de texte
-      li.fragment Non obligatoire mais fortement recommandé (pas UTF-8 par défaut)
+      li.fragment Fortement recommandé (pas UTF-8 par défaut)
 
   section
     h2 Métadonnées
@@ -377,7 +332,7 @@ section.language-markup
     ul
       li.fragment Les autres 
         a(href='http://www.alsacreations.com/article/lire/628-balises-meta.html') &lt;meta> utiles ou non
-      li.fragment Cas typique: 
+      li.fragment Cas typique inutile: 
         code &lt;meta name="keywords">
 
   section
@@ -385,16 +340,10 @@ section.language-markup
     p.fragment CSS
     pre.fragment
       code.
-        &lt;!-- XHTML1 -->
-        &lt;link rel="stylesheet" type="text/css" href="styles.css" />
-        &lt;!-- HTML5 -->
         &lt;link rel="stylesheet" href="styles.css">
     p.fragment JavaScript
     pre.fragment
       code.
-        &lt;!-- XHTML1 -->
-        &lt;script src="script.js" type="text/javascript">&lt;/script>
-        &lt;!-- HTML5 -->
         &lt;script src="script.js">&lt;/script>
 
   section
@@ -403,21 +352,6 @@ section.language-markup
       li.fragment Élément 
         code &lt;body>
       li.fragment Contient les éléments visibles de la page
-  
-  section
-    h2 Structure minimale XHTML1
-    pre.fragment
-      code.
-        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-        &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
-          &lt;head>
-            &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            &lt;title>Titre&lt;/title>
-          &lt;/head>
-          &lt;body>
-            &lt;p>Contenu&lt;/p>
-          &lt;/body>
-        &lt;/html>
 
   section
     h2 Structure minimale HTML5
