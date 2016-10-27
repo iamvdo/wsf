@@ -423,6 +423,32 @@ section.language-css
     h2 Le modèle de boite
     +img2('modeleBoite.jpg')
 
+  section
+    h2 Le modèle de boite, en mieux!
+    ul
+      li <code>box-sizing</code> modifie le calcul du modèle de boite
+        ul
+          li <code>box-sizing: content-box</code>: modèle CSS2.1
+          li <code>box-sizing: border-box</code>: modèle CSS3
+      li <code>width</code> devient la largeur totale
+    +img('boxsizing.jpg')
+
+  section
+    h2 Le modèle de boite, en mieux!
+    ul
+      li Préconisé de toujours utiliser ce mode:
+    pre
+      code.
+        * {
+          box-sizing: border-box;
+        }
+        /* et même */
+        *,
+        *:before,
+        *:after {
+          box-sizing: border-box;
+        }
+
 
 
 
