@@ -28,7 +28,8 @@ html {
 }
 #menu li {
   display: inline-block;
-  width: 120px;
+  width: 200px;
+  font-size: 1.8em;
 }
 #milieu {
   margin-right: 100px;
